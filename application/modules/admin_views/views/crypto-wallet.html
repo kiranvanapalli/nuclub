@@ -1,0 +1,597 @@
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>admin_assets/app-assets/vendors/css/tables/datatable/datatables.min.css"> 
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>admin_assets/app-assets/css/pages/single-page.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>admin_assets/app-assets/vendors/css/cryptocoins/cryptocoins.css">
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+      <div class="content-overlay"></div>
+      <div class="content-wrapper">
+        <div class="content-header row">
+          <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
+            <h3 class="content-header-title mb-0 d-inline-block">Wallet</h3>
+            <div class="row breadcrumbs-top d-inline-block">
+              <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item active">Wallet
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="content-header-right col-md-6 col-12">
+            <div class="btn-group float-md-right">
+              <button class="btn btn-info dropdown-toggle mb-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+              <div class="dropdown-menu arrow"><a class="dropdown-item" href="#"><i class="fa fa-calendar-check mr-1"></i> Calender</a><a class="dropdown-item" href="#"><i class="fa fa-cart-plus mr-1"></i> Cart</a><a class="dropdown-item" href="#"><i class="fa fa-life-ring mr-1"></i> Support</a>
+                <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-cog mr-1"></i> Settings</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-body"><section id="pagination">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Wallet</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table alt-pagination wallet-wrapper">
+                            <thead>
+                                <tr>
+                                    <th>Cryptocurrency</th>
+                                    <th>Total</th>
+                                    <th>Price</th>
+                                    <th>Total Price</th>
+                                    <th>Transact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc BTC warning"></i> Bitcoin </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">100</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">10</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">1000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc LTC info"></i>Litecoin </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">80</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">8</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">640</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"><i class="cc NEO success"></i>NEO</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">75</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">10</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">750</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc DASH primary"></i>DASH </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit"> 90</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">10</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">900</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc ETH"></i>ETH </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">750</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">10</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">7500</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class=" transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc XRP info"></i> XRP </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">500</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">15</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">7500</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc BTA success"></i> BTA </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">700</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">10</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">7000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc XMR primary"></i> XMR </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">400</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">80</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">32000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc ANC warning"></i> ANC </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">650</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">10</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">6500</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc ARK"></i> ARK </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">200</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">200</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">40000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc BC info"></i> BC </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">10</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">10000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc DCR success"></i> DCR </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">800</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">15</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">12000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc ETC primary"></i> ETC </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">900</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">200</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">180000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc FRK warning"></i> FRK </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">500</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">40</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">20000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc GAME"></i> GAME </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">850</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">100</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">85000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc GNO info"></i>GNO </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">750</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">100</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">75000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc ICN warning"></i> ICN </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">720</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">200</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">144000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc IOC"></i> ICO </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">300</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">400</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">120000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc JBS success"></i> JBS </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">850</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">100</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">85000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc KORE primary"></i> KORE </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">630</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">300</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">189000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc MCO info"></i> MCO </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">470</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">200</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">94000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <div class="currency"> <i class="cc MRC success"></i> MRC </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="totalunit">100</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="price">10</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="total-price">10000</div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="transact form-inline">
+                                            <div class="mr-xl-2 mr-1">
+                                                <a href="#"><i class="la la-arrow-circle-o-down"></i> Deposit</a>
+                                            </div>
+                                            <div>
+                                                <a href="#"> <i class="la la-arrow-circle-o-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </div>
+      </div>
+    </div>
+    <!-- END: Content-->
+    <script src="<?php echo base_url(); ?>admin_assets/app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <script src="<?php echo base_url(); ?>admin_assets/app-assets/js/scripts/pages/crypto-wallet.min.js"></script>
+
+
+
+
+
