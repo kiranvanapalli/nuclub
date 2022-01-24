@@ -5,7 +5,7 @@ class Frontend extends MX_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('task_list/Allfiles_model');
+        $this->load->model('Allfiles_model');
        
     }
     public function index()

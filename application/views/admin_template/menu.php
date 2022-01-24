@@ -10,11 +10,11 @@
             <span class="menu-title" data-i18n="Transactions">Dashboard</span>
             </a>
          </li>
-         <!-- <li class="nav-item" class="<?php echo active_link('members'); ?>">
+         <li class="nav-item" class="<?php echo active_link('members'); ?>">
             <a class="<?php if ($this->uri->segment(1) == "members") {
                echo "active";
                }
-               else if($this->uri->segment(1) == "add_upcoming_movie")
+               else if($this->uri->segment(1) == "add_member")
                {
                   echo "active";
                }
@@ -25,11 +25,11 @@
                else if($this->uri->segment(1) == "edit_upcoming_movie_details")
                {
                   echo "active";
-               } ?>" href="<?= base_url() ?>upcoming_movies">
-            <i class="las la-film"></i>
-            <span class="menu-title" data-i18n="Transactions">Movies</span>
+               } ?>" href="<?= base_url() ?>members">
+            <i class="las la-user-friends"></i>
+            <span class="menu-title" data-i18n="Transactions">Members</span>
             </a>
-         </li> -->
+         </li>
          <li class="nav-item" class="<?php echo active_link('cast_crew'); ?>">
             <a class="<?php if ($this->uri->segment(1) == "cast_crew") {
                echo "active";

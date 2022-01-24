@@ -86,3 +86,126 @@ ERROR - 2022-01-24 10:18:07 --> Severity: Notice --> Undefined variable: videos 
 ERROR - 2022-01-24 10:18:07 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
 ERROR - 2022-01-24 10:18:07 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
 ERROR - 2022-01-24 10:18:07 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:50:16 --> Severity: error --> Exception: Unable to locate the model you have specified: Allfiles_model D:\xampp_V7\htdocs\nuclub\system\core\Loader.php 344
+ERROR - 2022-01-24 10:50:46 --> Severity: error --> Exception: Unable to locate the model you have specified: Allfiles_model D:\xampp_V7\htdocs\nuclub\system\core\Loader.php 344
+ERROR - 2022-01-24 10:52:23 --> Severity: Notice --> Undefined variable: awards D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 36
+ERROR - 2022-01-24 10:52:23 --> Severity: Notice --> Undefined variable: contactus D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 47
+ERROR - 2022-01-24 10:52:23 --> Severity: Notice --> Undefined variable: videos D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 57
+ERROR - 2022-01-24 10:52:23 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
+ERROR - 2022-01-24 10:52:23 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
+ERROR - 2022-01-24 10:52:24 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:55:11 --> Severity: Notice --> Undefined variable: awards D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 36
+ERROR - 2022-01-24 10:55:11 --> Severity: Notice --> Undefined variable: contactus D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 47
+ERROR - 2022-01-24 10:55:11 --> Severity: Notice --> Undefined variable: videos D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 57
+ERROR - 2022-01-24 10:55:11 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
+ERROR - 2022-01-24 10:55:11 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
+ERROR - 2022-01-24 10:55:11 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:56:15 --> Severity: Notice --> Undefined variable: awards D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 36
+ERROR - 2022-01-24 10:56:15 --> Severity: Notice --> Undefined variable: contactus D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 47
+ERROR - 2022-01-24 10:56:15 --> Severity: Notice --> Undefined variable: videos D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 57
+ERROR - 2022-01-24 10:56:15 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
+ERROR - 2022-01-24 10:56:15 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
+ERROR - 2022-01-24 10:56:15 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:56:26 --> Severity: Notice --> Undefined variable: awards D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 36
+ERROR - 2022-01-24 10:56:26 --> Severity: Notice --> Undefined variable: contactus D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 47
+ERROR - 2022-01-24 10:56:26 --> Severity: Notice --> Undefined variable: videos D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 57
+ERROR - 2022-01-24 10:56:26 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
+ERROR - 2022-01-24 10:56:26 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
+ERROR - 2022-01-24 10:56:26 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:56:40 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:56:49 --> Severity: Notice --> Undefined variable: awards D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 36
+ERROR - 2022-01-24 10:56:49 --> Severity: Notice --> Undefined variable: contactus D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 47
+ERROR - 2022-01-24 10:56:49 --> Severity: Notice --> Undefined variable: videos D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 57
+ERROR - 2022-01-24 10:56:49 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
+ERROR - 2022-01-24 10:56:49 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
+ERROR - 2022-01-24 10:56:50 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:56:50 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:56:59 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:58:57 --> Severity: Notice --> Undefined variable: awards D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 36
+ERROR - 2022-01-24 10:58:57 --> Severity: Notice --> Undefined variable: contactus D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 47
+ERROR - 2022-01-24 10:58:57 --> Severity: Notice --> Undefined variable: videos D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 57
+ERROR - 2022-01-24 10:58:57 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
+ERROR - 2022-01-24 10:58:57 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
+ERROR - 2022-01-24 10:58:58 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:58:59 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:59:29 --> Severity: Notice --> Undefined variable: awards D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 36
+ERROR - 2022-01-24 10:59:29 --> Severity: Notice --> Undefined variable: contactus D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 47
+ERROR - 2022-01-24 10:59:29 --> Severity: Notice --> Undefined variable: videos D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 57
+ERROR - 2022-01-24 10:59:29 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
+ERROR - 2022-01-24 10:59:29 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
+ERROR - 2022-01-24 10:59:29 --> Severity: Notice --> Undefined variable: awards D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 36
+ERROR - 2022-01-24 10:59:29 --> Severity: Notice --> Undefined variable: contactus D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 47
+ERROR - 2022-01-24 10:59:29 --> Severity: Notice --> Undefined variable: videos D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 57
+ERROR - 2022-01-24 10:59:29 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
+ERROR - 2022-01-24 10:59:29 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
+ERROR - 2022-01-24 10:59:30 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:59:30 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:59:30 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 10:59:31 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:00:08 --> Severity: Notice --> Undefined variable: awards D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 36
+ERROR - 2022-01-24 11:00:08 --> Severity: Notice --> Undefined variable: contactus D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 47
+ERROR - 2022-01-24 11:00:08 --> Severity: Notice --> Undefined variable: videos D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 57
+ERROR - 2022-01-24 11:00:08 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
+ERROR - 2022-01-24 11:00:08 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
+ERROR - 2022-01-24 11:00:08 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:00:08 --> Severity: Notice --> Undefined variable: awards D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 36
+ERROR - 2022-01-24 11:00:08 --> Severity: Notice --> Undefined variable: contactus D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 47
+ERROR - 2022-01-24 11:00:08 --> Severity: Notice --> Undefined variable: videos D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 57
+ERROR - 2022-01-24 11:00:08 --> Severity: Notice --> Undefined variable: recent_news D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 67
+ERROR - 2022-01-24 11:00:08 --> Severity: Notice --> Undefined variable: email_subscriber D:\xampp_V7\htdocs\nuclub\application\modules\admin_dashboard\views\admin_dashboard\dashboards.php 77
+ERROR - 2022-01-24 11:00:09 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:00:09 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:00:11 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:00:11 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:00:11 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:00:56 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:00:56 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:01:31 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:01:31 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:01:40 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:01:40 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:02:10 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:02:10 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:06:37 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:06:37 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:07:24 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:07:24 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:09:01 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:09:01 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:11:35 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:12:09 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:12:38 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:12:41 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:17:31 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:17:32 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:18:22 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:18:24 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:19:12 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:21:21 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:22:27 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:22:41 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:22:54 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:22:59 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:23:52 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:25:19 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:25:33 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:25:49 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:30:13 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:36:21 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:39:28 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:43:07 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:43:58 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:44:23 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:44:53 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:45:51 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:46:02 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:46:15 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:46:21 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:46:27 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:46:29 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:46:44 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:48:04 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:49:05 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:50:02 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:50:26 --> 404 Page Not Found: /index
+ERROR - 2022-01-24 11:50:47 --> 404 Page Not Found: /index

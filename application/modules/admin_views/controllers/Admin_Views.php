@@ -8,7 +8,7 @@ class Admin_Views extends MX_Controller
         modules::run('admin/admin/is_logged_in');
         $this->load->model('Admin_model');
         $this->load->library('upload');
-        $this->load->model('task_list/Allfiles_model');
+        $this->load->model('Allfiles_model');
     }
 	 public function trading()
     {

@@ -131,83 +131,12 @@ $route['forgotpassword'] = 'admin/admin/checkemail';
 
 $route['logout'] = 'admin/admin/logout';
 
-//Catalog
-$route['catalog'] = 'catalog/Catalog';
+//Admin Member 
 
-//Add Movie
-// $route['movies'] = 'movies/Movies';
-// $route['add_movie'] = 'movies/Movies/add_movie';
-// $route['getmoviedetails'] = 'movies/Movies/getmoviedetails';
-// $route['edit_movie'] = 'movies/Movies/edit_movie';
-
-//Awards
-$route['award'] = 'award/Award';
-$route['add_award'] = 'award/Award/add_award';
-$route['award_preview'] = 'award/Award/award_preview';
-$route['edit_award'] = 'award/Award/edit_award_details';
-
-//Add Upcoming Movies
-$route['movies'] = 'movies/Movies';
-$route['add_movie'] = 'movies/Movies/add_movie';
-$route['movie_details']= 'movies/Movies/movie_details';
-$route['edit_movie_details']= 'movies/Movies/edit_movie_details';
-$route['movie_cast_details']= 'movies/Movies/movie_cast_details';
-
-//Videos
-$route['videos'] = 'video/Video';
-$route['add_video'] = 'video/Video/add_video';
-$route['save_video'] = 'video/Video/save_video';
-$route['video_preview'] = 'video/Video/video_preview';
-$route['edit_video_details'] = 'video/Video/edit_video_details';
-$route['update_video_details'] = 'video/Video/update_video_details';
-$route['delete_video'] = 'video/Video/delete_video';
-
-//Enquiry
-$route['enquiry'] = 'enquiry/Enquiry';
-
-//News
-$route['news'] = 'news/News';
-$route['add_news'] = 'news/News/add_news';
-$route['news_view'] = 'news/News/news_view';
-$route['add_news_details'] = 'news/News/add_news_details';
-$route['edit_news'] = 'news/News/edit_news';
-$route['update_news'] = 'news/News/update_news';
-$route['delete_resent_news'] = 'news/News/delete_recent_news';
-
-//News Letter
-$route['news_letter'] = 'news_letter/News_letter';
-
-//Review
-$route['review'] = 'review/Review';
+$route['members'] = 'members/Members';
+$route['add_member'] = 'members/Members/add_member';
 
 
-//Cast & Crew
-
-$route['cast_crew'] = 'cast_crew/Cast_crew';
-$route['add_cast_crew'] = 'cast_crew/Cast_crew/add_cast_crew';
-$route['cast_crew_details'] = 'cast_crew/Cast_crew/cast_crew_details';
-$route['edit_cast_crew_details'] = 'cast_crew/Cast_crew/edit_cast_crew_details';
-
-//Gallery
-
-$route['gallery'] = 'gallery/Gallery';
-$route['add_gallery'] = 'gallery/Gallery/add_gallery';
-$route['gallery_details'] = 'gallery/Gallery/gallery_details';
-$route['edit_gallery_details'] = 'gallery/Gallery/edit_gallery_details';
-
-//Behind the Screen
-
-$route['behind_screen'] = 'behind_the_screen/Behind_the_screen';
-$route['add_behind_screen'] = 'behind_the_screen/Behind_the_screen/add_behind_screen';
-$route['behind_screen_details'] = 'behind_the_screen/Behind_the_screen/behind_screen_details';
-$route['edit_behind_screen_details'] = 'behind_the_screen/Behind_the_screen/edit_behind_screen_details';
-
-//Wallpapers
-
-$route['wallpapers'] = 'wallpapers/Wallpapers';
-$route['add_wallpaper'] = 'wallpapers/Wallpapers/add_wallpaper';
-$route['wallpaper_details'] = 'wallpapers/Wallpapers/wallpaper_details';
-$route['edit_wallpaper_details'] = 'wallpapers/Wallpapers/edit_wallpaper_details';
 
 
 /* END HERE */

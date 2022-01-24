@@ -7,7 +7,7 @@ class Admin extends MX_Controller
         parent::__construct();
         $this->load->model('Admin_model');
         $this->load->library('upload');
-        $this->load->model('task_list/Allfiles_model');
+        $this->load->model('Allfiles_model');
     }
     
     public function index() 
