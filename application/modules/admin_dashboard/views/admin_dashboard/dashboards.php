@@ -12,12 +12,7 @@
                     </div>
                 </div>
 
-                <!-- <div class="col-4">
-                    <div class="main__title">
-                        <a href="add-item.html" class="main__title-link">Add Item</a>
-                    </div>
-                </div> -->
-                <!-- end main title -->
+              
 
 
             </div>
@@ -25,16 +20,16 @@
             <div id="crypto-stats-3" class="row">
 
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <a href="<?php echo base_url() ?>upcoming_movies">
+                    <!-- <a href="<?php echo base_url() ?>upcoming_movies"> -->
                         <div class="card p-2 stats colo-1">
-                            <span>Upcoming Movies</span>
-                            <p><?php echo $movies; ?></p>
-                            <i class="las la-film"></i>
+                            <span>Members</span>
+                            <p>30</p>
+                            <i class="las la-user-friends"></i>
                         </div>
-                    </a>
+                    <!-- </a> -->
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <!-- <div class="col-12 col-sm-6 col-lg-4">
                     <a href="<?php echo base_url(); ?>award">
                         <div class="card p-2 stats colo-2">
                             <span>Awards</span>
@@ -43,16 +38,7 @@
                         </div>
                     </a>
                 </div>
-<!-- 
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <a href="<?php echo base_url() ?>movies">
-                        <div class="card p-2 stats colo-3">
-                            <span>Movies</span>
-                            <p><?php echo $movies; ?></p>
-                            <i class="las la-film"></i>
-                        </div>
-                    </a>
-                </div> -->
+
 
                 <div class="col-12 col-sm-6 col-lg-4">
                     <a href="<?php echo base_url() ?>enquiry">
@@ -93,7 +79,7 @@
                         </div>
                     </a>
                     
-                </div>
+                </div> -->
 
             </div>
         </div>

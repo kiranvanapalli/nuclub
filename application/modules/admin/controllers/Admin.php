@@ -14,7 +14,7 @@ class Admin extends MX_Controller
     {
         $this->form_validation->set_rules('admin_email','Email','trim|required|valid_email');
         $this->form_validation->set_rules('admin_pass','Password','trim|required');
-        $data['title'] = 'Mythri';
+        $data['title'] = 'NUCLUB';
         if ($this->form_validation->run() == FALSE) 
         { 
              $this->load->view('login',$data);

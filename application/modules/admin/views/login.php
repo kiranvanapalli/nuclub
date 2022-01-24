@@ -6,7 +6,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Mythri</title>
+  <title>NUCLUB</title>
   <link rel="apple-touch-icon" href="admin_assets/app-assets/images/ico/apple-icon-120.png" />
 
   <!-- BEGIN: Theme CSS-->
@@ -58,10 +58,10 @@
                       </fieldset>
                       <div class="form-group row">
                         <div class="col-sm-6 col-12 text-center text-sm-left pr-0">
-                          <!-- <fieldset>
+                          <fieldset>
                     <div class="icheckbox_square-blue" style="position: relative;"><input type="checkbox" id="remember-me" class="chk-remember" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                     <label for="remember-me"> Remember Me</label>
-                  </fieldset> -->
+                  </fieldset>
                         </div>
                         <div class="col-sm-6 col-12 float-sm-left text-center text-sm-right"><a href="<?php echo base_url(); ?>forgetpassword_page" class="card-link">Forgot Password?</a></div>
                       </div>

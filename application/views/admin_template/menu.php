@@ -10,8 +10,8 @@
             <span class="menu-title" data-i18n="Transactions">Dashboard</span>
             </a>
          </li>
-         <!-- <li class="nav-item" class="<?php echo active_link('movies'); ?>">
-            <a class="<?php if ($this->uri->segment(1) == "movies") {
+         <!-- <li class="nav-item" class="<?php echo active_link('members'); ?>">
+            <a class="<?php if ($this->uri->segment(1) == "members") {
                echo "active";
                }
                else if($this->uri->segment(1) == "add_upcoming_movie")

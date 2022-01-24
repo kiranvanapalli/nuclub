@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Mythri</title>
+    <title>NUCLUB</title>
     <link rel="apple-touch-icon" href="admin_assets/app-assets/images/ico/apple-icon-120.png" />
 
     <!-- BEGIN: Theme CSS-->
@@ -41,7 +41,7 @@
                     <li class="nav-item mr-auto">
                         <a class="navbar-brand" href="<?php echo base_url(); ?>dashboard">
                             <img class="brand-logo" alt="modern admin logo" src="admin_assets/app-assets/images/logo/logo.png" />
-                            <h3 class="brand-text">Mythri Movie Maker</h3>
+                            <!-- <h3 class="brand-text">Mythri Movie Maker</h3> -->
                         </a>
                     </li>
                 </ul>
