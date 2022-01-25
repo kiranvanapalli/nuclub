@@ -30,7 +30,7 @@
             <span class="menu-title" data-i18n="Transactions">Members</span>
             </a>
          </li>
-         <li class="nav-item" class="<?php echo active_link('cast_crew'); ?>">
+         <!-- <li class="nav-item" class="<?php echo active_link('cast_crew'); ?>">
             <a class="<?php if ($this->uri->segment(1) == "cast_crew") {
                echo "active";
                }
@@ -49,8 +49,8 @@
             <i class="las la-film"></i>
             <span class="menu-title" data-i18n="Transactions">Cast & Crew</span>
             </a>
-         </li>
-         <li class="nav-item">
+         </li> -->
+         <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "award") {
                echo "active";
                }
@@ -64,8 +64,8 @@
             <i class="las la-award"></i>
             <span class="menu-title" data-i18n="Transactions">Awards</span>
             </a>
-         </li>
-         <li class="nav-item">
+         </li> -->
+         <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "movies") {
                echo "active";
                } else if ($this->uri->segment(1) == "add_movie") {
@@ -77,16 +77,16 @@
             <i class="las la-film"></i>
             <span class="menu-title" data-i18n="Transactions">Movies</span>
             </a>
-         </li>
-         <li class="nav-item">
+         </li> -->
+         <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "enquiry") {
                echo "active";
                } ?>" href="<?= base_url() ?>enquiry">
             <i class="las la-headset"></i>
             <span class="menu-title" data-i18n="Transactions">Enquiry</span>
             </a>
-         </li>
-         <li class="nav-item">
+         </li> -->
+         <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "videos") {
                echo "active";
                } else if ($this->uri->segment(1) == "add_video") {
@@ -102,8 +102,8 @@
             <i class="las la-video"></i>
             <span class="menu-title" data-i18n="Transactions">Videos</span>
             </a>
-         </li>
-         <li class="nav-item">
+         </li> -->
+         <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "news") {
                echo "active";
                } else if ($this->uri->segment(1) == "add_news") {
@@ -120,8 +120,8 @@
             <i class="las la-newspaper"></i>
             <span class="menu-title" data-i18n="Transactions">News</span>
             </a>
-         </li>
-         <li class="nav-item">
+         </li> -->
+         <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "gallery") {
                echo "active";
                } else if ($this->uri->segment(1) == "add_gallery") {
@@ -138,9 +138,9 @@
             <i class="las la-newspaper"></i>
             <span class="menu-title" data-i18n="Transactions">Gallery</span>
             </a>
-         </li>
+         </li> -->
 
-         <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "behind_screen") {
                echo "active";
                } else if ($this->uri->segment(1) == "add_behind_screen") {
@@ -157,10 +157,10 @@
             <i class="las la-newspaper"></i>
             <span class="menu-title" data-i18n="Transactions">Behind the Screen</span>
             </a>
-         </li>
+         </li> -->
 
          
-         <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "wallpapers") {
                echo "active";
                } else if ($this->uri->segment(1) == "add_wallpaper") {
@@ -177,15 +177,15 @@
             <i class="las la-newspaper"></i>
             <span class="menu-title" data-i18n="Transactions">Wallpapers</span>
             </a>
-         </li>
-         <li class="nav-item">
+         </li> -->
+         <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "news_letter") {
                echo "active";
                } ?>" href="<?= base_url() ?>news_letter">
             <i class="las la-envelope"></i>
             <span class="menu-title" data-i18n="Transactions">News Letter</span>
             </a>
-         </li>
+         </li> -->
          <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "profileview") {
                echo "active";
