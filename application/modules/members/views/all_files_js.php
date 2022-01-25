@@ -8,41 +8,70 @@
             endDate: '-3d',
             autoclose: true //to close picker once year is selected
         });
-        $('#asset_model').click(function() {
-            $('.asset_form')[0].reset();
-            // $('#asset_title').val('');
-            $('#asset_name').val('');
-            $('.today_asset_price').val('');
-            $('.in_or_de_asset_value').val('');
-            $('.present_asset_value').val('');
-            $('#edit_id').val('');
-            $('#status_div').css('display', 'none');
-            $('#asset_title').text('Add Asset');
-            $('#btn_submit').text('Submit');
-            $("#addassets").modal('show');
-
-        });
-        $(document).on('submit', '#asset_form', function(event) {
+        
+        $(document).on('submit', '#add_member', function(event) {
             event.preventDefault();
-            var asset_name = $('#asset_name').val();
-            var today_asset_price = $('#today_asset_price').val();
-            var in_or_de_asset_value = $('#in_or_de_asset_value').val();
+            var full_name = $('#full_name').val();
+            // var email_id = $('#email_id').val();
+            var mobile_number = $('#mobile_number').val();
+            var gender = $('#gender').val();
+            var date = $('#date').val();
+            var state = $('#state').val();
+            var city = $('#city').val();
+            var pay_via = $('#pay_via').val();
+            var password = $('#password').val();
+            var conf_password = $('#conf_password').val();
+            var nu_points = $('#nu_points').val();
 
-            if (asset_name == '') {
-                toastr["error"]("Asset Name is required!");
+            if (full_name == '') {
+                toastr["error"]("Full Name is required!");
                 return false;
             }
-            if (today_asset_price == '') {
-                toastr["error"]("Please Enter Today Asset Price!");
+            if (mobile_number == '') {
+                toastr["error"]("Please Enter Mobile Number!");
                 return false;
             }
-            if (in_or_de_asset_value == '') {
-                toastr["error"]("Please Enter Increase Or Decrease Asset Price");
+            if (gender == '') {
+                toastr["error"]("Please Select Gender");
+                return false;
+            }
+            if (date == '') {
+                toastr["error"]("Please Select Date Of Birth");
+                return false;
+            }
+            if (state == '') {
+                toastr["error"]("Please Select State");
+                return false;
+            }
+            if (city == '') {
+                toastr["error"]("Please Enter City Name");
+                return false;
+            }
+            if (pay_via == '') {
+                toastr["error"]("Please Select Pay Via");
+                return false;
+            }
+            if (password == '') {
+                toastr["error"]("Please Enter Password");
+                return false;
+            }
+            if (conf_password == '') {
+                toastr["error"]("Please Enter Confirm password");
+                return false;
+            }
+            if(password != conf_password)
+            {
+                toastr["error"]("Please Password & Confirm Password Not Match");
+                return false;
+
+            }
+            if (nu_points == '') {
+                toastr["error"]("Please Enter Points");
                 return false;
             }
             // var datastring = $("#asset_form").serialize();
             $.ajax({
-                url: "<?php echo base_url() ?>addassets",
+                url: "<?php echo base_url() ?>save_member",
                 method: 'POST',
                 data: new FormData(this),
                 contentType: false,
@@ -50,13 +79,11 @@
                 success: function(data) {
                     if (data) {
                         console.log(data);
-                        $('.asset_form')[0].reset();
-                        $('#addassets').modal('hide');
-                        toastr["success"]("Asset Details Added Successfully!");
-                        window.location.href = "<?php echo base_url(); ?>asset";
+                        toastr["success"]("Member Details Added Successfully!");
+                        window.location.href = "<?php echo base_url(); ?>members";
 
                     } else {
-                        toastr["error"]("Asset Details added failed! Please try again.");
+                        toastr["error"]("Member Details added failed! Please try again.");
                         return false;
                     }
 
@@ -65,152 +92,126 @@
             });
 
         });
-        $(document).on('click', '.edit', function() {
-            var id = $(this).attr("id");
+
+
+        $(document).on('submit', '#update_member', function(event) {
+            event.preventDefault();
+            var full_name = $('#full_name').val();
+            // var email_id = $('#email_id').val();
+            var mobile_number = $('#mobile_number').val();
+            var gender = $('#gender').val();
+            var date = $('#date').val();
+            var state = $('#state').val();
+            var city = $('#city').val();
+            var pay_via = $('#pay_via').val();
+            var password = $('#password').val();
+            var conf_password = $('#conf_password').val();
+            var nu_points = $('#nu_points').val();
+
+            if (full_name == '') {
+                toastr["error"]("Full Name is required!");
+                return false;
+            }
+            if (mobile_number == '') {
+                toastr["error"]("Please Enter Mobile Number!");
+                return false;
+            }
+            if (gender == '') {
+                toastr["error"]("Please Select Gender");
+                return false;
+            }
+            if (date == '') {
+                toastr["error"]("Please Select Date Of Birth");
+                return false;
+            }
+            if (state == '') {
+                toastr["error"]("Please Select State");
+                return false;
+            }
+            if (city == '') {
+                toastr["error"]("Please Enter City Name");
+                return false;
+            }
+            if (pay_via == '') {
+                toastr["error"]("Please Select Pay Via");
+                return false;
+            }
+            if (password == '') {
+                toastr["error"]("Please Enter Password");
+                return false;
+            }
+            if (conf_password == '') {
+                toastr["error"]("Please Enter Confirm password");
+                return false;
+            }
+            if(password != conf_password)
+            {
+                toastr["error"]("Please Password & Confirm Password Not Match");
+                return false;
+
+            }
+            if (nu_points == '') {
+                toastr["error"]("Please Enter Points");
+                return false;
+            }
+            if($('#status').val() == '')
+            {
+                toastr["error"]("Please Select Status");
+                return false;
+            }
+             $.ajax({  
+             url:"<?php echo base_url() ?>update_member",  
+             method:'POST',  
+             data:new FormData(this),
+             contentType:false,  
+             processData:false, 
+             dataType:'JSON',
+             success:function(data)  
+             {  
+              console.log(data);
+                if(data.status == 'success')
+                {
+                    
+                    toastr["success"]("Member Details Updated Successfully!");
+                    window.location.href = "<?php echo base_url(); ?>members";
+                }
+                else
+                {
+                      toastr["error"]("Member Details updated failed! Please try again.");
+                      return false;
+                }     
+                  
+             }  
+        });
+    });
+
+    $(document).on('click', '#modaldelete', function(event) {
+            event.preventDefault();
+            var id = $(".delete").attr('id');
+
             console.log(id);
+
             $.ajax({
-                url: "<?php echo base_url(); ?>editassets",
+                url: "<?php echo base_url() ?>delete_member",
                 method: "POST",
                 data: {
-                    asset_id: id
+                    member_id: id,
+                    <?php echo $this->security->get_csrf_token_name(); ?>: <?php echo "'" . $this->security->get_csrf_hash() . "'"; ?>
                 },
-                dataType: "json",
                 success: function(data) {
-
-                    $('.asset_form')[0].reset();
-                    $('#edit_id').val(data.asset_id);
-                    $('#asset_title').attr('id', "update_asset");
-                    $('#update_asset').text("Update Asset");
-                    $('#btn_submit').text("Update");
-                    $("#status_div").css('display', 'block');
-                    $("#status").val(data.status);
-                    $('#asset_form').attr('id', "update_asset_form");
-                    if (data.asset_name != '') {
-                        $('#asset_name').val(data.asset_name);
+                    if (data) {
+                        toastr["success"]("Cast & Crew Details  Deleted Successfully!");
+                        window.location.href = "<?php echo base_url(); ?>members";
+                    } else {
+                        toastr["error"]("Delete failed! Please try again.");
+                        return false;
                     }
-                    if (data.today_value != '') {
-                        $('#today_asset_price').val(data.today_value);
-                    }
-                    if (data.incr_decr != '') {
-                        $('#in_or_de_asset_value').val(data.incr_decr);
-                    }
-                    if (data.prasent_value != '') {
-                        $('#present_asset_value').val(data.prasent_value);
-                    }
-
-                    $('#addassets').modal('show');
-
                 }
-            });
+            })
         });
-
-        $(document).on('submit', '#update_asset_form', function(event) {
+        $(document).on('click', '#close', function(event) {
             event.preventDefault();
-            var id = $('#edit_id').val();
-            var asset_name = $('#asset_name').val();
-            console.log(id);
-            var today_asset_price = $('#today_asset_price').val();
-            var in_or_de_asset_value = $('#in_or_de_asset_value').val();
-            var present_asset_value = $('#present_asset_value').val();
-            var status = $('#status').val();
-
-            if (asset_name == '') {
-                toastr["error"]("Please Enter Asset Name!");
-                return false;
-            }
-            if (today_asset_price == '') {
-                toastr["error"]("Please Enter Asset Price!");
-                return false;
-            }
-            if (in_or_de_asset_value == '') {
-                toastr["error"]("Please Enter Increase Or Decrease Asset Price!");
-                return false;
-            }
-            if (status == '') {
-                toastr["error"]("Please Select Status!");
-                return false;
-            }
-            if (id != '') {
-                $.ajax({
-                    url: "<?php echo base_url(); ?>update_asset",
-                    method: "POST",
-                    data: $(this).serialize(),
-                    success: function(data) {
-                        if (data) {
-                            $('#addassets').modal('hide');
-                            $('#update_asset_form')[0].reset();
-                            $('#update_asset_form').attr('id', 'asset_form');
-                            toastr["success"]("Asset Updated Successfully!");
-                            asset_table.ajax.reload();
-                        } else {
-                            toastr["error"]("Assets Update failed! Please try again.");
-                            return false;
-                        }
-
-                    }
-
-
-
-                });
-            } else {
-                alert("Something went wrong. Please try again!");
-                return false;
-            }
-
+            window.location.href = "<?php echo base_url(); ?>members";
         });
-
-
-        $(document).on('click', '.delete', function(event) {
-            event.preventDefault();
-            var id = $(this).attr("id");
-            swal({
-                    title: "Do you want delete this Email Subscribe Data?",
-                    type: "warning",
-                    showCancelButton: true,
-                    confirmButtonClass: 'btn btn-success',
-                    cancelButtonClass: 'btn btn-danger',
-                    buttonsStyling: false,
-                    confirmButtonText: "Delete",
-                    cancelButtonText: "Cancel",
-                    closeOnConfirm: false,
-                    showLoaderOnConfirm: true,
-                },
-                function(isConfirm) {
-                    if (isConfirm) {
-                        $.ajax({
-                            url: "<?php echo base_url() . 'delete_email_sub' ?>",
-                            method: "POST",
-                            data: {
-                                id: id,
-                                <?php echo $this->security->get_csrf_token_name(); ?>: <?php echo "'" . $this->security->get_csrf_hash() . "'"; ?>
-                            },
-                            success: function(resp) {
-                                window.location.href = "<?php echo base_url(); ?>email_subscribe";
-                            }
-                        });
-                    }
-                    return false;
-                });
-        });
-        $(".toggle-password").click(function() {
-            $(this).toggleClass("fa-eye fa-eye-slash");
-            var input = $($(this).attr("toggle"));
-            if (input.attr("type") == "password") {
-                input.attr("type", "text");
-            } else {
-                input.attr("type", "password");
-            }
-        });
-
-
-        $(document).on("change keyup blur", "#in_or_de_asset_value", function() {
-            $('#present_asset_value').text('');
-            var today_asset_value = parseFloat($('#today_asset_price').val());
-            var in_or_de_asset_value = $('#in_or_de_asset_value').val();
-            var preset_asset_value = parseFloat((today_asset_value * in_or_de_asset_value) / 100);
-            var total = parseFloat(today_asset_value + preset_asset_value);
-            $("#present_asset_value").val(total);
-        });
-
     });
 </script>

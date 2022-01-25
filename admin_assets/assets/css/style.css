@@ -258,7 +258,7 @@ body.vertical-layout.vertical-menu-modern.menu-expanded .main-menu .navigation l
   color: rgba(255,255,255,0.7);
 }
 .main__table-btns {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: flex-start;
 }

@@ -135,6 +135,10 @@ $route['logout'] = 'admin/admin/logout';
 
 $route['members'] = 'members/Members';
 $route['add_member'] = 'members/Members/add_member';
+$route['save_member'] = 'members/Members/save_member';
+$route['edit_member'] = 'members/Members/edit_member';
+$route['update_member'] = 'members/Members/update_member';
+$route['delete_member'] = 'members/Members/delete_member';
 
 
 

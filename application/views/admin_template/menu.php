@@ -26,7 +26,7 @@
                {
                   echo "active";
                } ?>" href="<?= base_url() ?>members">
-            <i class="las la-user-friends"></i>
+            <i class="las la-user-alt"></i>
             <span class="menu-title" data-i18n="Transactions">Members</span>
             </a>
          </li>

@@ -27,6 +27,9 @@ class Members extends MX_Controller
     public function add_member()
     {
       $data['file'] = 'members/add_member';
+      $where = ["status" => 1];
+      $type  = "array";
+      $data['states_list'] = $this->Allfiles_model->GetDataAllmodels("tb_states",$where,$type,'state_name',$limit='');
       $data['custom_js']  = 'members/all_files_js';
       $this->load->view('admin_template/main',$data);  
     }
@@ -34,58 +37,72 @@ class Members extends MX_Controller
    
     public function save_member()
     {  
-      $asset_name =  $this->input->post("asset_name");
-      $today_value =  $this->input->post("today_asset_price");
-      $incr_decr  =  $this->input->post("in_or_de_asset_value");
-      $prasent_value =  $this->input->post("present_asset_value");
+
+
+      $fivedigitcode = mt_rand(11111,99999);
+
+      $member_code = "NU".$fivedigitcode;
+     
       $data = array(
-       'asset_name' =>$asset_name,
-       'today_value' =>$today_value,
-       'incr_decr' => $incr_decr, 
-       'prasent_value' => $prasent_value, 
+       'fullname' =>$this->input->post("full_name"),
+       'email' =>$this->input->post("email_id"),
+       'mobilenumber' => $this->input->post("mobile_number"),
+       'gender' => $this->input->post("gender"),
+       'date_of_birth' => $this->input->post("date"),
+       'state' => $this->input->post("state"),
+       'city' => $this->input->post("city"),
+       'payment_via' => $this->input->post("pay_via"),
+       'password' => $this->input->post("password"),
+       'points' => $this->input->post("nu_points"),
+       'member_code' => $member_code,
        'created_at' => date('Y-m-d H:i:s'),  
        'status' => 1,
      ); 
-     $result = $this->Allfiles_model->data_save("tb_assets",$data);
+     $result = $this->Allfiles_model->data_save("tb_members",$data);
      echo  json_encode($result);
     }
-    public function edit_asset()
-    {
-       if (isset($_POST['asset_id']) && !empty($_POST['asset_id'])) 
-       {
-          $where = ['asset_id' => $_POST['asset_id']];
-          $type = "row";
-          $result  = $this->Allfiles_model->GetDataAll("tb_assets as a",$where,$type,$order='',$limit='');
-          echo json_encode($result); 
-            
-       }
-       else
+    public function edit_member()
+     {
+        if(isset($_GET['id']) && !empty($_GET['id'])) 
         {
-            echo "Something went wrong please try again!";
-        }    
-    }
+             $id=$_GET['id'];
+            //  $where = ['member_id' => $id];
+             $where1= ['status' => 1];
+             $type = "array";
+             $get_member_details = $this->Allfiles_model->get_data('tb_members','*','member_id',$id);
+             $data['get_member_details']   = $get_member_details['resultSet'];
+             $data['states'] = $this->Allfiles_model->GetDataAllmodels("tb_states",$where1, $type, 'state_id', $limit = '');
+             $data['file'] = 'members/edit_member';
+             $data['custom_js']  = 'members/all_files_js';
+             $this->load->view('admin_template/main',$data);
+        }
+     }
 
-    public function update_asset()
+    public function update_member()
     {
     if(!empty($_POST['edit_id']))
         {   
 
             $response = [];
-            $where = ['asset_id' => $_POST['edit_id']];
-            $asset_name =  $this->input->post("asset_name");
-            $today_value =  $this->input->post("today_asset_price");
-            $incr_decr  =  $this->input->post("in_or_de_asset_value");
-            $prasent_value =  $this->input->post("present_asset_value");
+            $where = ['member_id' => $_POST['edit_id']];
             $data = array(
-             'asset_name' =>$asset_name,
-             'today_value' =>$today_value,
-             'incr_decr' => $incr_decr, 
-             'prasent_value' => $prasent_value, 
-             'updated_at' => date('Y-m-d H:i:s'),  
-             'status' => $this->input->post('status'),
-           ); 
-            $update_asset =   $this->Allfiles_model->updateData("tb_assets",$data,$where);
-            if($update_asset) 
+              'fullname' =>$this->input->post("full_name"),
+              'email' =>$this->input->post("email_id"),
+              'mobilenumber' => $this->input->post("mobile_number"),
+              'gender' => $this->input->post("gender"),
+              'date_of_birth' => $this->input->post("date"),
+              'state' => $this->input->post("state"),
+              'city' => $this->input->post("city"),
+              'payment_via' => $this->input->post("pay_via"),
+              'password' => $this->input->post("password"),
+              'points' => $this->input->post("nu_points"),
+              'member_code' => $this->input->post('member_code'),
+              'updated_at' => date('Y-m-d H:i:s'),  
+              'status' => $this->input->post('status'),
+            ); 
+            
+            $update_member_details =   $this->Allfiles_model->updateData("tb_members",$data,$where);
+            if($update_member_details) 
             {
                 $response = ['status' => 'success'];
             }
@@ -98,14 +115,13 @@ class Members extends MX_Controller
                                    
     }
 
-    public function delete_email_subscribe()
+    public function delete_member()
      {
-       if (isset($_POST['id']) && !empty($_POST['id'])) 
-
+       if (isset($_POST['member_id']) && !empty($_POST['member_id'])) 
        {
       
-            $where = ['id' => $_POST['id']];
-            $result  = $this->Allfiles_model->deleteData("email_subscribe",$where);
+            $where = ['member_id' => $_POST['member_id']];
+            $result  = $this->Allfiles_model->deleteData("tb_members",$where);
             echo $result;
         }         
        }
