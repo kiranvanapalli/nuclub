@@ -60,7 +60,7 @@ class Members extends MX_Controller
        'status' => 1,
      ); 
      $result = $this->Allfiles_model->data_save("tb_members",$data);
-     echo  json_encode($result);
+    //  echo  json_encode($result);
      if($result)
      {
       $insert_id = $this->db->insert_id();
