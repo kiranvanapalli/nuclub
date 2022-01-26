@@ -1,109 +1,121 @@
-<footer class="footer-wrapper footer-layout2 bg-fluid pt-10" data-bg-src="user_assets/img/shape/footer-bg-2-1.jpg">
-    <div class="footer-copyright">
+<footer id="footer" class="bg-2">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-7 text-center">
-                    <div class="copyright-shape bg-light-dark">
-                        <p class="text-light fw-bold text-bold mb-0">
-                            &copy; 2021 <a class="text-white" href="index.html">Mythri Movie Maker</a> By <a
-                                class="text-white" href="http://adnectics.com/" target="_blank">Adnectics</a>. All
-                            Rights Reserved.
-                        </p>
+            <div class="footer-copyright">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7">
+                        <p>&copy; 2022 NU Club | All right reserved.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-5 text-lg-right">
+						<p>Powered By <a href="http://adnectics.com/" target="_blank" class="text-white">Adnectics</a>.</p>
+<!--
+                        <div class="footer-social text-right">
+                            <ul>
+                                <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                                <li><a href="#"><i class="icofont-linkedin"></i></a></li>
+                                <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                            </ul>
+                        </div>
+-->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+    <!--end footer-->
+    <!--jQuery js-->
+    <script src="user_assets/assets/js/jquery-3.3.1.min.js"></script>
+    <!--proper js-->
+    <script src="user_assets/assets/js/popper.min.js"></script>
+    <!--bootstrap js-->
+    <script src="user_assets/assets/js/bootstrap.min.js"></script>
+    <!--counter js-->
+    <script src="user_assets/assets/js/waypoints.js"></script>
+    <script src="user_assets/assets/js/counterup.min.js"></script>
+    <!--magnic popup js-->
+    <script src="user_assets/assets/js/magnific-popup.min.js"></script>
+    <!--owl carousel js-->
+    <script src="user_assets/assets/js/owl.carousel.min.js"></script>
+    <!--owl scrollIt js-->
+    <script src="user_assets/assets/js/scrollIt.min.js"></script>
+    <!--validator js-->
+    <script src="user_assets/assets/js/validator.min.js"></script>
+    <!--contact js-->
+    <script src="user_assets/assets/js/contact.js"></script>
+    <!--ajax newsletter js-->
+    <script src="newsletter/ajax-newsletter-form.js"></script>
+    <!--main js-->
+    <script src="user_assets/assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-
-<a href="#" class="scrollToTop icon-btn3"><i class="far fa-angle-up"></i></a>
-<div class="vs-cursor"></div>
-<div class="vs-cursor2"></div>
-<script src="user_assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="user_assets/js/app.min.js"></script>
-<script src="user_assets/js/vscustom-carousel.min.js"></script>
-<script src="user_assets/js/vs-cursor.min.js"></script>
-<script src="user_assets/js/vsmenu.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
-<script src="user_assets/js/map.js"></script>
-<script src="user_assets/js/ajax-mail.js"></script>
-<script src="user_assets/js/main.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
-
-<div class="socialmedia">
-    <div class="">
-        <ul>
-            <li class="facebook"><a href="https://www.facebook.com/MythriMovieMakers/" target="_blank"><i
-                        class="fab fa-facebook"></i></a></li>
-
-            <li class="instagram"><a href="https://www.instagram.com/mythriofficial/" target="_blank"><i
-                        class="fab fa-instagram"></i></a></li>
-
-            <li class="twitter"><a href="https://twitter.com/MythriOfficial" target="_blank"><i
-                        class="fab fa-twitter"></i></a></li>
-
-            <li class="pinterest"><a href="https://www.pinterest.com/mythrimoviemakers/" target="_blank"><i
-                        class="fab fa-pinterest"></i></a></li>
-
-            <li class="youtube"><a href="https://www.youtube.com/channel/UCKZSn5C-RzrLjuWJF8wWiDw" target="_blank"><i
-                        class="fab fa-youtube"></i></a></li>
-
-            <li class="whatsapp"><a href="https://api.whatsapp.com/send?phone=+914023551866" target="_blank"><i
-                        class="fab fa-whatsapp"></i></a></li>
-        </ul>
-    </div>
-</div>
-
-<div id="back-to-top" class="show">
-    <a class="top" href="https://api.whatsapp.com/send?phone=+914023551866" target="_blank" id="top"> <i
-            class="fab fa-whatsapp"></i> </a>
-</div>
-
-<?php if($this->session->flashdata('success')) {  ?>
-<script type="text/javascript">
-toastr.success("<?php echo $this->session->flashdata('success'); ?>", "", {
-"closeButton": "true",
-"progressBar": "true",
-"positionClass": "toast-top-right",
- "timeOut": "5000",
- "extendedTimeOut": "1000"  
+	<script>
+	$ (document).ready (function () {
+	$ (".modal a").not (".dropdown-toggle").on ("click", function () {
+		$ (".modal").modal ("hide");
+	});
 });
-</script> 
-<?php  } if($this->session->flashdata('error')){ ?>
-<script type="text/javascript">
-toastr.error("<?php echo $this->session->flashdata('error');?>", "", {
-"closeButton": "true",
-"progressBar": "true",
-"positionClass": "toast-top-right"
-});
-</script> 
-<?php } ?>  
- 
-<script type="text/javascript">       
-    <?php 
-        $err = validation_errors('', ',');
-        $error_msg = explode(',',$err);                    
-        if(isset($error_msg, $err) && !empty($error_msg) && (count($error_msg) > 0)  ){           
-            foreach($error_msg as $error){
-                if($error != ""){
-    ?>          
-    toaster("<?php echo trim(str_replace("<p>","",$error)); ?>");      
-<?php } } } ?> 
-
-function toaster(err_msg)
-{
-    if(err_msg){
-        toastr.error(err_msg, "", {
-         "closeButton": "true",
-         "progressBar": "true"
-     }); 
-    }
-    
-} 
-</script>
+	</script>
 
 </body>
-
 </html>
+
+
+<!-- Sidebar Right -->
+<div class="modal fade right" id="sidebar-right" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Refer & Earn</h4>
+            </div>
+            <div class="modal-body">
+                <form class="login-signup-form pb-5 pt-5">
+                                <div class="form-group">
+                                    <label class="pb-1">Friend Name</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="input-icon">
+                                            <span class="icofont-user color-primary"></span>
+                                        </div>
+                                        <input type="email" class="form-control" placeholder="Enter Your Name">
+                                    </div>
+                                </div>
+					 <!-- Mobile Number -->
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="pb-1">Friend Mobile</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-merge">
+                                        <div class="input-icon">
+                                            <span class="icofont-phone color-primary"></span>
+                                        </div>
+                                        <input type="email" class="form-control" placeholder="Enter Mobile Number">
+                                    </div>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="pb-1"> Friend Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-merge">
+                                        <div class="input-icon">
+                                            <span class="icofont-email color-primary"></span>
+                                        </div>
+                                        <input type="email" class="form-control" placeholder="name@yourdomain.com">
+                                    </div>
+                                </div>
+
+
+                                <!-- Submit -->
+                                <button class="btn btn-block secondary-solid-btn border-radius mt-4 mb-2">
+                                    Submit
+                                </button>
+
+                            </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -100,16 +100,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 // frontend views
 $route['default_controller'] = 'frontend_side/frontend/index';
 $route['index'] = 'frontend_side/Frontend/index';
+$route['nuclub'] = 'frontend_side/Frontend/nuclub_view';
 $route['contactus'] = 'frontend_side/Frontend/contactus';
-$route['about'] = 'frontend_side/Frontend/about';
-$route['error_page'] = 'frontend_side/Frontend/error_page';
-$route['awards'] = 'frontend_side/Frontend/award';
-$route['all_movies'] = 'frontend_side/Frontend/all_movies';
-$route['movie_details'] = 'frontend_side/Frontend/movie_details';
-$route['save_enquiry'] = 'frontend_side/Frontend/save_enquiry';
-$route['saveemail'] = 'frontend_side/Frontend/saveemail';
-$route['news_details'] = 'frontend_side/Frontend/news_details';
-$route['movie_info'] = 'frontend_side/Frontend/movie_info';
+$route['joinus'] = 'frontend_side/Frontend/joinus';
+$route['user_login'] = 'frontend_side/Frontend/user_login';
+$route['register'] = 'frontend_side/Frontend/user_register';
+$route['user_forgotpassword'] = 'frontend_side/Frontend/forgotpassword';
+
+
+
+
+
+
 
 
 /** admin side **/

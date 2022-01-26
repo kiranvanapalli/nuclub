@@ -10,36 +10,51 @@ class Frontend extends MX_Controller
     }
     public function index()
     {   
-        $where = ['status' => 1];
-        $wherereleasedmovies = ['movie_status' => "released"];
-        $whereupcomingmovies = ['movie_status' => "upcoming"];
-        $type = "array";
-        $data['all_news'] =  $this->Allfiles_model->GetDataAll("tb_resent_news",$where,$type,'news_id',$limit='');
+        $this->load->view('frontend_side/index'); 
+    }
+    public function nuclub_view()
+    {
+        $data['file'] = 'frontend_side/nuclub';
+        $this->load->view('user_template/main',$data);
+    }
 
-        $data['all_movies_list'] = $this->Allfiles_model->GetDataAll("movies",$wherereleasedmovies,$type,'movie_id',$limit='');
-        // $data['all_movies_list'] = $this->Allfiles_model->GetDataAll("tb_movies", $where, $type, 'year', $limit = '');
-        $data['video_list'] = $this->Allfiles_model->GetDataAll("tb_videos",$where,$type,'video_id',$limit='');
-        $data['upcoming_movies'] = $this->Allfiles_model->GetDataAll("movies", $whereupcomingmovies, $type, 'movie_id', $limit = '4');
-        $upcoming_movies = $this->Allfiles_model->GetDataAll("movies", $whereupcomingmovies, $type, 'movie_id', $limit = '1');
-        $movie_id = $upcoming_movies[0]['movie_id'];
-      
-        $where_cast = ['movie_id' => $movie_id,'status' => 1];
-        $data['cast_data'] = $this->Allfiles_model->GetDataAllmodels("tb_cast_crew", $where_cast, $type, 'cast_crew_id', $limit = '4');
-        $data['role_list'] = $this->Allfiles_model->GetDataAllmodels("tb_roles", $where, $type, 'role_id', $limit = '');
-        $data['upcoming_movies_banner_list'] = $this->Allfiles_model->GetDataAll("movies", $whereupcomingmovies, $type, 'movie_id', $limit = '');
-        $data['upcoming_movies_list'] = $this->Allfiles_model->GetDataAll("movies", $whereupcomingmovies, $type, 'movie_id', $limit = '');
-        // echo "<pre>";
-        // print_r($upcoming_movies[0]);
-        // print_r($data['cast_data']);
-        // echo "</pre>";
-        //  die();
-        $query = $this->db->get('movies');
-        $data['no_of_movies'] = $query->num_rows();
-        // echo $data['no_of_movies'];
-        $data['file'] = 'frontend_side/index';
+    public function contactus()
+    {
+
+        $data['file'] = 'frontend_side/contact';
         $data['custom_js'] = 'frontend_side/custom_js';
         $this->load->view('user_template/main',$data); 
     }
+    
+    public function joinus()
+    {
+        $data['file'] = 'frontend_side/joinus';
+        $data['custom_js'] = 'frontend_side/custom_js';
+        $this->load->view('user_template/main',$data); 
+    }
+
+    public function user_login()
+    {
+        $data['file'] = 'frontend_side/login';
+        $data['custom_js'] = 'frontend_side/custom_js';
+        $this->load->view('user_template/main',$data); 
+    }
+    public function user_register()
+    {
+        $data['file'] = 'frontend_side/register';
+        $data['custom_js'] = 'frontend_side/custom_js';
+        $this->load->view('user_template/main',$data); 
+    }
+
+    public function forgotpassword()
+    {
+        $data['file'] = 'frontend_side/forgot_password';
+        $data['custom_js'] = 'frontend_side/custom_js';
+        $this->load->view('user_template/main',$data); 
+    }
+
+
+
     public function about()
     {
         $data['file'] = 'frontend_side/about';
@@ -54,13 +69,7 @@ class Frontend extends MX_Controller
          $data['file'] = 'frontend_side/awards';
          $this->load->view('user_template/main',$data);
     }
-    public function contactus()
-    {
-
-        $data['file'] = 'frontend_side/contact';
-        $data['custom_js'] = 'frontend_side/custom_js';
-        $this->load->view('user_template/main',$data); 
-    } 
+   
 
     public function all_movies()
     {

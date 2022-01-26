@@ -1,97 +1,81 @@
+<!doctype html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>:: NU Club ::</title>
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="user_assets/assets/images/favicon.png" />
+    <!--bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="user_assets/assets/css/bootstrap.min.css">
+    <!--owl carousel css-->
+    <link rel="stylesheet" type="text/css" href="user_assets/assets/css/owl.carousel.min.css">
+    <!--magnific popup css-->
+    <link rel="stylesheet" type="text/css" href="user_assets/assets/css/magnific-popup.css">
+    <!--font awesome css-->
+    <link rel="stylesheet" type="text/css" href="user_assets/assets/css/fontawesome-all.min.css">
+    <!--icomoon icon css-->
+    <link rel="stylesheet" type="text/css" href="user_assets/assets/css/icomoon.css">
+    <!--icofont css-->
+    <link rel="stylesheet" type="text/css" href="user_assets/assets/css/icofont.min.css">
+    <!--animate css-->
+    <link rel="stylesheet" type="text/css" href="user_assets/assets/css/animate.css">
+    <!--main css-->
+    <link rel="stylesheet" type="text/css" href="user_assets/new-assets/css/style.css">
+    <!--responsive css-->
+    <link rel="stylesheet" type="text/css" href="user_assets/new-assets/css/responsive.css">
+</head>
 
-<html class="no-js" lang="zxx">
-
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>Mythri Movie Makers</title>
-
-        <link rel="preconnect" href="https://fonts.gstatic.com/" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Montserrat:wght@700&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
-
-        <link rel="icon" type="image/png" sizes="16x16" href="user_assets/img/favicons/favicon-16x16.png" />
-		
-        <link rel="manifest" href="user_assets/img/favicons/manifest.json" />
-        <link rel="stylesheet" href="user_assets/css/app.min.css" />
-        <link rel="stylesheet" href="user_assets/css/fontawesome.min.css" />
-        <link rel="stylesheet" href="user_assets/css/style.css" />
-        <link rel="stylesheet" href="user_assets/css/theme-color1.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    </head>
-    <body>
-        <div class="preloader">
-<!--            <button class="vs-btn preloaderCls">Cancel Preloader</button>-->
-            <div class="preloader-inner">
-                <div class="loader-logo"><img src="user_assets/img/logo.png" alt="Loader Image" /></div>
-                <div class="loader-wrap pt-4"><span class="loader"></span></div>
-            </div>
-        </div>
-        <div class="sticky-header-wrap sticky-header py-1 py-sm-2 py-lg-1">
-            <div class="container position-relative">
-                <div class="row align-items-center">
-                    <div class="col-5 col-md-3">
-                        <div class="logo">
-                            <a href="<?php echo base_url(); ?>"><img src="user_assets/img/logo-2.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <div class="col-7 col-md-9 text-end position-static">
-                        <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
-                            <ul>
-                                <li><a href="<?php echo base_url(); ?>">Home</a></li>
-								<li class="menu-item-has-children">
-								   <a href="#">company</a>
-								   <ul class="sub-menu">
-									  <li><a href="<?php echo base_url(); ?>about">About</a></li>
-                                      <li><a href="<?php echo base_url(); ?>awards">Awards</a></li>
-								   </ul>
-								</li>
-								<li><a href="<?= base_url(); ?>all_movies">Movies</a></li>
-								<li><a href="<?= base_url(); ?>contactus">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+<body>
+    <!--Start Preloader-->
+    <div class="preloader">
+        <div class="d-table">
+            <div class="d-table-cell align-middle">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
                 </div>
             </div>
         </div>
-        <div class="vs-menu-wrapper">
-            <div class="vs-menu-area bg-dark">
-                <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
-                <div class="mobile-logo">
-                    <a href="<?php echo base_url(); ?>"><img src="user_assets/img/logo.png" alt="" /></a>
-                </div>
-                <div class="vs-mobile-menu link-inherit"></div>
-            </div>
-        </div>
-        <header class="header-wrapper header-layout3 z-index-step1">
-            
-            <div class="menu-area py-3 py-lg-0">
-                <div class="container position-relative">
-                    <div class="row align-items-center">
-                        <div class="col-6 col-xl-2">
-                            <div class="bg-major-black d-lg-block d-none header-logo2 pt-30">
-                                <a href="<?php echo base_url(); ?>"><img src="user_assets/img/logo.png" alt="Logo Image" /></a>
-                            </div>
-                            <a class="d-inline-block d-lg-none" href="<?php echo base_url(); ?>"><img src="user_assets/img/logo-2.png" alt="Theme Logo" /></a>
-                        </div>
-                        <div class="col-6 col-lg-12 text-end ">
-                            <nav class="main-menu menu-style2 mobile-menu-active" data-expand="992">
-                                <ul>
-									<li><a href="<?php echo base_url(); ?>">Home</a></li>
-									<li class="menu-item-has-children">
-									  <a href="#">company</a>
-									  <ul class="sub-menu">
-										  <li><a href="<?php echo base_url(); ?>about">About</a></li>
-									 	  <li><a href="<?php echo base_url(); ?>awards">Awards</a></li>
-									  </ul>
-								   </li>
-                                   <li><a href="<?= base_url(); ?>all_movies">Movies</a></li>
-									<li><a href="<?= base_url(); ?>contactus">Contact</a></li>
-                            	</ul>
-                            </nav>
-                            <button type="button" class="vs-menu-toggle  d-inline-block d-lg-none"><i class="far fa-bars"></i></button>
-                        </div>
+    </div>
+    <!--End Preloader-->
+    <!--start header-->
+    <header id="header" class="two">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <a class="logo" href="<?php echo base_url(); ?>"><img src="user_assets/new-assets/images/logo-2.png" alt="logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"><i class="icofont-navigation-menu"></i></span>
+                    </button>
+                    <!-- navbar links -->
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="<?php echo base_url() ?>" data-scroll-nav="0">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-scroll-nav="1">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-scroll-nav="2">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-scroll-nav="4">News & Events</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo base_url() ?>contactus">Contact Us</a></li>
+							<li class="nav-item">
+                                <a class="nav-link" href="" type="button" data-toggle="modal" data-target="#sidebar-right">Refer & Earn</a>
+                            </li>
+                            <li class="nav-item download-btn">
+                                <a class="nav-link" href="<?php echo base_url() ?>joinus">Join Us</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </header>
+            </nav>
+        </div>
+    </header>

@@ -1,67 +1,146 @@
-<!--     ---------------------------------  Menu  ----------------------------------->
-<div class="breadcumb-wrapper breadcumb-layout1 pt-60 pb-50" data-bg-src="user_assets/img/breadcumb/breadcumb-1.jpg" data-overlay>
-   <div class="container z-index-common">
-      <div class="breadcumb-content text-center">
-         <h1 class="breadcumb-title h1 text-white my-0">Contact Us</h1>
-         <h2 class="breadcumb-bg-title">connect</h2>
-         <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
-            <li><a href="<?= base_url(); ?>"><i class="fal fa-home"></i>Home</a></li>
-            <li class="active">Contact Us</li>
-         </ul>
-      </div>
-   </div>
-</div>
-<section class="vs-contact-wrapper">
-   <div class="container">
-      <div class="row gx-60 mb-30">
-         <div class="col-8 mt-60">
-            <div class="position-relative">
-               <div class="map-wrap">
-                  <div>
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121804.28702274377!2d78.35493285010783!3d17.441326900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91641bc4ee5f%3A0x65c63ebb57501ed0!2sMythri%20movie%20makers!5e0!3m2!1sen!2sin!4v1634643542270!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                  </div>
-               </div>
-               <div class="info-box3 bg-dark position-absolute start-0 bottom-0 px-40 py-40">
-                  <h3 class="h4 text-white text-normal mb-2">MYTHRI MOVIE MAKERS</h3>
-                  <p class="text-white"><i class="fas fa-map-marker-alt me-2"></i>Sushrutha, #330/1, Rd. No.25, Jubilee Hills, Hyderabad – 500 033</p>
-                  <div class="row mt-lg-4">
-                     <div class="col-sm-5 mb-10 mb-sm-0">
-                        <div class="d-flex">
-                           <span class="icon-btn3 me-3"><i class="fas fa-phone-alt"></i></span>
-                           <div class="media-body align-self-center">
-                              <h4 class="h5 text-white font-theme text-normal mb-0">Get In Touch</h4>
-                              <a href="tel:+914023551866" class="text-white d-inline-block">+91 40 23551866</a>
-                           </div>
+<div class="main">
+
+    <!--header section start-->
+    <section class="hero-section ptb-100 gradient-overlay"
+             style="background: url('img/header-bg-5.jpg')no-repeat center center / cover">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-7">
+                    <div class="page-header-content text-white text-center pt-sm-5 pt-md-5">
+                        <h2 class="text-white mb-0">Contact Us</h2>
+                        <div class="custom-breadcrumb">
+                            <ol class="breadcrumb d-inline-block bg-transparent list-inline py-0">
+                                <li class="list-inline-item breadcrumb-item"><a class="text-white" href="<?php echo base_url() ?>">Home</a></li>
+                                <li class="list-inline-item breadcrumb-item active text-white">Contact Us</li>
+                            </ol>
                         </div>
-                     </div>
-                     <div class="col-sm-7">
-                        <div class="d-flex">
-                           <span class="icon-btn3 me-3"><i class="fal fa-envelope"></i></span>
-                           <div class="media-body align-self-center">
-                              <h4 class="h5 text-white font-theme text-normal mb-0">Mail Us</h4>
-                              <a href="mailto:info@mythrimoviemakers.com" class="text-white d-inline-block">info@mythrimoviemakers.com</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="col-lg-4">
-            <form action="<?= base_url() ?>save_enquiry" method="POST"  class="contact-form-style1 bg-smoke mt-60 border-0">
-               <div class="col-12 mb-30">
-                  <h3 class="text-normal mb-2">Send Us a Message</h3>
-                  <p class="fs-18">Your email address will not be published*</p>
-               </div>
-               <div class="form-group mb-20"><input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name"> <i class="fal fa-user"></i></div>
-               <div class="form-group mb-20"><input type="text" id="email" name="email" class="form-control" placeholder="Enter Your Email"> <i class="fal fa-envelope"></i></div>
-               <div class="form-group mb-20"><textarea class="form-control" id="message" rows="5" cols="50" name="message" placeholder="Your Message"></textarea> <i class="fal fa-pencil-alt"></i></div>
-               <div class="form-group mb-0">
-                  <button type="submit" class="vs-btn gradient-btn" name="enquiry_form" id="enquiry_form">Submit Your Quote</button>
-                  <p class="form-messages mt-20 mb-0"></p>
-               </div>
-            </form>
-         </div>
-      </div>
-   </div>
-</section>
+        </div>
+    </section>
+    <!--header section end-->
+
+    <!--contact us promo start-->
+    <section class="contact-us-promo pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card single-promo-card single-promo-hover text-center shadow-sm">
+                        <div class="py-5">
+                            <div class="pb-2">
+                                <span class="color-secondary fa-phone fas"></span>
+                            </div>
+                            <div><h5 class="mb-0">Call Us</h5>
+                                <p class="text-muted mb-0">+123 456-78900</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card single-promo-card single-promo-hover text-center shadow-sm">
+                        <div class="py-5">
+                            <div class="pb-2">
+                                <span class="fa-location-arrow fas color-secondary"></span>
+                            </div>
+                            <div><h5 class="mb-0">Visit Us</h5>
+                                <p class="text-muted mb-0">New York, CA N310</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card single-promo-card single-promo-hover text-center shadow-sm">
+                        <div class="py-5">
+                            <div class="pb-2">
+                                <span class="fa-envelope fas color-secondary"></span>
+                            </div>
+                            <div><h5 class="mb-0">Mail Us</h5>
+                                <p class="text-muted mb-0">help@yourdomain.com</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card single-promo-card single-promo-hover text-center shadow-sm">
+                        <div class="py-5">
+                            <div class="pb-2">
+                                <span class="fa-tty fas color-secondary"></span>
+                            </div>
+                            <div><h5 class="mb-0">Live Chat</h5>
+                                <p class="text-muted mb-0">Chat with Us 24/7</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--contact us promo end-->
+
+    <!--contact us section start-->
+    <section class="contact-us-section ptb-100">
+        <div class="container contact">
+            <div class="col-12 pb-3 message-box d-none">
+                <div class="alert alert-danger"></div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col-md-6">
+                    <div class="contact-us-form gray-light-bg rounded p-5">
+                        <h4>Ready to get started?</h4>
+                        <form action="#" method="POST" id="contactForm" class="contact-us-form">
+                            <div class="form-row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Enter name" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="Enter email" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea name="message" id="message" class="form-control" rows="7" cols="25" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-3">
+                                    <button type="submit" class="btn secondary-solid-btn" id="btnContactUs">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="contact-us-content">
+                        <h4>Looking for a excellent Business idea?</h4>
+                        <p class="">Seamlessly deliver pandemic e-services and next-generation initiatives.</p>
+
+                        <a href="#" class="btn outline-btn align-items-center">Get Directions <span class="icon-arrow-pointing-to-right pl-2"></span></a>
+
+                        <hr class="my-5">
+
+                        <h5>Our Headquarters</h5>
+                        <address>
+                            100 Yellow House, Mn <br>
+                            Factory, United State, 13420
+                        </address>
+                        <br>
+                        <span>Phone: +1234567890123</span> <br>
+                        <span>Email: <a href="mailto:email@yourdomain.com" class="link-color">email@yourdomain.com</a></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--contact us section end-->
+
+    <!--google map block start-->
+    <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.953735315922!3d-37.817323442021234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sbd!4v1571030260624!5m2!1sen!2sbd" height="450" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <!--google map block end-->
+
+
+</div>
