@@ -75,7 +75,7 @@ class Members extends MX_Controller
                     'from_address' => $from,
                     'to_address' => $to,
                     'full_name' => $this->input->post("full_name"),
-                    'email' => $$this->input->post("email_id"),
+                    'email' => $this->input->post("email_id"),
                     'mobilenumber' => $this->input->post("mobile_number"),
                     'password' => $this->input->post('password'),
                     'member_code' => $member_code,
