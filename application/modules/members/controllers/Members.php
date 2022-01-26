@@ -12,6 +12,8 @@ class Members extends MX_Controller
 
     }
 
+    
+
     public function index()
     {
         $where = '';
@@ -23,6 +25,8 @@ class Members extends MX_Controller
         $data['all_members'] = $all_members;
         $this->load->view('admin_template/main', $data);
     }
+
+    
 
     public function add_member()
     {
@@ -66,11 +70,26 @@ class Members extends MX_Controller
                 $primaryfield = 'member_id';
                 $get_member_details = $this->Allfiles_model->get_data("tb_members", $fieldname, $primaryfield, $insert_id);
                 $data['get_member_details'] = $get_member_details['resultSet'];
-                $this->load->config('email');
+               
+                $config = array(
+                  'protocol' => 'mail', // 'mail', 'sendmail', or 'smtp'
+                  'smtp_host' => 'sg2plmcpnl485224.prod.sin2.secureserver.net', 
+                  'smtp_port' => 587,
+                  'smtp_user' => 'adnectics@gmail.com',
+                  'smtp_pass' => 'Adnectics@1222',
+                  'smtp_crypto' => 'ssl', //can be 'ssl' or 'tls' for example
+                  'mailtype' => 'html', //plaintext 'text' mails or 'html'
+                  'smtp_timeout' => '4', //in seconds
+                  'charset' => 'utf-8',
+                  'wordwrap' => TRUE,
+                  'priority' => '1'
+              );
+
+               $this->load->config($config);
+                
                 $this->load->library('email');
                 $from = $this->config->item('smtp_user');
                 $to = $this->input->post('email');
-
                 $data = array(
                     'from_address' => $from,
                     'to_address' => $to,
