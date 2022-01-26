@@ -12,4 +12,6 @@ $config = array(
     'wordwrap' => TRUE,
     'priority' => '1'
 );
+$this->email->initialize($config);
+
 ?>
