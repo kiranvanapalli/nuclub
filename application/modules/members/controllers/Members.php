@@ -85,7 +85,7 @@ class Members extends MX_Controller
               //     'priority' => '1'
               // );
 
-              //  $this->load->config($config);
+               $this->load->config('email');
                 
                 $this->load->library('email');
                 $from = $this->config->item('smtp_user');
