@@ -202,99 +202,91 @@ class Allfiles_model extends CI_Model
                 return $query;
 
     }
-     public function GetDataFromJoinwithdist($data)
-    {
+    //  public function GetDataFromJoinwithdist($data)
+    // {
        
-        if(isset($data) && !empty($data) && is_array($data))
-        {
-            if(isset($data['fileds']) && !empty($data['fileds']))
-            {    
+    //     if(isset($data) && !empty($data) && is_array($data))
+    //     {
+    //         if(isset($data['fileds']) && !empty($data['fileds']))
+    //         {    
 
-                 $this->db->select($data['fileds']);
+    //              $this->db->select($data['fileds']);
                 
 
-            }
-            $this->db->from($data['table']); 
+    //         }
+    //         $this->db->from($data['table']); 
         
-            // Joins
-            if(isset($data['join_tables']) && !empty($data['join_tables']) && is_array($data['join_tables']))
-            {
-                foreach($data['join_tables'] as $join)
-                {
+    //         // Joins
+    //         if(isset($data['join_tables']) && !empty($data['join_tables']) && is_array($data['join_tables']))
+    //         {
+    //             foreach($data['join_tables'] as $join)
+    //             {
                     
-                    $this->db->join($join['table'], $join['join_on'], $join['join_type']);
-                }
-            }
+    //                 $this->db->join($join['table'], $join['join_on'], $join['join_type']);
+    //             }
+    //         }
 
-            // Where
-            if(isset($data['where']) && !empty($data['where']) && is_array($data['where']))
-            {
-                foreach($data['where'] as $where)
-                {
-                    if(isset($where['column'],$where['value']) && !empty($where['status']))
-                    {
-                        $this->db->where($where['column']." ".$where['value'],NULL,false); 
-                    }
-                    else
-                    {
-                        $this->db->where($where['column'],$where['value']);
-                    }
+    //         // Where
+    //         if(isset($data['where']) && !empty($data['where']) && is_array($data['where']))
+    //         {
+    //             foreach($data['where'] as $where)
+    //             {
+    //                 if(isset($where['column'],$where['value']) && !empty($where['status']))
+    //                 {
+    //                     $this->db->where($where['column']." ".$where['value'],NULL,false); 
+    //                 }
+    //                 else
+    //                 {
+    //                     $this->db->where($where['column'],$where['value']);
+    //                 }
                      
-                }
-            }
+    //             }
+    //         }
 
-            //Limit            
-            if(isset($data['limit']['start'],$data['limit']['end']) && !empty($data['limit']) && is_array($data['limit']))
-            {
-                $limit = $data['limit']['start']; $offset = $data['limit']['end'];
-                $this->db->limit($limit, $offset);                
-            }
+    //         //Limit            
+    //         if(isset($data['limit']['start'],$data['limit']['end']) && !empty($data['limit']) && is_array($data['limit']))
+    //         {
+    //             $limit = $data['limit']['start']; $offset = $data['limit']['end'];
+    //             $this->db->limit($limit, $offset);                
+    //         }
 
-            if(isset($data['order_by']['column'],$data['order_by']['Type']) && !empty($data['order_by']) && is_array($data['order_by']))
-            {
-                $order_type = (isset($data['order_by']['Type']) && !empty($data['order_by']['Type']))?$data['order_by']['Type']:"ASC";
+    //         if(isset($data['order_by']['column'],$data['order_by']['Type']) && !empty($data['order_by']) && is_array($data['order_by']))
+    //         {
+    //             $order_type = (isset($data['order_by']['Type']) && !empty($data['order_by']['Type']))?$data['order_by']['Type']:"ASC";
                 
-                $this->db->order_by($data['order_by']['column'],$order_type);
+    //             $this->db->order_by($data['order_by']['column'],$order_type);
                                   
-            }
+    //         }
+
+    //         if (isset(($data['group_by']['column']))){
            
             
-               
-               
+    //           $this->db->group_by($data['group_by']['column']); 
+    //           } 
 
-            
-                                  
-          
-
-            if (isset(($data['group_by']['column']))){
+    //           if (isset(($data['group_by2']['column']))){
            
             
-              $this->db->group_by($data['group_by']['column']); 
-              } 
-
-              if (isset(($data['group_by2']['column']))){
-           
-            
-              $this->db->group_by($data['group_by2']['column']); 
-              } 
+    //           $this->db->group_by($data['group_by2']['column']); 
+    //           } 
 
 
 
                 
-              $this->db->distinct($data['distinct']['column']);
+    //           $this->db->distinct($data['distinct']['column']);
                                    
-            if(isset($data['row_type']) && $data['row_type'] != '' && $data['row_type'] == 'array')
-            {
-               $query = $this->db->get()->result_array();
-            }
-            if(isset($data['row_type']) && $data['row_type'] != '' && $data['row_type'] == 'row')
-            {
-               $query = $this->db->get()->row_array();
-            }
+    //         if(isset($data['row_type']) && $data['row_type'] != '' && $data['row_type'] == 'array')
+    //         {
+    //            $query = $this->db->get()->result_array();
+    //         }
+    //         if(isset($data['row_type']) && $data['row_type'] != '' && $data['row_type'] == 'row')
+    //         {
+    //            $query = $this->db->get()->row_array();
+    //         }
                 
-            return $query;
-        } 
-    }
+    //         return $query;
+    //     } 
+    // }
 
 
     public function count($tableName,$whr)
