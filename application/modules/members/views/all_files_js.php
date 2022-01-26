@@ -84,7 +84,7 @@
                     if (data) {
                         console.log(data);
                         toastr["success"]("Member Details Added Successfully!");
-                        window.location.href = "<?php echo base_url(); ?>members";
+                        // window.location.href = "<?php echo base_url(); ?>members";
 
                     } else {
                         toastr["error"]("Member Details added failed! Please try again.");
