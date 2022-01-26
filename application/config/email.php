@@ -6,7 +6,7 @@ $config = array(
     'smtp_user' => 'info.adnectics@adnectics.com',
     'smtp_pass' => 'Adnectics@123',
     'smtp_crypto' => 'ssl', //can be 'ssl' or 'tls' for example
-   //plaintext 'text' mails or 'html'
+    'mailtype' => 'html', //plaintext 'text' mails or 'html'
     'smtp_timeout' => '4', //in seconds
     'charset' => 'utf-8',
     'wordwrap' => TRUE,
