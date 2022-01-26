@@ -31,7 +31,8 @@ class Members extends MX_Controller
       $type  = "array";
       $data['states_list'] = $this->Allfiles_model->GetDataAllmodels("tb_states",$where,$type,'state_name',$limit='');
       $data['custom_js']  = 'members/all_files_js';
-      $this->load->view('admin_template/main',$data);  
+      $this->load->view('admin_template/main',$data);
+        
     }
 
    
@@ -60,6 +61,21 @@ class Members extends MX_Controller
      ); 
      $result = $this->Allfiles_model->data_save("tb_members",$data);
      echo  json_encode($result);
+     if($result)
+     {
+      $insert_id = $this->db->insert_id();
+      if ($insert_id) 
+      {
+        $fieldname = '';       
+        $primaryfield = 'member_id';      
+        $where = ['member_id' => $insert_id];
+        $type = "array"; 
+        $get_member_details = $this->Allfiles_model->get_data("tb_members",$fieldname,$primaryfield,$insert_id);
+        $data['get_member_details']   = $get_member_details['resultSet'];
+        print_r($get_member_details);die();
+      }
+     }
+    
     }
     public function edit_member()
      {
