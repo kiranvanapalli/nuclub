@@ -12,7 +12,7 @@
         $(document).on('submit', '#add_member', function(event) {
             event.preventDefault();
             var full_name = $('#full_name').val();
-            // var email_id = $('#email_id').val();
+            var email_id = $('#email_id').val();
             var mobile_number = $('#mobile_number').val();
             var gender = $('#gender').val();
             var date = $('#date').val();
@@ -25,6 +25,10 @@
 
             if (full_name == '') {
                 toastr["error"]("Full Name is required!");
+                return false;
+            }
+            if (email_id == '') {
+                toastr["error"]("Email Id is required!");
                 return false;
             }
             if (mobile_number == '') {
@@ -97,7 +101,7 @@
         $(document).on('submit', '#update_member', function(event) {
             event.preventDefault();
             var full_name = $('#full_name').val();
-            // var email_id = $('#email_id').val();
+            var email_id = $('#email_id').val();
             var mobile_number = $('#mobile_number').val();
             var gender = $('#gender').val();
             var date = $('#date').val();
@@ -110,6 +114,10 @@
 
             if (full_name == '') {
                 toastr["error"]("Full Name is required!");
+                return false;
+            }
+            if (email_id == '') {
+                toastr["error"]("Email Id is required!");
                 return false;
             }
             if (mobile_number == '') {
