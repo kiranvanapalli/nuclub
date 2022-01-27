@@ -172,6 +172,17 @@
                 toastr["error"]("Please Enter Confirm password");
                 return false;
             }
+            if(password.length < 6)
+            {
+                toastr["error"]("Password Should Be At Least 6 Letters");
+                return false;
+
+            }
+            if(conf_password.length < 6)
+            {
+                toastr["error"]("Confirm Password Should Be At Least 6 Letters");
+                return false;
+            }
             if(password != conf_password)
             {
                 toastr["error"]("Please Password & Confirm Password Not Match");

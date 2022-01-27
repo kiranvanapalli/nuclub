@@ -15,7 +15,7 @@
                                         <input type="email" class="form__input" placeholder="Email ID" id="email_id" name="email_id" value="<?php echo $get_member_details['email'] ?>">
                                     </div>
                                     <div class="col-12 col-sm-6 col-lg-3">
-                                        <input type="text" class="form__input" placeholder="Mobile Number" id="mobile_number" name="mobile_number" value="<?php echo $get_member_details['mobilenumber'] ?>">
+                                        <input type="text" class="form__input" placeholder="Mobile Number" id="mobile_number" name="mobile_number" value="<?php echo $get_member_details['mobilenumber'] ?>" onkeypress="return onlyNumberKey(event)" maxlength="10">
                                     </div>
                                     <div class="col-12 col-sm-6 col-lg-3">
                                         <select class="form__input" id="gender" name="gender">
@@ -101,7 +101,7 @@
                                                 <input type="password" name="password" id="password" class="form__input" placeholder="Password" autocomplete="off" value="<?php echo $get_member_details['password']; ?>">
                                             </div>
                                             <div class="col-lg-6">
-                                                <input type="password" name="conf_password" id="conf_password" class="form__input" placeholder="Confirm Password" autocomplete="off" value="<?php echo $get_member_details['password']; ?>">
+                                                <input type="password" name="conf_password" id="conf_password" class="form__input" placeholder="Confirm Password" autocomplete="off" value="<?php echo $get_member_details['password']; ?>"onkeypress="return onlyNumberKey(event)" maxlength="10">
                                             </div>
                                         </div>
                                     </div>
