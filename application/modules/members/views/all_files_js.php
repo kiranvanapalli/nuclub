@@ -86,8 +86,8 @@
                         toastr["success"]("Member Details Added Successfully!");
                         window.location.href = "<?php echo base_url(); ?>members";
 
-                    } else if(data.status =="error") {
-                        toastr["error"](data.message);
+                    } else if(data.status == "error") {
+                        toastr["error"]("Mobile Number Already Existed");
                         return false;
                     }
 
