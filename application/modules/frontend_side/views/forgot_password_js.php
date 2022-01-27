@@ -18,18 +18,18 @@
                 data: new FormData(this),
                 contentType: false,
                 processData: false,
-                dataType:JSON,
+                dataType:'JSON',
                 success: function(data) {
                     
-                    let details = JSON.parse(data);
-                    console.log(details);
-                    if (details.status == "Success") {
+                   
+                    console.log(data);
+                    if (data.status == "success") {
 
                         toastr["success"]("Password Send Your Registered Mail");
                         // window.location.href = "<?php echo base_url(); ?>";
 
                     }
-                    else if(details.status == "Fail")
+                    else if(details.status == "fail")
                     {
                         toastr["error"]("MailId Not Registered");
                         return false;

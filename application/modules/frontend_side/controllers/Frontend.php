@@ -90,19 +90,17 @@ class Frontend extends MX_Controller
             } else {
                 show_error($this->email->print_debugger());
             }
-            $response = array(
-                "status" => "Success",
-                "Message" => "User Found"
-            );
+            $response = ['status' => 'success'];
         }
         else
         {
-            $response = array(
-                "status" => "Fail",
-                "Message" => "User Not Found"
-            );
-
+            
+                $response = ['status' => 'fail'];
+       
+            
         }
+
+        
         echo json_encode($response);
         
     }
