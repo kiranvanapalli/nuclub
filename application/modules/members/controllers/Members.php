@@ -90,7 +90,7 @@ class Members extends MX_Controller
                 $this->load->library('email');
                 $from = $this->config->item('smtp_user');
                 // $this->email->set_mailtype("html");
-                $to = $this->input->post('email');
+                $to = $this->input->post('email_id');
                 $data = array(
                     'from_address' => $from,
                     'to_address' => $to,
