@@ -81,7 +81,10 @@
                 contentType: false,
                 processData: false,
                 success: function(data) {
-                    console.log(data['status']);
+                    let detail = JSON.parse(data);
+
+                    console.log(detail);
+                    
                     if (data['status'] =="success") {
                         toastr["success"]("Member Details Added Successfully!");
                         window.location.href = "<?php echo base_url(); ?>members";
