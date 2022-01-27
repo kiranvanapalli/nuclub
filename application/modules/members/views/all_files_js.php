@@ -83,14 +83,16 @@
                 success: function(data) {
                     console.log(data);
                     let detail = JSON.parse(data);
-                    if (detail['status'] == "success") {
-                        toastr["success"]("Member Details Added Successfully!");
-                        window.location.href = "<?php echo base_url(); ?>members";
-
-                    } else if(detail['status'] == "error") {
+                    if (detail['status'] == "error") {
                         toastr["error"]("Mobile Number Already Existed");
                         return false;
+
+                    } else 
+                    {
+                        toastr["error"]("Member Details Added Successfully!");
+                        window.location.href = "<?php echo base_url(); ?>members";
                     }
+                    
 
 
                 }
