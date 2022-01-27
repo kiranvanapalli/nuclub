@@ -77,12 +77,13 @@
             $.ajax({
                 url: "<?php echo base_url() ?>save_member",
                 method: 'POST',
-                dataType:'JSON',
+                data: new FormData(this),
                 contentType: false,
                 processData: false,
+                dataType:'JSON',
                 success: function(data) {
                     console.log(data);
-                    if (data.status== "success") {
+                    if (data['status'] == "success") {
                         
                         toastr["success"]("Member Details Added Successfully!");
                          window.location.href = "<?php echo base_url(); ?>members";
