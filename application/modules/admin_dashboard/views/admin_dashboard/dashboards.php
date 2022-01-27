@@ -29,18 +29,18 @@
                     </a> 
                 </div>
 
-                <!-- <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-lg-4">
                     <a href="<?php echo base_url(); ?>award">
                         <div class="card p-2 stats colo-2">
-                            <span>Awards</span>
-                            <p><?php echo $awards; ?></p>
-                            <i class="las la-award"></i>
+                            <span>Join US</span>
+                            <p><?php echo $join_us; ?></p>
+                            <i class="las la-user-friends"></i>
                         </div>
                     </a>
                 </div>
 
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <!-- <div class="col-12 col-sm-6 col-lg-4">
                     <a href="<?php echo base_url() ?>enquiry">
                         <div class="card p-2 stats colo-4">
                             <span>Enquiry</span>

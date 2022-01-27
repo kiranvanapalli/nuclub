@@ -13,10 +13,11 @@ class Admin_dashboards extends MX_Controller
     public function index()
     {
         $where = ['status' => 1];
+        $where_data = '';
         $data['file'] = 'admin_dashboard/admin_dashboard/dashboards';
         // $data['custom_js'] = 'admin_dashboard/admin_dashboard/custom_js/admin_dashboard_js';
          $data['no_of_members'] = $this->Allfiles_model->count('tb_members',$where);
-        // $data['movies'] = $this->Allfiles_model->count('movies',$where);
+         $data['join_us'] = $this->Allfiles_model->countwittoutwhere('tb_join_us');
         // $data['awards'] = $this->Allfiles_model->count('tb_awards',$where);
         // // $data['movies'] = $this->Allfiles_model->count('tb_movies',$where);
         // $data['videos'] = $this->Allfiles_model->count('tb_videos',$where);

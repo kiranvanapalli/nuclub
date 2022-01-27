@@ -296,6 +296,12 @@ class Allfiles_model extends CI_Model
     return $query->num_rows();    
 
   }
+  public function countwittoutwhere($tableName)
+  {
+    $query = $this->db->get($tableName);
+    return $query->num_rows();    
+
+  }
   public function fetch_model($manufactured_id)
   {
   $this->db->where('status', 1);
