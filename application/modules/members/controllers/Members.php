@@ -67,6 +67,7 @@ class Members extends MX_Controller
             );
             $result = $this->Allfiles_model->data_save("tb_members", $data);
             $response = ['status' => 'success'];
+            echo json_encode($response);
             if ($result) {
                 // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
                 // echo json_encode($response);
@@ -111,8 +112,9 @@ class Members extends MX_Controller
                 // echo json_encode($response);
                
             }
+            
         }
-        echo json_encode($response);
+        
     }
     public function edit_member()
     {
