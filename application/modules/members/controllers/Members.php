@@ -48,7 +48,7 @@ class Members extends MX_Controller
             // $response = array('status'=>'error','message' => 'Mobile Number Already Existed'); //etc
             // echo json_encode($response);
 
-            $response = ['status' => 'success'];
+            $response = ['status' => 'fail'];
         } else {
             $data = array(
                 'fullname' => $this->input->post("full_name"),
@@ -66,7 +66,7 @@ class Members extends MX_Controller
                 'status' => 1,
             );
             $result = $this->Allfiles_model->data_save("tb_members", $data);
-           
+            $response = ['status' => 'success'];
             if ($result) {
                 // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
                 // echo json_encode($response);
@@ -111,8 +111,6 @@ class Members extends MX_Controller
                 // echo json_encode($response);
                
             }
-           
-            $response = ['status' => 'success'];
         }
         echo json_encode($response);
     }
