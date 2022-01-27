@@ -67,6 +67,8 @@ class Members extends MX_Controller
             );
             $result = $this->Allfiles_model->data_save("tb_members", $data);
             $response = ['status' => 'success'];
+
+            print_r($response);
            
             if ($result) {
                 // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
