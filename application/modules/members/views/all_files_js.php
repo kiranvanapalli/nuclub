@@ -82,14 +82,14 @@
                 processData: false,
                 success: function(data) {
                     console.log(data);
-                    // if (data.status="success") {
-                    //     toastr["success"]("Member Details Added Successfully!");
-                    //     window.location.href = "<?php echo base_url(); ?>members";
+                    if (data.status =="success") {
+                        toastr["success"]("Member Details Added Successfully!");
+                        window.location.href = "<?php echo base_url(); ?>members";
 
-                    // } else if(data.status="error") {
-                    //     toastr["error"](data.message);
-                    //     return false;
-                    // }
+                    } else if(data.status =="error") {
+                        toastr["error"](data.message);
+                        return false;
+                    }
 
 
                 }
