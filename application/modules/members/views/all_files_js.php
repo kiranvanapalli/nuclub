@@ -80,7 +80,7 @@
                 data: new FormData(this),
                 contentType: false,
                 processData: false,
-                dataType:'JSON',
+               
                 success: function(data) {
                     console.log(data);
                     if (data.status == 'success') {
