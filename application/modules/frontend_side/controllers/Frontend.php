@@ -51,6 +51,7 @@ class Frontend extends MX_Controller
     public function forgotpasswordmail()
     {
         $response = [];
+
         $where = $this->input->post('email');
         $type = "array";
         $fieldname = '';
@@ -59,7 +60,7 @@ class Frontend extends MX_Controller
        
         if($get_member_details['status'] != '')
         {
-            $data = $get_member_details['resultSet'];
+            $details = $get_member_details['resultSet'];
             // print_r($data);
             $this->load->config('email');
             $this->load->library('email');
@@ -68,12 +69,12 @@ class Frontend extends MX_Controller
             $data = array(
                 'from_address' => $from,
                 'to_address' => $to,
-                'full_name' => $data['fullname'],
-                'email' => $data['email'],
-                'mobilenumber' => $data['mobilenumber'],
-                'password' =>$data['password'],
-                'member_code' => $data['member_code'],
-                'points' => $this->input->post('points'),
+                'full_name' => $details['fullname'],
+                'email' => $details['email'],
+                'mobilenumber' => $details['mobilenumber'],
+                'password' =>$details['password'],
+                'member_code' => $details['member_code'],
+                'points' => $details['points'],
 
             );
 
@@ -93,7 +94,7 @@ class Frontend extends MX_Controller
           
         }
        
-        if($data)
+        if($get_member_details)
         {
             $response = ['status' => "success"];
         }
