@@ -46,7 +46,7 @@ class Members extends MX_Controller
         $all_members = $this->Allfiles_model->GetDataAll("tb_members", $where, $type, 'member_id', $limit = '');
         if (!empty($all_members)) {
             $response = array('status'=>'error','message' => 'Mobile Number Already Existed'); //etc
-            
+            echo json_encode($response);
         } else {
             $data = array(
                 'fullname' => $this->input->post("full_name"),
@@ -104,11 +104,8 @@ class Members extends MX_Controller
                 }
             }
             $response = array('status'=>'success','message' => 'Member Details Added Successfully');
-           
-
+            echo json_encode($response);
         }
-        echo json_encode($response);
-
     }
     public function edit_member()
     {
