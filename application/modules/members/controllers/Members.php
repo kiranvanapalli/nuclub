@@ -75,7 +75,7 @@ class Members extends MX_Controller
                 'status' => 1,
             );
             $result = $this->Allfiles_model->data_save("tb_members", $data);
-            $response = ['status' => 'success'];
+            $response = array('status'=>'success','message' => 'Member Details Added Successfully');
             echo json_encode($response);
             if ($result) {
                 $insert_id = $this->db->insert_id();
