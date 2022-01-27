@@ -103,7 +103,7 @@ class Members extends MX_Controller
 
                 );
 
-                // $subject = "Member Login Details";
+                $subject = 'Member Login Details';
                 $body = $this->load->view('send_mail_temp', $data, true);
                 $this->email->set_newline("\r\n");
                 $this->email->from($from, 'Nu Club');
