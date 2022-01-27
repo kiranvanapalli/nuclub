@@ -81,13 +81,15 @@
                 contentType: false,
                 processData: false,
                 success: function(data) {
-                    if (data['status'] == "error") {
-                        toastr["error"]("Mobile Number Already Existed");
-                        return false;
+                    if (data['status'] == "success") {
+                        
+                        toastr["success"]("Member Details Added Successfully!");
+                         window.location.href = "<?php echo base_url(); ?>members";
+                        
                     }else
                     {
-                        toastr["success"]("Member Details Added Successfully!");
-                        window.location.href = "<?php echo base_url(); ?>members";
+                        toastr["error"]("Mobile Number Already Existed");
+                        return false;
                     }
                 }
             });

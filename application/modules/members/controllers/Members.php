@@ -112,7 +112,7 @@ class Members extends MX_Controller
                
             }
            
-            $response = ['status' => 'error'];
+            $response = ['status' => 'success'];
         }
         echo json_encode($response);
     }
