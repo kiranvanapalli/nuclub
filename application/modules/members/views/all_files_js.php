@@ -81,12 +81,14 @@
                 contentType: false,
                 processData: false,
                 success: function(data) {
+                    console.log(data);
                     if (data['status'] == "success") {
                         
                         toastr["success"]("Member Details Added Successfully!");
                          window.location.href = "<?php echo base_url(); ?>members";
                         
-                    }else
+                    }
+                    else
                     {
                         toastr["error"]("Mobile Number Already Existed");
                         return false;
