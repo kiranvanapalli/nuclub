@@ -86,7 +86,7 @@
                         toastr["success"]("Member Details Added Successfully!");
                         // window.location.href = "<?php echo base_url(); ?>members";
 
-                    } else {
+                    } else if(data="error") {
                         toastr["error"]("Member Details added failed! Please try again.");
                         return false;
                     }
