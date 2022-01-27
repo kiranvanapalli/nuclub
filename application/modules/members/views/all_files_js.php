@@ -81,7 +81,7 @@
                 contentType: false,
                 processData: false,
                 success: function(data) {
-                    console.log(data);
+                    console.log(data['status']);
                     if (data['status'] =="success") {
                         toastr["success"]("Member Details Added Successfully!");
                         window.location.href = "<?php echo base_url(); ?>members";
