@@ -23,7 +23,7 @@
                     <!-- <a href="<?php echo base_url() ?>upcoming_movies"> -->
                         <div class="card p-2 stats colo-1">
                             <span>Members</span>
-                            <p>30</p>
+                            <p><?php echo $no_of_members; ?></p>
                             <i class="las la-user-friends"></i>
                         </div>
                     <!-- </a> -->
