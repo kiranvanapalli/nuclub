@@ -41,7 +41,7 @@
                     </li>
                     <li class="nav-item mr-auto">
                         <a class="navbar-brand" href="<?php echo base_url(); ?>dashboard">
-                            <img class="brand-logo" alt="modern admin logo" src="admin_assets/app-assets/images/logo/logo.png" />
+                            <img class="brand-logo" alt="modern admin logo" src="user_assets/new-assets/images/logo-2.png" />
                             <!-- <h3 class="brand-text">Mythri Movie Maker</h3> -->
                         </a>
                     </li>
