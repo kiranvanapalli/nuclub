@@ -18,6 +18,7 @@
                 data: new FormData(this),
                 contentType: false,
                 processData: false,
+                dataType:JSON,
                 success: function(data) {
                     
                     let details = JSON.parse(data);
