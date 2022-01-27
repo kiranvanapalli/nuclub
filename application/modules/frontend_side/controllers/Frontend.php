@@ -90,14 +90,16 @@ class Frontend extends MX_Controller
             } else {
                 show_error($this->email->print_debugger());
             }
-            $response = ['status' => 'success'];
+          
+        }
+       
+        if($data)
+        {
+            $response = ['status' => "success"];
         }
         else
         {
-            
-                $response = ['status' => 'fail'];
-       
-            
+            $response = ['status' => "fail"];
         }
 
         
