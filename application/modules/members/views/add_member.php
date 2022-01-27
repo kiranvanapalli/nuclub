@@ -100,7 +100,7 @@
                                             <div class="col-lg-12">
                                                 <h3>Add NU Points</h3>
                                             </div>
-                                            <div class="col-lg-6"><input type="text" class="form__input" placeholder="0000" name="nu_points" id="nu_points"></div>
+                                            <div class="col-lg-6"><input type="text" class="form__input" placeholder="0000" name="nu_points" id="nu_points"  onkeypress="return onlyNumberKey(event)"></div>
                                         </div>
                                     </div>
                                     <div class="col-12">
