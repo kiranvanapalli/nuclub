@@ -85,11 +85,11 @@
 
                     console.log(detail);
                     
-                    if (data['status'] =="success") {
+                    if (detail['status'] =="success") {
                         toastr["success"]("Member Details Added Successfully!");
                         window.location.href = "<?php echo base_url(); ?>members";
 
-                    } else if(data['status'] == "error") {
+                    } else if(detail['status'] == "error") {
                         toastr["error"]("Mobile Number Already Existed");
                         return false;
                     }
