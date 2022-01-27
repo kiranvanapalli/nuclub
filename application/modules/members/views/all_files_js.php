@@ -81,6 +81,7 @@
                 contentType: false,
                 processData: false,
                 success: function(data) {
+                    console.log(data);
                     let detail = JSON.parse(data);
                     if (detail['status'] == "success") {
                         toastr["success"]("Member Details Added Successfully!");
