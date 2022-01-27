@@ -60,11 +60,6 @@ class Frontend extends MX_Controller
         if($get_member_details['status'] != '')
         {
             $data = $get_member_details['resultSet'];
-            $response = array(
-                "status" => "Success",
-                "Message" => "User Found"
-            );
-    
             $this->load->config('email');
             $this->load->library('email');
             $from = $this->config->item('smtp_user');
@@ -94,6 +89,10 @@ class Frontend extends MX_Controller
             } else {
                 show_error($this->email->print_debugger());
             }
+            $response = array(
+                "status" => "Success",
+                "Message" => "User Found"
+            );
         }
         else
         {

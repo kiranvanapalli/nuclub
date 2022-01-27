@@ -20,6 +20,7 @@
                 processData: false,
                 success: function(data) {
                     let details = JSON.parse(data);
+                    console.log(details);
                     if (details.status == "Success") {
 
                         toastr["success"]("Password Send Your Registered Mail");
