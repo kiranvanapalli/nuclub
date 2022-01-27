@@ -81,7 +81,7 @@
                 contentType: false,
                 processData: false,
                 success: function(data) {
-                    if (data.status == "error") {
+                    if (data['status'] == "error") {
                         toastr["error"]("Mobile Number Already Existed");
                         return false;
                     }else
