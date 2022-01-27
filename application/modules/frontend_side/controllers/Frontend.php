@@ -60,6 +60,7 @@ class Frontend extends MX_Controller
         if($get_member_details['status'] != '')
         {
             $data = $get_member_details['resultSet'];
+            // print_r($data);
             $this->load->config('email');
             $this->load->library('email');
             $from = $this->config->item('smtp_user');

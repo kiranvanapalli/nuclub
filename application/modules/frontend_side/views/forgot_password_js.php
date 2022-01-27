@@ -19,12 +19,13 @@
                 contentType: false,
                 processData: false,
                 success: function(data) {
+                    
                     let details = JSON.parse(data);
                     console.log(details);
                     if (details.status == "Success") {
 
                         toastr["success"]("Password Send Your Registered Mail");
-                        window.location.href = "<?php echo base_url(); ?>";
+                        // window.location.href = "<?php echo base_url(); ?>";
 
                     }
                     else if(details.status == "Fail")
