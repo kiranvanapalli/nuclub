@@ -92,17 +92,16 @@
                 toastr["error"]("Please Enter Points");
                 return false;
             }
-            // var datastring = $("#asset_form").serialize();
+           
             $.ajax({
                 url: "<?php echo base_url() ?>save_member",
                 method: 'POST',
                 data: new FormData(this),
                 contentType: false,
                 processData: false,
-                dataType:'JSON',
                 success: function(data) {
                     console.log(data);
-                    if (data.status == 'success') {
+                    if (data) {
 
                         toastr["success"]("Member Details Added Successfully!");
                          window.location.href = "<?php echo base_url(); ?>members";
