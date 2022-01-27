@@ -102,9 +102,11 @@ class Members extends MX_Controller
                     }
 
                 }
+                $response = array('status'=>'success','message' => 'Member Details Added Successfully');
+                echo json_encode($response);
             }
-            $response = array('status'=>'success','message' => 'Member Details Added Successfully');
-            echo json_encode($response);
+          
+
         }
     }
     public function edit_member()
