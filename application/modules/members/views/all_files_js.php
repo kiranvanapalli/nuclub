@@ -81,12 +81,11 @@
                 contentType: false,
                 processData: false,
                 success: function(data) {
-                    if (data) {
-                        console.log(data);
+                    if (status="success") {
                         toastr["success"]("Member Details Added Successfully!");
-                        // window.location.href = "<?php echo base_url(); ?>members";
+                        window.location.href = "<?php echo base_url(); ?>members";
 
-                    } else if(data="error") {
+                    } else if(status="error") {
                         toastr["error"]("Member Details added failed! Please try again.");
                         return false;
                     }
