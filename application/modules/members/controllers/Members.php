@@ -37,7 +37,7 @@ class Members extends MX_Controller
 
     public function save_member()
     {
-
+        $response = [];
         $fivedigitcode = mt_rand(11111, 99999);
         $member_code = "NU" . $fivedigitcode;
         $mobile_number = $this->input->post("mobile_number");
@@ -46,7 +46,7 @@ class Members extends MX_Controller
         $all_members = $this->Allfiles_model->GetDataAll("tb_members", $where, $type, 'member_id', $limit = '');
         if (!empty($all_members)) {
             $response = array('status'=>'error','message' => 'Mobile Number Already Existed'); //etc
-            echo json_encode($response);
+            
         } else {
             $data = array(
                 'fullname' => $this->input->post("full_name"),
@@ -104,9 +104,10 @@ class Members extends MX_Controller
                 }
             }
             $response = array('status'=>'success','message' => 'Member Details Added Successfully');
-            echo json_encode($response);
+           
 
         }
+        echo json_encode($response);
 
     }
     public function edit_member()
