@@ -20,13 +20,13 @@
             <div id="crypto-stats-3" class="row">
 
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <!-- <a href="<?php echo base_url() ?>upcoming_movies"> -->
+                    <a href="<?php echo base_url() ?>members">
                         <div class="card p-2 stats colo-1">
                             <span>Members</span>
                             <p><?php echo $no_of_members; ?></p>
                             <i class="las la-user-friends"></i>
                         </div>
-                    <!-- </a> -->
+                    </a> 
                 </div>
 
                 <!-- <div class="col-12 col-sm-6 col-lg-4">
