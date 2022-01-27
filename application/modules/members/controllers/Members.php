@@ -56,7 +56,7 @@ class Members extends MX_Controller
         
 
         if (!empty($all_members)) {
-            $response = ['status' => 'error'];
+            $response = array('status'=>'error','message' => 'Mobile Number Already Existed'); //etc
             echo json_encode($response);
         } else {
             $data = array(
