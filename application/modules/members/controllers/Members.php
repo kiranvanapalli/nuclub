@@ -39,22 +39,11 @@ class Members extends MX_Controller
     {
 
         $fivedigitcode = mt_rand(11111, 99999);
-
         $member_code = "NU" . $fivedigitcode;
-
         $mobile_number = $this->input->post("mobile_number");
-
         $where = ["mobilenumber" => $mobile_number];
-
         $type = "array";
-
         $all_members = $this->Allfiles_model->GetDataAll("tb_members", $where, $type, 'member_id', $limit = '');
-
-        // echo $this->db->last_query();die();
-
-        
-        
-
         if (!empty($all_members)) {
             $response = array('status'=>'error','message' => 'Mobile Number Already Existed'); //etc
             echo json_encode($response);
@@ -75,8 +64,6 @@ class Members extends MX_Controller
                 'status' => 1,
             );
             $result = $this->Allfiles_model->data_save("tb_members", $data);
-            $response = array('status'=>'success','message' => 'Member Details Added Successfully');
-            echo json_encode($response);
             if ($result) {
                 $insert_id = $this->db->insert_id();
                 if ($insert_id) {
@@ -116,6 +103,8 @@ class Members extends MX_Controller
 
                 }
             }
+            $response = array('status'=>'success','message' => 'Member Details Added Successfully');
+            echo json_encode($response);
 
         }
 
