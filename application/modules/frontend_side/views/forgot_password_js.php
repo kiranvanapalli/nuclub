@@ -29,7 +29,7 @@
                         // window.location.href = "<?php echo base_url(); ?>";
 
                     }
-                    else if(details.status == "fail")
+                    else if(data.status == "fail")
                     {
                         toastr["error"]("MailId Not Registered");
                         return false;
