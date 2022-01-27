@@ -64,6 +64,7 @@ class Frontend extends MX_Controller
                 "status" => "Success",
                 "Message" => "User Found"
             );
+            print_r($response);die();
             $this->load->config('email');
             $this->load->library('email');
             $from = $this->config->item('smtp_user');
