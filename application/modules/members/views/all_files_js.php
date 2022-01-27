@@ -83,7 +83,7 @@
                 dataType:'JSON',
                 success: function(data) {
                     console.log(data);
-                    if (data['status'] == "success") {
+                    if (data.status == "success") {
                         
                         toastr["success"]("Member Details Added Successfully!");
                          window.location.href = "<?php echo base_url(); ?>members";
