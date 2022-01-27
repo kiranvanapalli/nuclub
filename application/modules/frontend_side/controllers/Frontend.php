@@ -94,7 +94,7 @@ class Frontend extends MX_Controller
           
         }
        
-        if($get_member_details)
+        if($get_member_details['status'] != '')
         {
             $response = ['status' => "success"];
         }
