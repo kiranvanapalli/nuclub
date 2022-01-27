@@ -8,7 +8,7 @@
             endDate: '-3d',
             autoclose: true //to close picker once year is selected
         });
-        
+
         $(document).on('submit', '#add_member', function(event) {
             event.preventDefault();
             var full_name = $('#full_name').val();
@@ -81,20 +81,14 @@
                 contentType: false,
                 processData: false,
                 success: function(data) {
-                    console.log(data);
-                    let detail = JSON.parse(data);
-                    if (detail['status'] == "error") {
+                    if (data.state == "error") {
                         toastr["error"]("Mobile Number Already Existed");
                         return false;
-
-                    } else 
+                    }else
                     {
-                        toastr["error"]("Member Details Added Successfully!");
+                        toastr["success"]("Member Details Added Successfully!");
                         window.location.href = "<?php echo base_url(); ?>members";
                     }
-                    
-
-
                 }
             });
 
@@ -170,19 +164,19 @@
                 toastr["error"]("Please Select Status");
                 return false;
             }
-             $.ajax({  
-             url:"<?php echo base_url() ?>update_member",  
-             method:'POST',  
+             $.ajax({
+             url:"<?php echo base_url() ?>update_member",
+             method:'POST',
              data:new FormData(this),
-             contentType:false,  
-             processData:false, 
+             contentType:false,
+             processData:false,
              dataType:'JSON',
-             success:function(data)  
-             {  
+             success:function(data)
+             {
               console.log(data);
                 if(data.status == 'success')
                 {
-                    
+
                     toastr["success"]("Member Details Updated Successfully!");
                     window.location.href = "<?php echo base_url(); ?>members";
                 }
@@ -190,9 +184,9 @@
                 {
                       toastr["error"]("Member Details updated failed! Please try again.");
                       return false;
-                }     
-                  
-             }  
+                }
+
+             }
         });
     });
 

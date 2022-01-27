@@ -45,8 +45,10 @@ class Members extends MX_Controller
         $type = "array";
         $all_members = $this->Allfiles_model->GetDataAll("tb_members", $where, $type, 'member_id', $limit = '');
         if (!empty($all_members)) {
-            $response = array('status'=>'error','message' => 'Mobile Number Already Existed'); //etc
-            echo json_encode($response);
+            // $response = array('status'=>'error','message' => 'Mobile Number Already Existed'); //etc
+            // echo json_encode($response);
+
+            $response = ['status' => 'success'];
         } else {
             $data = array(
                 'fullname' => $this->input->post("full_name"),
@@ -66,9 +68,8 @@ class Members extends MX_Controller
             $result = $this->Allfiles_model->data_save("tb_members", $data);
            
             if ($result) {
-                $response = array('status'=>'success','message' => 'Member Details Added Successfully');
-              print_r($response);
-                echo json_encode($response);
+                // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
+                // echo json_encode($response);
                 $insert_id = $this->db->insert_id();
                 if ($insert_id) {
                     $fieldname = '';
@@ -108,10 +109,12 @@ class Members extends MX_Controller
                 }
                 // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
                 // echo json_encode($response);
+               
             }
            
-
+            $response = ['status' => 'error'];
         }
+        echo json_encode($response);
     }
     public function edit_member()
     {
