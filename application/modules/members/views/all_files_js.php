@@ -84,11 +84,11 @@
                     let detail = JSON.parse(data);
                     console.log(detail);
                     if (detail['status'] =="success") {
-                        toastr["success"](detail['message']);
+                        toastr["success"]("Member Details Added Successfully!");
                         window.location.href = "<?php echo base_url(); ?>members";
 
                     } else if(detail['status'] == "error") {
-                        toastr["error"](detail['message']);
+                        toastr["error"]("Mobile Number Already Existed");
                         return false;
                     }
 
