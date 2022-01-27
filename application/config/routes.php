@@ -106,6 +106,7 @@ $route['joinus'] = 'frontend_side/Frontend/joinus';
 $route['user_login'] = 'frontend_side/Frontend/user_login';
 $route['register'] = 'frontend_side/Frontend/user_register';
 $route['user_forgotpassword'] = 'frontend_side/Frontend/forgotpassword';
+$route['savejoinus'] = 'frontend_side/Frontend/savejoinus';
 
 
 
@@ -143,6 +144,11 @@ $route['update_member'] = 'members/Members/update_member';
 $route['delete_member'] = 'members/Members/delete_member';
 
 
+
+//Join Us
+
+$route['join_us'] = 'joinus/JoinUs';
+$route['delete_join_us'] = 'joinus/JoinUs/delete_join_us';
 
 
 /* END HERE */

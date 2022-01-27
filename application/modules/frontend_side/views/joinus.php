@@ -20,14 +20,14 @@
                             </div>
 
                             <!--login form-->
-                            <form class="login-signup-form">
+                            <form class="login-signup-form" name="join_us" id="join_us_form">
                                 <div class="form-group">
                                     <label class="pb-1">Full Name</label>
                                     <div class="input-group input-group-merge">
                                         <div class="input-icon">
                                             <span class="icofont-user color-primary"></span>
                                         </div>
-                                        <input type="email" class="form-control" placeholder="Enter Your Name">
+                                        <input type="text" class="form-control" placeholder="Enter Your Name" name="full_name" id="full_name">
                                     </div>
                                 </div>
                                 <!-- Password -->
@@ -41,7 +41,7 @@
                                         <div class="input-icon">
                                             <span class="icofont-email color-primary"></span>
                                         </div>
-                                        <input type="email" class="form-control" placeholder="name@yourdomain.com">
+                                        <input type="email" class="form-control" placeholder="name@yourdomain.com" name="email" id="email">
                                     </div>
                                 </div>
 								
@@ -56,12 +56,12 @@
                                         <div class="input-icon">
                                             <span class="icofont-phone color-primary"></span>
                                         </div>
-                                        <input type="email" class="form-control" placeholder="Enter Mobile Number">
+                                        <input type="text" class="form-control" placeholder="Enter Mobile Number" name="mobile_number" id="mobile_number" onkeypress="return onlyNumberKey(event)" maxlength="10">
                                     </div>
                                 </div>
 
                                 <!-- Submit -->
-                                <button class="btn btn-block secondary-solid-btn border-radius mt-4 mb-2">
+                                <button class="btn btn-block secondary-solid-btn border-radius mt-4 mb-2" type="submit" id="join_us_form">
                                     Submit
                                 </button>
 

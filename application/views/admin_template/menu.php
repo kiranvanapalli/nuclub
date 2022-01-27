@@ -18,11 +18,7 @@
                {
                   echo "active";
                }
-               else if($this->uri->segment(1) == "upcoming_movie_details")
-               {
-                  echo "active";
-               }
-               else if($this->uri->segment(1) == "edit_upcoming_movie_details")
+               else if($this->uri->segment(1) == "edit_member")
                {
                   echo "active";
                } ?>" href="<?= base_url() ?>members">
@@ -30,26 +26,14 @@
             <span class="menu-title" data-i18n="Transactions">Members</span>
             </a>
          </li>
-         <!-- <li class="nav-item" class="<?php echo active_link('cast_crew'); ?>">
-            <a class="<?php if ($this->uri->segment(1) == "cast_crew") {
+         <li class="nav-item" class="<?php echo active_link('join_us'); ?>">
+            <a class="<?php if ($this->uri->segment(1) == "join_us") {
                echo "active";
-               }
-               else if($this->uri->segment(1) == "add_cast_crew")
-               {
-                  echo "active";
-               }
-               else if($this->uri->segment(1) == "cast_crew_details")
-               {
-                  echo "active";
-               }
-               else if($this->uri->segment(1) == "edit_cast_crew_details")
-               {
-                  echo "active";
-               } ?>" href="<?= base_url() ?>cast_crew">
-            <i class="las la-film"></i>
-            <span class="menu-title" data-i18n="Transactions">Cast & Crew</span>
+               } ?>" href="<?= base_url() ?>join_us">
+            <i class="las la-user-friends"></i>
+            <span class="menu-title" data-i18n="Transactions">Interested</span>
             </a>
-         </li> -->
+         </li>
          <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "award") {
                echo "active";

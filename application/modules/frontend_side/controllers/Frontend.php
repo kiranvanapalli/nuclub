@@ -33,6 +33,21 @@ class Frontend extends MX_Controller
         $this->load->view('user_template/main',$data); 
     }
 
+    public function savejoinus()
+    {
+        $data = array(
+            'full_name' => $this->input->post('full_name'),
+            'email'=> $this->input->post('email'),
+            'mobile_number' => $this->input->post('mobile_number')
+
+        );
+
+        $result = $this->Allfiles_model->data_save('tb_join_us',$data);
+
+        echo json_encode($result);
+
+    }
+
     public function user_login()
     {
         $data['file'] = 'frontend_side/login';

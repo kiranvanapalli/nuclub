@@ -5,15 +5,15 @@
                 <!-- main title -->
                 <div class="col-6">
                     <div class="main__title">
-                        <h2>Members List</h2>
+                        <h2>Intersted User's List</h2>
                     </div>
                 </div>
 
-                <div class="col-6">
+                <!-- <div class="col-6">
                     <div class="main__title">
                         <a href="<?php echo base_url() ?>add_member" class="main__title-link w-50">Add Member</a>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="row">
@@ -22,62 +22,43 @@
 
                         <div class="card-content collapse show">
                             <div class="table-responsive">
-                                <table class="table table-sm mb-0 text-center membertable">
+                                <table class="table table-sm mb-0 text-center join_us_table">
                                     <thead>
                                         <tr>
-                                            
+                                            <th>Sl.no</th>    
                                             <th>Name</th>
                                             <th>Mobile Number</th>
-                                            <th>Member Code</th>
-                                            <th>NU POINTS</th>
-                                            <th>STATUS</th>
+                                            <th>Email</th>
                                             <th>ACTIONS</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
-                                        // $i = 1;
-                                        foreach ($all_members as $all_members) { ?>
+                                        $i = 1;
+                                        foreach ($join_us_list as $join_us_list) { ?>
 
                                             <tr>
-                                                <!-- <td>
+                                                <td>
                                                     <div class="main__table-text"><?php echo $i++; ?></div>
-                                                </td> -->
-                                                <td>
-                                                    <div class="main__table-text"><?php echo $all_members['fullname']; ?></div>
                                                 </td>
                                                 <td>
-                                                    <div class="main__table-text"><?php echo $all_members['mobilenumber']; ?></div>
+                                                    <div class="main__table-text"><?php echo $join_us_list['full_name']; ?></div>
                                                 </td>
                                                 <td>
-                                                    <div class="main__table-text"><?php echo $all_members['member_code']; ?></div>
+                                                    <div class="main__table-text"><?php echo $join_us_list['mobile_number']; ?></div>
                                                 </td>
                                                 <td>
-                                                    <div class="main__table-text"><?php echo $all_members['points']; ?></div>
+                                                    <div class="main__table-text"><?php echo $join_us_list['email']; ?></div>
                                                 </td>
-                                                <td class="text-center">
-                                                    <?php
-                                                    if ($all_members['status'] == "1") {
-                                                        $status = "Active";
-                                                        echo "<div class='main__table-text main__table-text--green'>".$status."</div>";
 
-                                                    } else {
-                                                        $status = "In Active";
-                                                        echo "<div class='main__table-text main__table-text--red'>".$status."</div>";
-                                                    }
-                                                    ?>
-                                                   
-                                                </td>
+                                                
                                                 <td class="text-center">
                                                     <div class="main__table-btns text-center">
                                                       
                                                         <!-- <a href="detailviewpage.html" target="_blank" class="main__table-btn main__table-btn--view">
                                                             <i class="lar la-eye"></i>
                                                         </a> -->
-                                                        <a href="<?php echo base_url() ?>edit_member?id=<?php echo $all_members['member_id']; ?>" class="main__table-btn main__table-btn--edit">
-                                                            <i class="las la-edit"></i>
-                                                        </a>
-                                                        <a id="<?php echo $all_members['member_id']; ?>"data-toggle="modal" data-target="#modaldelete" class="main__table-btn main__table-btn--delete open-modal delete">
+                                                        <a id="<?php echo $join_us_list['id']; ?>"data-toggle="modal" data-target="#modaldelete" class="main__table-btn main__table-btn--delete open-modal delete">
                                                             <i class="las la-trash-alt"></i>
                                                         </a>
                                                     </div>
@@ -105,8 +86,8 @@
             <div class="row">
                <div class="col-12 pb-1">
                   <div class="text-center">
-                     <h4>Delete Member Details</h4>
-                     <p>Are you sure to permanently delete this Member Details</p>
+                     <h4>Delete Join Us Details</h4>
+                     <p>Are you sure to permanently delete this Join US Details</p>
                   </div>
                </div>
             </div>
