@@ -67,6 +67,7 @@ class Members extends MX_Controller
            
             if ($result) {
                 $response = array('status'=>'success','message' => 'Member Details Added Successfully');
+              print_r($response);
                 echo json_encode($response);
                 $insert_id = $this->db->insert_id();
                 if ($insert_id) {
