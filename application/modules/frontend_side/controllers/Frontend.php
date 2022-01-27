@@ -48,6 +48,64 @@ class Frontend extends MX_Controller
 
     }
 
+    public function forgotpasswordmail()
+    {
+        $response = [];
+        $where = $this->input->post('email');
+        $type = "array";
+        $fieldname = '';
+        $primaryfield = 'email';
+        $get_member_details = $this->Allfiles_model->get_data("tb_members", $fieldname, $primaryfield, $where);
+       
+        if($get_member_details['status'] != '')
+        {
+            $data = $get_member_details['resultSet'];
+            $response = array(
+                "status" => "Success",
+                "Message" => "User Found"
+            );
+            $this->load->config('email');
+            $this->load->library('email');
+            $from = $this->config->item('smtp_user');
+            $to = $this->input->post('email');
+            $data = array(
+                'from_address' => $from,
+                'to_address' => $to,
+                'full_name' => $data['fullname'],
+                'email' => $data['email'],
+                'mobilenumber' => $data['mobilenumber'],
+                'password' =>$data['password'],
+                'member_code' => $data['member_code'],
+                'points' => $this->input->post('points'),
+
+            );
+
+            $subject = 'Forgot Password';
+            $body = $this->load->view('new_mail_temp', $data, true);
+            $this->email->set_newline("\r\n");
+            $this->email->from($from, 'Nu Club');
+            $this->email->to($to);
+            $this->email->subject($subject);
+            $this->email->message($body);
+            if ($this->email->send()) {
+                echo 'Email has been sent successfully';
+                redirect("");
+            } else {
+                show_error($this->email->print_debugger());
+            }
+        }
+        else
+        {
+            $response = array(
+                "status" => "Fail",
+                "Message" => "User Not Found"
+            );
+
+        }
+        echo json_encode($response);
+        
+    }
+
     public function user_login()
     {
         $data['file'] = 'frontend_side/login';
@@ -64,7 +122,7 @@ class Frontend extends MX_Controller
     public function forgotpassword()
     {
         $data['file'] = 'frontend_side/forgot_password';
-        $data['custom_js'] = 'frontend_side/custom_js';
+        $data['custom_js'] = 'frontend_side/forgot_password_js';
         $this->load->view('user_template/main',$data); 
     }
 

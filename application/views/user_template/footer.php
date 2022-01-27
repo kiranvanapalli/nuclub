@@ -121,3 +121,42 @@
         </div>
     </div>
 </div>
+<script>
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "10000",
+  "extendedTimeOut": "5000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+  }
+
+  <?php if ($this->session->flashdata('success')) {?>
+<script>
+toastr.success("<?php echo $this->session->flashdata('success'); ?>", "", {
+"closeButton": "true",
+"progressBar": "true",
+"positionClass": "toast-top-right",
+ "timeOut": "5000",
+ "extendedTimeOut": "1000"
+});
+</script>
+<?php }if ($this->session->flashdata('error')) {?>
+<script type="text/javascript">
+toastr.error("<?php echo $this->session->flashdata('error'); ?>", "", {
+"closeButton": "true",
+"progressBar": "true",
+"positionClass": "toast-top-right"
+});
+</script>
+<?php }?>
+</script>
