@@ -64,7 +64,10 @@ class Members extends MX_Controller
                 'status' => 1,
             );
             $result = $this->Allfiles_model->data_save("tb_members", $data);
+           
             if ($result) {
+                $response = array('status'=>'success','message' => 'Member Details Added Successfully');
+                echo json_encode($response);
                 $insert_id = $this->db->insert_id();
                 if ($insert_id) {
                     $fieldname = '';
@@ -105,8 +108,7 @@ class Members extends MX_Controller
                 // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
                 // echo json_encode($response);
             }
-            $response = array('status'=>'success','message' => 'Member Details Added Successfully');
-            echo json_encode($response);
+           
 
         }
     }
