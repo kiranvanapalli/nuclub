@@ -1,4 +1,12 @@
 <script>
+    function onlyNumberKey(evt) {
+
+          // Only ASCII character in that range allowed
+          var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+          if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+              return false;
+          return true;
+      }
     $(document).ready(function() {
         var asset_table = $('.membertable').DataTable({});
         var d = new Date();
@@ -8,7 +16,6 @@
             endDate: '-3d',
             autoclose: true //to close picker once year is selected
         });
-
         $(document).on('submit', '#add_member', function(event) {
             event.preventDefault();
             var full_name = $('#full_name').val();
@@ -61,6 +68,18 @@
             }
             if (conf_password == '') {
                 toastr["error"]("Please Enter Confirm password");
+                return false;
+            }
+            
+            if(password.length < 6)
+            {
+                toastr["error"]("Password Should Be At Least 6 Letters");
+                return false;
+
+            }
+            if(conf_password.length < 6)
+            {
+                toastr["error"]("Confirm Password Should Be At Least 6 Letters");
                 return false;
             }
             if(password != conf_password)
@@ -195,12 +214,18 @@
         });
     });
 
-    $(document).on('click', '#modaldelete', function(event) {
+    $(document).on('click', '.delete', function(event) {
             event.preventDefault();
-            var id = $(".delete").attr('id');
+            var id = $(this).attr('id');
+            $('.modaldelete').attr('value',id)
 
+
+    })
+
+    $(document).on('click', '.modaldelete', function(event) {
+            event.preventDefault();
+            var id = $(this).attr('value');
             console.log(id);
-
             $.ajax({
                 url: "<?php echo base_url() ?>delete_member",
                 method: "POST",
@@ -210,7 +235,7 @@
                 },
                 success: function(data) {
                     if (data) {
-                        toastr["success"]("Cast & Crew Details  Deleted Successfully!");
+                        toastr["success"]("Member Deleted Successfully");
                         window.location.href = "<?php echo base_url(); ?>members";
                     } else {
                         toastr["error"]("Delete failed! Please try again.");
@@ -221,7 +246,7 @@
         });
         $(document).on('click', '#close', function(event) {
             event.preventDefault();
-            window.location.href = "<?php echo base_url(); ?>members";
+            asset_table.ajax.reload();
         });
     });
 </script>

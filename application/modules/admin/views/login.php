@@ -35,7 +35,7 @@
               <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
                 <div class="card-header border-0">
                   <div class="card-title text-center">
-                    <img src="admin_assets/app-assets/images/logo/logo-dark.png" alt="branding logo">
+                    <img src="user_assets/new-assets/images/logo-2.png" alt="branding logo">
                   </div>
                 </div>
                 <div class="card-content">

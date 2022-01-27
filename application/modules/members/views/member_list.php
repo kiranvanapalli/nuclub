@@ -94,7 +94,7 @@
         </div>
     </div>
 </div>
-<div class="modal" id="modaldelete">
+<div class="modal modaldelete" id="modaldelete">
    <div class="modal-dialog">
       <div class="modal-content">
          <div class="modal-body p-4">

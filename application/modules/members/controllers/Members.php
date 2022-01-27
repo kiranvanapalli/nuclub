@@ -35,90 +35,155 @@ class Members extends MX_Controller
 
     }
 
+    // public function save_member()
+    // {
+    //     $response = [];
+    //     $fivedigitcode = mt_rand(11111, 99999);
+    //     $member_code = "NU" . $fivedigitcode;
+    //     $mobile_number = $this->input->post("mobile_number");
+    //     $where = ["mobilenumber" => $mobile_number];
+    //     $type = "array";
+    //     $all_members = $this->Allfiles_model->GetDataAll("tb_members", $where, $type, 'member_id', $limit = '');
+    //     if (!empty($all_members)) {
+    //         // $response = array('status'=>'error','message' => 'Mobile Number Already Existed'); //etc
+    //         // echo json_encode($response);
+
+    //         $response = ['status' => 'fail'];
+    //     }
+    //     else {
+    //         $data = array(
+    //             'fullname' => $this->input->post("full_name"),
+    //             'email' => $this->input->post("email_id"),
+    //             'mobilenumber' => $this->input->post("mobile_number"),
+    //             'gender' => $this->input->post("gender"),
+    //             'date_of_birth' => $this->input->post("date"),
+    //             'state' => $this->input->post("state"),
+    //             'city' => $this->input->post("city"),
+    //             'payment_via' => $this->input->post("pay_via"),
+    //             'password' => $this->input->post("password"),
+    //             'points' => $this->input->post("nu_points"),
+    //             'member_code' => $member_code,
+    //             'created_at' => date('Y-m-d H:i:s'),
+    //             'status' => 1,
+    //         );
+    //         $result = $this->Allfiles_model->data_save("tb_members", $data);
+    //         $response = ['status' => 'success'];
+
+    //         print_r($response);
+
+    //         if ($result) {
+    //             // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
+    //             // echo json_encode($response);
+    //             $insert_id = $this->db->insert_id();
+    //             if ($insert_id) {
+    //                 $fieldname = '';
+    //                 $primaryfield = 'member_id';
+    //                 $get_member_details = $this->Allfiles_model->get_data("tb_members", $fieldname, $primaryfield, $insert_id);
+    //                 $data['get_member_details'] = $get_member_details['resultSet'];
+    //                 $this->load->config('email');
+    //                 $this->load->library('email');
+    //                 $from = $this->config->item('smtp_user');
+    //                 $to = $this->input->post('email_id');
+    //                 $data = array(
+    //                     'from_address' => $from,
+    //                     'to_address' => $to,
+    //                     'full_name' => $this->input->post("full_name"),
+    //                     'email' => $this->input->post("email_id"),
+    //                     'mobilenumber' => $this->input->post("mobile_number"),
+    //                     'password' => $this->input->post('password'),
+    //                     'member_code' => $member_code,
+    //                     'points' => $this->input->post('nu_points'),
+
+    //                 );
+
+    //                 $subject = 'Member Login Details';
+    //                 $body = $this->load->view('send_mail_temp', $data, true);
+    //                 $this->email->set_newline("\r\n");
+    //                 $this->email->from($from, 'Nu Club');
+    //                 $this->email->to($to);
+    //                 $this->email->subject($subject);
+    //                 $this->email->message($body);
+    //                 if ($this->email->send()) {
+    //                     echo 'Email has been sent successfully';
+    //                     redirect("");
+    //                 } else {
+    //                     show_error($this->email->print_debugger());
+    //                 }
+
+    //             }
+    //             // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
+    //             // echo json_encode($response);
+
+    //         }
+
+    //     }
+
+    //     echo json_encode($response);
+
+    // }
     public function save_member()
     {
         $response = [];
         $fivedigitcode = mt_rand(11111, 99999);
         $member_code = "NU" . $fivedigitcode;
-        $mobile_number = $this->input->post("mobile_number");
-        $where = ["mobilenumber" => $mobile_number];
-        $type = "array";
-        $all_members = $this->Allfiles_model->GetDataAll("tb_members", $where, $type, 'member_id', $limit = '');
-        if (!empty($all_members)) {
-            // $response = array('status'=>'error','message' => 'Mobile Number Already Existed'); //etc
-            // echo json_encode($response);
+        $data = array(
+            'fullname' => $this->input->post("full_name"),
+            'email' => $this->input->post("email_id"),
+            'mobilenumber' => $this->input->post("mobile_number"),
+            'gender' => $this->input->post("gender"),
+            'date_of_birth' => $this->input->post("date"),
+            'state' => $this->input->post("state"),
+            'city' => $this->input->post("city"),
+            'payment_via' => $this->input->post("pay_via"),
+            'password' => $this->input->post("password"),
+            'points' => $this->input->post("nu_points"),
+            'member_code' => $member_code,
+            'created_at' => date('Y-m-d H:i:s'),
+            'status' => 1,
+        );
+        $result = $this->Allfiles_model->data_save("tb_members", $data);
+        echo json_encode($result);
+        if ($result) {
+            $insert_id = $this->db->insert_id();
+            if ($insert_id) {
+                $fieldname = '';
+                $primaryfield = 'member_id';
+                $get_member_details = $this->Allfiles_model->get_data("tb_members", $fieldname, $primaryfield, $insert_id);
+                $data['get_member_details'] = $get_member_details['resultSet'];
+                $this->load->config('email');
+                $this->load->library('email');
+                $from = $this->config->item('smtp_user');
+                $to = $this->input->post('email_id');
+                $data = array(
+                    'from_address' => $from,
+                    'to_address' => $to,
+                    'full_name' => $this->input->post("full_name"),
+                    'email' => $this->input->post("email_id"),
+                    'mobilenumber' => $this->input->post("mobile_number"),
+                    'password' => $this->input->post('password'),
+                    'member_code' => $member_code,
+                    'points' => $this->input->post('nu_points'),
 
-            $response = ['status' => 'fail'];
-        } else {
-            $data = array(
-                'fullname' => $this->input->post("full_name"),
-                'email' => $this->input->post("email_id"),
-                'mobilenumber' => $this->input->post("mobile_number"),
-                'gender' => $this->input->post("gender"),
-                'date_of_birth' => $this->input->post("date"),
-                'state' => $this->input->post("state"),
-                'city' => $this->input->post("city"),
-                'payment_via' => $this->input->post("pay_via"),
-                'password' => $this->input->post("password"),
-                'points' => $this->input->post("nu_points"),
-                'member_code' => $member_code,
-                'created_at' => date('Y-m-d H:i:s'),
-                'status' => 1,
-            );
-            $result = $this->Allfiles_model->data_save("tb_members", $data);
-            $response = ['status' => 'success'];
+                );
 
-            print_r($response);
-           
-            if ($result) {
-                // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
-                // echo json_encode($response);
-                $insert_id = $this->db->insert_id();
-                if ($insert_id) {
-                    $fieldname = '';
-                    $primaryfield = 'member_id';
-                    $get_member_details = $this->Allfiles_model->get_data("tb_members", $fieldname, $primaryfield, $insert_id);
-                    $data['get_member_details'] = $get_member_details['resultSet'];
-                    $this->load->config('email');
-                    $this->load->library('email');
-                    $from = $this->config->item('smtp_user');
-                    $to = $this->input->post('email_id');
-                    $data = array(
-                        'from_address' => $from,
-                        'to_address' => $to,
-                        'full_name' => $this->input->post("full_name"),
-                        'email' => $this->input->post("email_id"),
-                        'mobilenumber' => $this->input->post("mobile_number"),
-                        'password' => $this->input->post('password'),
-                        'member_code' => $member_code,
-                        'points' => $this->input->post('nu_points'),
-
-                    );
-
-                    $subject = 'Member Login Details';
-                    $body = $this->load->view('send_mail_temp', $data, true);
-                    $this->email->set_newline("\r\n");
-                    $this->email->from($from, 'Nu Club');
-                    $this->email->to($to);
-                    $this->email->subject($subject);
-                    $this->email->message($body);
-                    if ($this->email->send()) {
-                        echo 'Email has been sent successfully';
-                        redirect("");
-                    } else {
-                        show_error($this->email->print_debugger());
-                    }
-
+                $subject = 'Member Login Details';
+                $body = $this->load->view('send_mail_temp', $data, true);
+                $this->email->set_newline("\r\n");
+                $this->email->from($from, 'Nu Club');
+                $this->email->to($to);
+                $this->email->subject($subject);
+                $this->email->message($body);
+                if ($this->email->send()) {
+                    echo 'Email has been sent successfully';
+                    redirect("");
+                } else {
+                    show_error($this->email->print_debugger());
                 }
-                // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
-                // echo json_encode($response);
-               
             }
-            
         }
 
-        echo json_encode($response);
-        
+       
+
     }
     public function edit_member()
     {
@@ -171,12 +236,13 @@ class Members extends MX_Controller
 
     public function delete_member()
     {
-        if (isset($_POST['member_id']) && !empty($_POST['member_id'])) {
+      
 
             $where = ['member_id' => $_POST['member_id']];
             $result = $this->Allfiles_model->deleteData("tb_members", $where);
+            // echo $this->db->last_query();
             echo $result;
-        }
-    }
+         }
+    
 
 }
