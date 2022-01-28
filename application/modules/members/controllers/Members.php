@@ -126,6 +126,7 @@ class Members extends MX_Controller
         $response = [];
         $fivedigitcode = mt_rand(11111, 99999);
         $member_code = "NU" . $fivedigitcode;
+        $password = base64_encode(base64_encode($this->input->post('password')));
         $data = array(
             'fullname' => $this->input->post("full_name"),
             'email' => $this->input->post("email_id"),
@@ -135,7 +136,7 @@ class Members extends MX_Controller
             'state' => $this->input->post("state"),
             'city' => $this->input->post("city"),
             'payment_via' => $this->input->post("pay_via"),
-            'password' => $this->input->post("password"),
+            'password' => $password,
             'points' => $this->input->post("nu_points"),
             'member_code' => $member_code,
             'created_at' => date('Y-m-d H:i:s'),
@@ -154,6 +155,7 @@ class Members extends MX_Controller
                 $this->load->library('email');
                 $from = $this->config->item('smtp_user');
                 $to = $this->input->post('email_id');
+                
                 $data = array(
                     'from_address' => $from,
                     'to_address' => $to,

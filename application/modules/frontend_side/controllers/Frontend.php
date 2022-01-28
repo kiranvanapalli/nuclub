@@ -121,16 +121,16 @@ class Frontend extends MX_Controller
 		$whr = ['email' => $email,'status' => 1 ];
 		$userDetails = $this->Allfiles_model->getCustomerDetails("tb_members", $whr)->row_array();
 		
-		// $decoded = base64_decode(base64_decode($userDetails['user_pass'])) ;
+	    $decoded = base64_decode(base64_decode($userDetails['password'])) ;
 		
 		
 		if ($userDetails['email'] == $email)
 			{
         		    $username = $userDetails['fullname'];
 
-                    $password = $userDetails['password'];
+                    // $password = $userDetails['password'];
         		
-        		    // $decoded = base64_decode(base64_decode($userDetails['user_pass'])) ;
+        		    $decoded = base64_decode(base64_decode($userDetails['password'])) ;
                     // Load PHPMailer library
                     $this->load->library('phpmailer_lib');
                     
@@ -162,7 +162,7 @@ class Frontend extends MX_Controller
                     // Email body content
                     $mailContent = "Dear $username,<br/>
                     Please find the below password here.<br/>";
-                    $mailContent.="Your Password is: <strong>".$password."</strong>";
+                    $mailContent.="Your Password is: <strong>".$$decoded."</strong>";
                     $mail->Body = $mailContent;
                     
                     // Send email
