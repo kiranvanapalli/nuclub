@@ -315,6 +315,22 @@ class Allfiles_model extends CI_Model
   }
   return $output;
  }
+ public function getCustomerDetails($tablename,$whr)
+
+ {
+
+     $this->db->select('*');
+
+     $this->db->from($tablename);
+
+     $this->db->where($whr);
+
+     $result = $this->db->get();
+     
+
+     return $result;
+
+ }
 
 }
 ?>

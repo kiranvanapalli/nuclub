@@ -48,63 +48,140 @@ class Frontend extends MX_Controller
 
     }
 
+    // public function forgotpasswordmail()
+    // {
+    //     $response = [];
+
+    //     $where = $this->input->post('email');
+    //     $type = "array";
+    //     $fieldname = '';
+    //     $primaryfield = 'email';
+    //     $get_member_details = $this->Allfiles_model->get_data("tb_members", $fieldname, $primaryfield, $where);
+       
+    //     if($get_member_details['status'] != '')
+    //     {
+    //         $details = $get_member_details['resultSet'];
+    //         // print_r($data);
+    //         $this->load->config('email');
+    //         $this->load->library('email');
+    //         $from = $this->config->item('smtp_user');
+    //         $to = $this->input->post('email');
+    //         $data = array(
+    //             'from_address' => $from,
+    //             'to_address' => $to,
+    //             'full_name' => $details['fullname'],
+    //             'email' => $details['email'],
+    //             'mobilenumber' => $details['mobilenumber'],
+    //             'password' =>$details['password'],
+    //             'member_code' => $details['member_code'],
+    //             'points' => $details['points'],
+
+    //         );
+
+    //         $subject = 'Forgot Password';
+    //         $body = $this->load->view('new_mail_temp', $data, true);
+    //         $this->email->set_newline("\r\n");
+    //         $this->email->from($from, 'Nu Club');
+    //         $this->email->to($to);
+    //         $this->email->subject($subject);
+    //         $this->email->message($body);
+    //         if ($this->email->send()) {
+    //             echo 'Email has been sent successfully';
+    //             redirect("");
+    //         } else {
+    //             show_error($this->email->print_debugger());
+    //         }
+          
+    //     }
+    //         if($get_member_details['status'] != '')
+    //         {
+    //             $response = ['status' => "success"];
+    //         }
+    //     else
+    //     {
+    //         $response = ['status' => "fail"];
+    //     }
+
+        
+    //     echo json_encode($response);
+        
+    // }
+
     public function forgotpasswordmail()
     {
-        $response = [];
-
-        $where = $this->input->post('email');
-        $type = "array";
-        $fieldname = '';
-        $primaryfield = 'email';
-        $get_member_details = $this->Allfiles_model->get_data("tb_members", $fieldname, $primaryfield, $where);
-       
-        if($get_member_details['status'] != '')
-        {
-            $details = $get_member_details['resultSet'];
-            // print_r($data);
-            $this->load->config('email');
-            $this->load->library('email');
-            $from = $this->config->item('smtp_user');
-            $to = $this->input->post('email');
-            $data = array(
-                'from_address' => $from,
-                'to_address' => $to,
-                'full_name' => $details['fullname'],
-                'email' => $details['email'],
-                'mobilenumber' => $details['mobilenumber'],
-                'password' =>$details['password'],
-                'member_code' => $details['member_code'],
-                'points' => $details['points'],
-
-            );
-
-            $subject = 'Forgot Password';
-            $body = $this->load->view('new_mail_temp', $data, true);
-            $this->email->set_newline("\r\n");
-            $this->email->from($from, 'Nu Club');
-            $this->email->to($to);
-            $this->email->subject($subject);
-            $this->email->message($body);
-            if ($this->email->send()) {
-                echo 'Email has been sent successfully';
-                redirect("");
-            } else {
-                show_error($this->email->print_debugger());
-            }
-          
-        }
-            if($get_member_details['status'] != '')
-            {
-                $response = ['status' => "success"];
-            }
+        $email = $this->input->post('email');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required');
+        if ($this->form_validation->run() == FALSE)
+		{	
+			
+			$this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+		}
         else
-        {
-            $response = ['status' => "fail"];
-        }
+			{
+		$whr = ['email' => $email,'status' => 1 ];
+		$userDetails = $this->Allfiles_model->getCustomerDetails("tb_members", $whr)->row_array();
+		
+		// $decoded = base64_decode(base64_decode($userDetails['user_pass'])) ;
+		
+		
+		if ($userDetails['email'] == $email)
+			{
+        		    $username = $userDetails['fullname'];
 
-        
-        echo json_encode($response);
-        
+                    $password = $userDetails['password'];
+        		
+        		    // $decoded = base64_decode(base64_decode($userDetails['user_pass'])) ;
+                    // Load PHPMailer library
+                    $this->load->library('phpmailer_lib');
+                    
+                    // PHPMailer object
+                    $mail = $this->phpmailer_lib->load();
+                    
+                    // SMTP configuration
+                    $mail->isSMTP();
+                    $mail->Host     = 'sg2plmcpnl485224.prod.sin2.secureserver.net';
+                    $mail->SMTPDebug = 1; 
+                    $mail->SMTPAuth = true;
+                    $mail->Username = 'info@nuclubindia.com';
+                    $mail->Password = 'Adnectics@1222';
+                    $mail->SMTPSecure = 'ssl';
+                    $mail->Port     = 465;
+                    
+                    $mail->setFrom('info@nuclubindia.com', 'NU CLUB');
+                    $mail->addReplyTo('info@nuclubindia.com', 'NU CLUB');
+                    
+                    // Add a recipient
+                    $mail->addAddress($email);
+            
+                    // Email subject
+                    $mail->Subject = 'Forgot Password Notification';
+                    
+                    // Set email format to HTML
+                    $mail->isHTML(true);
+                    
+                    // Email body content
+                    $mailContent = "Dear $username,<br/>
+                    Please find the below password here.<br/>";
+                    $mailContent.="Your Password is: <strong>".$password."</strong>";
+                    $mail->Body = $mailContent;
+                    
+                    // Send email
+                    if(!$mail->send()){
+                        echo 'Message could not be sent.';
+                        echo 'Mailer Error: ' . $mail->ErrorInfo;
+                    }else{
+                        $this->session->set_flashdata('success_msg',"Password Sent Succesfully!");
+			            redirect(base_url());
+                    }
+			}
+		  else
+			{
+				
+			$this->session->set_flashdata('error_msg',"Email Not Valid");
+			redirect('user_forgotpassword');
+			
+			}
+		}
     }
 
     public function user_login()

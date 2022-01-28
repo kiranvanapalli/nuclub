@@ -20,7 +20,7 @@
                             </div>
 
                             <!--login form-->
-                            <form class="login-signup-form" name="forgot_password" id="forgot_password">
+                            <form class="login-signup-form" name="forgot_password" id="forgot_password" action="forgotpasswordmail" method="post">
                                 <!-- Password -->
                                 <div class="form-group">
                                     <div class="row">
@@ -32,12 +32,12 @@
                                         <div class="input-icon">
                                             <span class="icofont-phone color-primary"></span>
                                         </div>
-                                        <input type="email" class="form-control" placeholder="name@yourdomain.com" name="email">
+                                        <input type="email" class="form-control" placeholder="name@yourdomain.com" name="email" id="email">
                                     </div>
                                 </div>
 
                                 <!-- Submit -->
-								<button type="submit" name="forget_btn" class="btn btn-block secondary-solid-btn border-radius mt-4 mb-2">Verified</a>
+								<button type="submit" id="forget_btn" name="forget_btn" class="btn btn-block secondary-solid-btn border-radius mt-4 mb-2">Verified</a>
                             </form>
                         </div>
                 </div>
