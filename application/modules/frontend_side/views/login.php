@@ -70,3 +70,33 @@
             </div>
         </div>
     </section>
+
+    <?php if($this->session->flashdata('success')) {  ?>
+    <script type="text/javascript">
+    toastr.success("<?php echo $this->session->flashdata('success'); ?>", "", {
+    "closeButton": "true",
+    "progressBar": "true",
+    "timeOut": "5000",
+    "extendedTimeOut": "2000"   
+    });
+    </script> 
+    <?php  } elseif($this->session->flashdata('error')){ ?>
+    <script type="text/javascript">
+    toastr.error("<?php echo $this->session->flashdata('error'); ?>", "", {
+    "closeButton": "true",
+    "progressBar": "true"
+    });
+    </script> 
+    <?php } ?>
+
+    <?php 
+    $err = validation_errors();
+    $err_msg   = str_replace(array("\r","\n"), '\n', $err);
+    if(isset($err_msg) &&  $err_msg != ""){?>
+    <script type="text/javascript">
+    toastr.error("<?php echo $err_msg; ?>", "", {
+    "closeButton": "true",
+    "progressBar": "true"
+    });
+    </script> 
+    <?php  } ?>  

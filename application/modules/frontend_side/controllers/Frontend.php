@@ -194,7 +194,7 @@ class Frontend extends MX_Controller
         {   
              $data['file'] = 'frontend_side/login';
              $data['validation_js'] = 'frontend_side/custom_js';
-             $data['custom_js'] = 'frontend_side/frontend_validation_js';
+            //  $data['custom_js'] = 'all_common_js/frontend_validation_admin';
              $this->load->view('user_template/main',$data);
         }
         else
@@ -233,18 +233,17 @@ class Frontend extends MX_Controller
                     }
                     else
                     {
-                        $this->session->set_flashdata('error', 'Invalid details provided!');
-                        // redirect(base_url('user_login'));
+                        $this->session->set_flashdata('error', 'Please Login');
+                        redirect(base_url('user_login'));
 
-                        echo "after login";
                     } 
 
                 }
                 else 
                 {
-                    $this->session->set_flashdata('error', 'Invalid details provided.');
-                    // redirect(base_url('user_login'));
-                    echo " Not Found";
+                   echo $this->session->set_flashdata('error', 'Username or Password Incorrect');
+                    redirect(base_url('user_login'));
+                   
                 }
 
             }

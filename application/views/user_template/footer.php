@@ -46,7 +46,9 @@
     <!--main js-->
     <script src="user_assets/assets/js/custom.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
 
 	<script>
@@ -140,23 +142,31 @@ toastr.options = {
   "hideMethod": "fadeOut"
   }
 
-  <?php if ($this->session->flashdata('success')) {?>
-<script>
-toastr.success("<?php echo $this->session->flashdata('success'); ?>", "", {
-"closeButton": "true",
-"progressBar": "true",
-"positionClass": "toast-top-right",
- "timeOut": "5000",
- "extendedTimeOut": "1000"
-});
-</script>
-<?php }if ($this->session->flashdata('error')) {?>
-<script type="text/javascript">
-toastr.error("<?php echo $this->session->flashdata('error'); ?>", "", {
-"closeButton": "true",
-"progressBar": "true",
-"positionClass": "toast-top-right"
-});
-</script>
-<?php }?>
+  <?php if($this->session->flashdata('success')) {  ?>
+    
+    toastr.success("<?php echo $this->session->flashdata('success'); ?>", "", {
+    "closeButton": "true",
+    "progressBar": "true",
+    "timeOut": "5000",
+    "extendedTimeOut": "2000"   
+    });
+    <?php  } elseif($this->session->flashdata('error')){ ?>
+   
+    toastr.error("<?php echo $this->session->flashdata('error'); ?>", "", {
+    "closeButton": "true",
+    "progressBar": "true"
+    });
+   
+    <?php } ?>
+
+    <?php 
+    $err = validation_errors();
+    $err_msg   = str_replace(array("\r","\n"), '\n', $err);
+    if(isset($err_msg) &&  $err_msg != ""){?>
+    toastr.error("<?php echo $err_msg; ?>", "", {
+    "closeButton": "true",
+    "progressBar": "true"
+    });
+    
+    <?php  } ?>  
 </script>

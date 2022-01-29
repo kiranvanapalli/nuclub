@@ -19,7 +19,7 @@ class Admin extends MX_Controller
         { 
              $this->load->view('login',$data);
             /*admin front end validations*/
-            $this->load->view('all_common_js/frontend_validation_admin.php');    
+             $this->load->view('all_common_js/frontend_validation_admin.php');    
         } 
         else 
         {  
