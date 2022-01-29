@@ -7,7 +7,7 @@
                         <div class="d-table-cell align-middle">
                             <h1 class="mb-3">Welcome Back !</h1>
                             <h4 class="text-dark font-open-sans">NU Club is the most unique mobile app, designed for managing startups, small business projects, and supporting modern companies.</h4>
-							<a class="nav-link p-0" style="color: white" href="index.html">Back To Home >> </a>
+							<a class="nav-link p-0" style="color: white" href="<?php echo base_url() ?>">Back To Home >> </a>
                         </div>
                     </div>
                 </div>
@@ -20,19 +20,19 @@
                             </div>
 
                             <!--login form-->
-                            <form class="login-signup-form">
+                            <form class="login-signup-form" action="user_login" method="post">
                                 <!-- Password -->
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col">
-                                            <label class="pb-1">Mobile Number</label>
+                                            <label class="pb-1">Email</label>
                                         </div>
                                     </div>
                                     <div class="input-group input-group-merge">
                                         <div class="input-icon">
                                             <span class="icofont-phone color-primary"></span>
                                         </div>
-                                        <input type="email" class="form-control" placeholder="+91 00000 00000">
+                                        <input type="email" class="form-control" placeholder="Please Enter Email" name="email" id="email">
                                     </div>
                                 </div>
 								
@@ -47,12 +47,12 @@
                                         <div class="input-icon">
                                             <span class="icofont-key color-primary"></span>
                                         </div>
-                                        <input type="email" class="form-control" placeholder="************">
+                                        <input type="password" class="form-control" placeholder="Please Enter Password" name="password" id="password">
                                     </div>
                                 </div>
 
                                 <!-- Submit -->
-                                <button class="btn btn-block secondary-solid-btn border-radius mt-4 mb-2">
+                                <button class="btn btn-block secondary-solid-btn border-radius mt-4 mb-2" type="submit" id="login_btn">
                                     Submit
                                 </button>
 

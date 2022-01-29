@@ -99,6 +99,21 @@ class Admin_model extends CI_Model
 		return $result;
 
     }
+    public function getuserdata($email,$pwd,$tablename)
+    {
+        $this->db->where($email);
+        $this->db->where($pwd);
+        $query = $this->db->get($tablename);
+       // echo $this->db->last_query();exit;
+        if($query) 
+        {
+            return $query->row_array();
+        } 
+        else 
+        {
+            return FALSE;
+        }  
+    }
 
 
 }

@@ -1,15 +1,15 @@
 <script>
-     function onlyNumberKey(evt) {
+    function onlyNumberKey(evt) {
 
-// Only ASCII character in that range allowed
-var ASCIICode = (evt.which) ? evt.which : evt.keyCode
-if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
-    return false;
-return true;
-}
+        // Only ASCII character in that range allowed
+        var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+            return false;
+        return true;
+    }
 
     $(document).ready(function() {
-    $(document).on('submit', '#join_us_form', function(event) {
+        $(document).on('submit', '#join_us_form', function(event) {
             event.preventDefault();
             var full_name = $('#full_name').val();
             var email_id = $('#email').val();
@@ -39,11 +39,9 @@ return true;
                     if (data) {
 
                         toastr["success"]("Thank you Join Admin Contact You Later");
-                         window.location.href = "<?php echo base_url(); ?>";
+                        window.location.href = "<?php echo base_url(); ?>";
 
-                    }
-                    else
-                    {
+                    } else {
                         toastr["error"]("Some Thing Went Wrong");
                         return false;
                     }
@@ -51,47 +49,68 @@ return true;
             });
 
         });
+
+        $('#login_btn').click(function(e) {
+            if ($('#email').val() == '')
+
+            {
+                toastr["error"]("Email Address is required!");
+
+                e.preventDefault();
+
+            }
+            if ($('#password').val() == '')
+
+            {
+                toastr["error"]("Password is required!");
+
+                e.preventDefault();
+
+            }
+        });
     });
 
     toastr.options = {
-  "closeButton": true,
-  "debug": false,
-  "newestOnTop": false,
-  "progressBar": true,
-  "positionClass": "toast-top-right",
-  "preventDuplicates": false,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "10000",
-  "extendedTimeOut": "5000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-  }
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "10000",
+        "extendedTimeOut": "5000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
 
-  <?php if($this->session->flashdata('success')) {  ?>
-<script>
-toastr.success("<?php echo $this->session->flashdata('success'); ?>", "", {
-"closeButton": "true",
-"progressBar": "true",
-"positionClass": "toast-top-right",
- "timeOut": "5000",
- "extendedTimeOut": "1000"  
-});
-</script> 
-<?php  } if($this->session->flashdata('error')){ ?>
-<script type="text/javascript">
-toastr.error("<?php echo $this->session->flashdata('error');?>", "", {
-"closeButton": "true",
-"progressBar": "true",
-"positionClass": "toast-top-right"
-});
-</script> 
-<?php } ?>  
+    <?php if ($this->session->flashdata('success')) { ?>
+            <
+            script >
+            toastr.success("<?php echo $this->session->flashdata('success'); ?>", "", {
+                "closeButton": "true",
+                "progressBar": "true",
+                "positionClass": "toast-top-right",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000"
+            });
+</script>
+<?php }
+    if ($this->session->flashdata('error')) { ?>
+    <script type="text/javascript">
+        toastr.error("<?php echo $this->session->flashdata('error'); ?>", "", {
+            "closeButton": "true",
+            "progressBar": "true",
+            "positionClass": "toast-top-right"
+        });
+    </script>
+<?php } ?>
 
 
-    // Enquiry Form Validation
+// Enquiry Form Validation
 
 </script>

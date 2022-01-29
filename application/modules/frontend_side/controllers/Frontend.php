@@ -6,6 +6,7 @@ class Frontend extends MX_Controller
     {
         parent::__construct();
         $this->load->model('Allfiles_model');
+        $this->load->model('admin/Admin_model');
        
     }
     public function index()
@@ -186,10 +187,85 @@ class Frontend extends MX_Controller
 
     public function user_login()
     {
-        $data['file'] = 'frontend_side/login';
-        $data['custom_js'] = 'frontend_side/custom_js';
-        $this->load->view('user_template/main',$data); 
+        $this->form_validation->set_rules('email','Email','trim|required|valid_email');
+        $this->form_validation->set_rules('password','Password','trim|required');
+        $data['title'] = 'NUCLUB Login';
+        if ($this->form_validation->run() == FALSE) 
+        {   
+             $data['file'] = 'frontend_side/login';
+             $data['validation_js'] = 'frontend_side/custom_js';
+             $data['custom_js'] = 'frontend_side/frontend_validation_js';
+             $this->load->view('user_template/main',$data);
+        }
+        else
+        {
+            if(isset($_POST['email']) && !empty($_POST['email']))
+            {
+                $email  = $this->input->post('email');
+                $password = $this->input->post('password');
+
+                $where_email = ["email" => $email];
+              
+                
+                $decode = base64_encode(base64_encode($password));
+                $where_password = ["password" => $decode];
+                $result = $this->Admin_model->getuserdata($where_email,$where_password,'tb_members');
+                // echo $this->db->last_query();die();
+                // print_r($result);die();
+                if (isset($result['member_id']) && !empty($result['member_id'])) 
+                {
+                    $user_session_data = array(
+                        'email' => $result['email'],
+                        'member_id' => $result['member_id'],
+                        'city' => $result['city'],
+                        'fullname' => $result['fullname'],
+                        'mobilenumber' => $result['mobilenumber'],
+                        'member_code' => $result['member_code'],
+                        'points' => $result['points'],
+                        'user_login_is' => TRUE
+                    );
+                    $this->session->set_userdata($user_session_data);
+                    if ($user_session_data['user_login_is'] == 1) 
+                    {
+                        $this->session->set_userdata($user_session_data);
+                        $this->session->set_flashdata('success','Welcome '.$_SESSION['fullname']);
+                        redirect('member_dashboard');
+                    }
+                    else
+                    {
+                        $this->session->set_flashdata('error', 'Invalid details provided!');
+                        // redirect(base_url('user_login'));
+
+                        echo "after login";
+                    } 
+
+                }
+                else 
+                {
+                    $this->session->set_flashdata('error', 'Invalid details provided.');
+                    // redirect(base_url('user_login'));
+                    echo " Not Found";
+                }
+
+            }
+        } 
     }
+    public function logout()
+    {
+        //$this->session->unset_userdata('user_id');
+        //$this->session->unset_userdata('admin_logged_in');
+        session_destroy();
+        redirect(base_url('admin'));
+    }
+    
+    public function is_logged_in() 
+    {
+        $is_logged_in = $this->session->userdata('user_login_is');
+        if(!isset($is_logged_in) || $is_logged_in != TRUE)
+        {
+            redirect(base_url('user_login'));    
+        } 
+    }   
     public function user_register()
     {
         $data['file'] = 'frontend_side/register';

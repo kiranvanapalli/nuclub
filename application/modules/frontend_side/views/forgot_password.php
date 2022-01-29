@@ -15,7 +15,7 @@
                     <div class="card login-signup-card shadow-lg mb-0">
                         <div class="px-md-5 py-3 p-4">
                             <div class="mb-3">
-                                <h5 class="h3 m-auto p-3 text-center text-uppercase">Login</h5>
+                                <h5 class="h3 m-auto p-3 text-center text-uppercase">Forgot Password</h5>
 <!--                                <p class="text-muted mb-0">Sign in to your account to continue.</p>-->
                             </div>
 

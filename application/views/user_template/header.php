@@ -58,7 +58,7 @@
                     <div class="collapse navbar-collapse" id="navbarContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="<?php echo base_url() ?>" data-scroll-nav="0">Home</a>
+                                <a class="nav-link" href="<?php echo base_url() ?>">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-scroll-nav="1">About Us</a>

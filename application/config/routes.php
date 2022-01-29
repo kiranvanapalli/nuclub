@@ -109,6 +109,8 @@ $route['user_forgotpassword'] = 'frontend_side/Frontend/forgotpassword';
 $route['savejoinus'] = 'frontend_side/Frontend/savejoinus';
 $route['forgotpasswordmail'] = 'frontend_side/Frontend/forgotpasswordmail';
 
+$route['member_dashboard'] = 'member_views/Member';
+
 
 
 
