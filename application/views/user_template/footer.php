@@ -42,7 +42,6 @@
     <!--contact js-->
     <script src="user_assets/assets/js/contact.js"></script>
     <!--ajax newsletter js-->
-    <script src="newsletter/ajax-newsletter-form.js"></script>
     <!--main js-->
     <script src="user_assets/assets/js/custom.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
@@ -124,23 +123,7 @@
     </div>
 </div>
 <script>
-toastr.options = {
-  "closeButton": true,
-  "debug": false,
-  "newestOnTop": false,
-  "progressBar": true,
-  "positionClass": "toast-top-right",
-  "preventDuplicates": false,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "10000",
-  "extendedTimeOut": "5000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-  }
+
 
   <?php if($this->session->flashdata('success')) {  ?>
     
@@ -168,5 +151,23 @@ toastr.options = {
     "progressBar": "true"
     });
     
-    <?php  } ?>  
+    <?php  } ?> 
+    
+    toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "10000",
+  "extendedTimeOut": "5000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+  }
 </script>

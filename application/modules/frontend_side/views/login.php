@@ -20,7 +20,7 @@
                             </div>
 
                             <!--login form-->
-                            <form class="login-signup-form" action="user_login" method="post">
+                            <form class="login-signup-form" id="user_login" method="POST">
                                 <!-- Password -->
                                 <div class="form-group">
                                     <div class="row">

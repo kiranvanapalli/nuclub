@@ -49,64 +49,7 @@ class Frontend extends MX_Controller
 
     }
 
-    // public function forgotpasswordmail()
-    // {
-    //     $response = [];
-
-    //     $where = $this->input->post('email');
-    //     $type = "array";
-    //     $fieldname = '';
-    //     $primaryfield = 'email';
-    //     $get_member_details = $this->Allfiles_model->get_data("tb_members", $fieldname, $primaryfield, $where);
-       
-    //     if($get_member_details['status'] != '')
-    //     {
-    //         $details = $get_member_details['resultSet'];
-    //         // print_r($data);
-    //         $this->load->config('email');
-    //         $this->load->library('email');
-    //         $from = $this->config->item('smtp_user');
-    //         $to = $this->input->post('email');
-    //         $data = array(
-    //             'from_address' => $from,
-    //             'to_address' => $to,
-    //             'full_name' => $details['fullname'],
-    //             'email' => $details['email'],
-    //             'mobilenumber' => $details['mobilenumber'],
-    //             'password' =>$details['password'],
-    //             'member_code' => $details['member_code'],
-    //             'points' => $details['points'],
-
-    //         );
-
-    //         $subject = 'Forgot Password';
-    //         $body = $this->load->view('new_mail_temp', $data, true);
-    //         $this->email->set_newline("\r\n");
-    //         $this->email->from($from, 'Nu Club');
-    //         $this->email->to($to);
-    //         $this->email->subject($subject);
-    //         $this->email->message($body);
-    //         if ($this->email->send()) {
-    //             echo 'Email has been sent successfully';
-    //             redirect("");
-    //         } else {
-    //             show_error($this->email->print_debugger());
-    //         }
-          
-    //     }
-    //         if($get_member_details['status'] != '')
-    //         {
-    //             $response = ['status' => "success"];
-    //         }
-    //     else
-    //     {
-    //         $response = ['status' => "fail"];
-    //     }
-
-        
-    //     echo json_encode($response);
-        
-    // }
+    
 
     public function forgotpasswordmail()
     {
@@ -185,70 +128,116 @@ class Frontend extends MX_Controller
 		}
     }
 
-    public function user_login()
-    {
-        $this->form_validation->set_rules('email','Email','trim|required|valid_email');
-        $this->form_validation->set_rules('password','Password','trim|required');
-        $data['title'] = 'NUCLUB Login';
-        if ($this->form_validation->run() == FALSE) 
-        {   
-             $data['file'] = 'frontend_side/login';
-             $data['validation_js'] = 'frontend_side/custom_js';
-            //  $data['custom_js'] = 'all_common_js/frontend_validation_admin';
-             $this->load->view('user_template/main',$data);
-        }
-        else
-        {
-            if(isset($_POST['email']) && !empty($_POST['email']))
-            {
-                $email  = $this->input->post('email');
-                $password = $this->input->post('password');
+    // public function user_login()
+    // {
+    //     $this->form_validation->set_rules('email','Email','trim|required|valid_email');
+    //     $this->form_validation->set_rules('password','Password','trim|required');
+    //     $data['title'] = 'NUCLUB Login';
+    //     if ($this->form_validation->run() == FALSE) 
+    //     {   
+    //          $data['file'] = 'frontend_side/login';
+    //          $data['validation_js'] = 'frontend_side/custom_js';
+    //         //  $data['custom_js'] = 'all_common_js/frontend_validation_admin';
+    //          $this->load->view('user_template/main',$data);
+    //     }
+    //     else
+    //     {
+    //         if(isset($_POST['email']) && !empty($_POST['email']))
+    //         {
+    //             $email  = $this->input->post('email');
+    //             $password = $this->input->post('password');
 
-                $where_email = ["email" => $email];
+    //             $where_email = ["email" => $email];
               
                 
-                $decode = base64_encode(base64_encode($password));
-                $where_password = ["password" => $decode];
-                $result = $this->Admin_model->getuserdata($where_email,$where_password,'tb_members');
-                // echo $this->db->last_query();die();
-                // print_r($result);die();
-                if (isset($result['member_id']) && !empty($result['member_id'])) 
-                {
-                    $user_session_data = array(
-                        'email' => $result['email'],
-                        'member_id' => $result['member_id'],
-                        'city' => $result['city'],
-                        'fullname' => $result['fullname'],
-                        'mobilenumber' => $result['mobilenumber'],
-                        'member_code' => $result['member_code'],
-                        'points' => $result['points'],
-                        'user_login_is' => TRUE
-                    );
-                    $this->session->set_userdata($user_session_data);
-                    if ($user_session_data['user_login_is'] == 1) 
-                    {
-                        $this->session->set_userdata($user_session_data);
-                        $this->session->set_flashdata('success','Welcome '.$_SESSION['fullname']);
-                        redirect('member_dashboard');
-                    }
-                    else
-                    {
-                        $this->session->set_flashdata('error', 'Please Login');
-                        redirect(base_url('user_login'));
+    //             $decode = base64_encode(base64_encode($password));
+    //             $where_password = ["password" => $decode];
+    //             $result = $this->Admin_model->getuserdata($where_email,$where_password,'tb_members');
+    //             // echo $this->db->last_query();die();
+    //             // print_r($result);die();
+    //             if (isset($result['member_id']) && !empty($result['member_id'])) 
+    //             {
+    //                 $user_session_data = array(
+    //                     'email' => $result['email'],
+    //                     'member_id' => $result['member_id'],
+    //                     'city' => $result['city'],
+    //                     'fullname' => $result['fullname'],
+    //                     'mobilenumber' => $result['mobilenumber'],
+    //                     'member_code' => $result['member_code'],
+    //                     'points' => $result['points'],
+    //                     'user_login_is' => TRUE
+    //                 );
+    //                 $this->session->set_userdata($user_session_data);
+    //                 if ($user_session_data['user_login_is'] == 1) 
+    //                 {
+    //                     $this->session->set_userdata($user_session_data);
+    //                     $this->session->set_flashdata('success','Welcome '.$_SESSION['fullname']);
+    //                     redirect('member_dashboard');
+    //                 }
+    //                 else
+    //                 {
+    //                     $this->session->set_flashdata('error', 'Please Login');
+    //                     redirect(base_url('user_login'));
 
-                    } 
+    //                 } 
 
-                }
-                else 
-                {
-                   echo $this->session->set_flashdata('error', 'Username or Password Incorrect');
-                    redirect(base_url('user_login'));
+    //             }
+    //             else 
+    //             {
+    //                echo $this->session->set_flashdata('error', 'Username or Password Incorrect');
+    //                 redirect(base_url('user_login'));
                    
-                }
+    //             }
 
-            }
-        } 
+    //         }
+    //     } 
+    // }
+
+    public function userLogin()
+    {
+        $data['page_title'] = "Login";
+		
+		 if($this->session->set_userdata('user_login_is')){
+			redirect('member_dashboard');
+		}
+
+        $data['file'] = 'frontend_side/login';
+        $data['validation_js'] = 'frontend_side/all_common_js/login_js';
+        $this->load->view('user_template/main',$data);
     }
+
+    public function CheckUser()
+    {
+       $response = array();
+       $email = $this->input->post('email');
+       $email_where = ['email' => $email ];
+       $password= $this->input->post('password');
+       $decode = base64_encode(base64_encode($password));
+       $password_where = ['password' => $decode];
+       $getdata = $this->Allfiles_model->checkuserdata('tb_members',$email_where,$password_where);
+       if(count($getdata) > 0)
+       {
+        $user_session_data = array(
+            'email' => $getdata['email'],
+            'member_id' => $getdata['member_id'],
+            'city' => $getdata['city'],
+            'fullname' => $getdata['fullname'],
+            'mobilenumber' => $getdata['mobilenumber'],
+            'member_code' => $getdata['member_code'],
+            'points' => $getdata['points'],
+            'user_login_is' => TRUE
+        );
+        $this->session->set_userdata($user_session_data);
+        $response = ['status' => 'success','redirect_url' => "member_dashboard",'message'=> "Login Sucess"];
+       }
+       else
+       {
+        $message = "Invalid Email/Password";
+        $response = ['status' => 'failure','message' => $message];
+       }
+       echo json_encode($response); 
+    }
+
     public function logout()
     {
         //$this->session->unset_userdata('user_id');

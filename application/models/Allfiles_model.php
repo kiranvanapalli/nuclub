@@ -331,6 +331,25 @@ class Allfiles_model extends CI_Model
      return $result;
 
  }
+ public function checkuserdata($table_name,$email, $password)
+	{
+		$result = array();
+		$this->db->select('*');
+		$this->db->from($table_name);
+		// $this->db->group_start();
+		// $this->db->where('email', $email)->or_where('mobilenumber', $email);
+		// $this->db->group_end();
+        $this->db->where($email);
+		$this->db->where($password);
+        
+		$this->db->where('status', 1);
+		$query = $this->db->get();
+		
+		if($query->num_rows() > 0) {
+			$result = $query->row_array();
+		}
+		return $result;
+	}
 
 }
 ?>
