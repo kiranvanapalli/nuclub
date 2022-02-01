@@ -26,16 +26,8 @@
             <span class="menu-title" data-i18n="Transactions">Members</span>
             </a>
          </li>
-         <li class="nav-item" class="<?php echo active_link('join_us'); ?>">
-            <a class="<?php if ($this->uri->segment(1) == "join_us") {
-               echo "active";
-               } ?>" href="<?= base_url() ?>join_us">
-            <i class="las la-user-friends"></i>
-            <span class="menu-title" data-i18n="Transactions">Interested</span>
-            </a>
-         </li>
-         <!-- <li class="nav-item">
-            <a class="<?php if ($this->uri->segment(1) == "award") {
+         <li class="nav-item">
+            <a class="<?php if ($this->uri->segment(1) == "transcations") {
                echo "active";
                }
                else if ($this->uri->segment(1) == "add_award") {
@@ -44,11 +36,20 @@
                 else if ($this->uri->segment(1) == "edit_award") {
                echo "active";
                }
-                ?>" href="<?= base_url() ?>award">
-            <i class="las la-award"></i>
-            <span class="menu-title" data-i18n="Transactions">Awards</span>
+                ?>" href="<?= base_url() ?>transcations">
+            <i class="las la-calendar-check"></i>
+            <span class="menu-title" data-i18n="Transactions">Transcations</span>
             </a>
-         </li> -->
+         </li>
+         <li class="nav-item" class="<?php echo active_link('join_us'); ?>">
+            <a class="<?php if ($this->uri->segment(1) == "join_us") {
+               echo "active";
+               } ?>" href="<?= base_url() ?>join_us">
+            <i class="las la-user-friends"></i>
+            <span class="menu-title" data-i18n="Transactions">Interested</span>
+            </a>
+         </li>
+        
          <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "movies") {
                echo "active";
