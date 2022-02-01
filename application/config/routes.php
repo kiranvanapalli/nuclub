@@ -158,6 +158,7 @@ $route['delete_member'] = 'members/Members/delete_member';
 $route['transcations'] = 'transcations/Transcations';
 $route['edit_transcation'] = 'transcations/Transcations/edit_transcation';
 $route['updateTranscation'] = 'transcations/Transcations/updateTranscation';
+$route['tras_data'] = 'transcations/Transcations/tras_data';
 
 //Join Us
 

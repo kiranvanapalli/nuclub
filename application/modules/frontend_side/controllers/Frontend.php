@@ -282,7 +282,7 @@ class Frontend extends MX_Controller
             'transaction_type' => $transaction_type,
             'transaction_id' => $transaction_id,
             'utr_number' => $utr_number,
-            'status' => 0,
+            'status' => 2,
         );
         $result = $this->Allfiles_model->data_save('tb_transaction', $data);
         echo json_encode($result);
@@ -293,7 +293,6 @@ class Frontend extends MX_Controller
         $this->session->unset_userdata('member_id');
         $this->session->unset_userdata('user_logged');
         $this->session->unset_userdata('fullname');
-        // session_destroy();
         redirect(base_url(''));
     }
 

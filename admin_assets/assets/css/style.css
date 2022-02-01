@@ -26,10 +26,10 @@ body.vertical-layout.vertical-menu-modern.menu-expanded .main-menu .navigation l
     background: #e4f6ff;
 }
 .main-menu.menu-dark .navigation {
-    background: #001f44;
+    background: #3991fe;
 }
 .main-menu.menu-dark .navigation > li .active {
-    background: #f8aa00;
+    background: #005cce !important;
 }
 .main-menu.menu-dark .navigation > li > a {
     padding: 12px 30px 12px 18px;
@@ -43,7 +43,7 @@ body.vertical-layout.vertical-menu-modern.menu-expanded .main-menu .navigation l
 }
 .main-menu.menu-dark {
     color: #dcdcdc;
-    background: #001f44;
+    background: #3991fe;
     border-right: none !important;
 }
 .main__title-link {

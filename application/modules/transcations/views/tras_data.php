@@ -30,21 +30,19 @@
                                             <th>Mobile Number</th>
                                             <th>Transcation Number</th>
                                             <th>STATUS</th>
-                                            <th>ACTIONS</th>
+                                            <!-- <th>ACTIONS</th> -->
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                         // $i = 1;
-                                        foreach ($all_trascations as $all_trascations) { if($all_trascations['status'] == 0) {
+                                        foreach ($all_trascations as $all_trascations) {  
                                             ?>
 
                                            
 
                                             <tr>
-                                                <!-- <td>
-                                                    <div class="main__table-text"><?php echo $i++; ?></div>
-                                                </td> -->
+                                               
                                                 <td>
                                                     <div class="main__table-text"><?php echo $all_trascations['fullname']; ?></div>
                                                 </td>
@@ -58,33 +56,20 @@
                                                 <td class="text-center">
                                                     <?php
                                                     if ($all_trascations['status'] == 1) {
-                                                        $status = "Active";
+                                                        $status = "Payment Recevied";
                                                         echo "<div class='main__table-text main__table-text--green'>".$status."</div>";
 
                                                     } else {
-                                                        $status = "In Active";
+                                                        $status = "Payment Not Recevied";
                                                         echo "<div class='main__table-text main__table-text--red'>".$status."</div>";
                                                     }
                                                     ?>
                                                    
                                                 </td>
-                                                <td class="text-center">
-                                                    <div class="main__table-btns text-center">
-                                                      
-                                                        <!-- <a href="detailviewpage.html" target="_blank" class="main__table-btn main__table-btn--view">
-                                                            <i class="lar la-eye"></i>
-                                                        </a> -->
-                                                        <a href="<?php echo base_url() ?>edit_transcation?id=<?php echo $all_trascations['tr_id']; ?>" class="main__table-btn main__table-btn--edit">
-                                                            <i class="las la-edit"></i>
-                                                        </a>
-                                                        <!-- <a id="<?php echo $all_members['member_id']; ?>"data-toggle="modal" data-target="#modaldelete" class="main__table-btn main__table-btn--delete open-modal delete">
-                                                            <i class="las la-trash-alt"></i>
-                                                        </a> -->
-                                                    </div>
-                                                </td>
+                                              
                                             </tr>
 
-                                        <?php  } }
+                                        <?php  }
 
                                         ?>
 

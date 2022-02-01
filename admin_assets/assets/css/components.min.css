@@ -547,18 +547,17 @@ footer .ft-heart:before {
 }
 .main-menu.menu-dark .navigation > li.active > a {
     font-weight: 700;
-    background: #424e58;
+    background: #005cce;
     margin: 0 1rem;
     border-radius: 0.3rem;
 }
 .main-menu.menu-dark .navigation > li .active {
-    background: #424e58;
+    background: #005cce;
 }
 .main-menu.menu-dark .navigation > li .active > a {
     color: #f6f6f6;
     font-weight: 700;
-    background: #424e58;
-    margin: 0 1rem;
+    background: #005cce;
     border-radius: 0.3rem;
     padding-left: 40px;
 }
@@ -609,7 +608,7 @@ footer .ft-heart:before {
 }
 .main-menu.menu-dark .navigation > li > ul,
 .main-menu.menu-dark ul.menu-popout {
-    background: #2c343b;
+    background: #3991fe;
 }
 .main-menu.menu-dark .navigation > li.hover > a {
     padding-left: 24px;

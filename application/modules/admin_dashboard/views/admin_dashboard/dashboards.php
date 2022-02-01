@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <a href="<?php echo base_url(); ?>award">
+                    <a href="<?php echo base_url(); ?>join_us">
                         <div class="card p-2 stats colo-2">
                             <span>Join US</span>
                             <p><?php echo $join_us; ?></p>

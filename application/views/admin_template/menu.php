@@ -26,11 +26,11 @@
             <span class="menu-title" data-i18n="Transactions">Members</span>
             </a>
          </li>
-         <li class="nav-item">
+         <!-- <li class="sidebar__nav-item">
             <a class="<?php if ($this->uri->segment(1) == "transcations") {
                echo "active";
                }
-               else if ($this->uri->segment(1) == "add_award") {
+               else if ($this->uri->segment(1) == "Transcation List") {
                echo "active";
                }
                 else if ($this->uri->segment(1) == "edit_award") {
@@ -40,7 +40,19 @@
             <i class="las la-calendar-check"></i>
             <span class="menu-title" data-i18n="Transactions">Transcations</span>
             </a>
-         </li>
+         </li> -->
+         <li class="sidebar__nav-item">
+					<a class="sidebar__nav-link" data-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="true" aria-controls="collapseMenu"><i class="las la-calendar-check"></i> <span>Transcations</span> <i class="icon ion-md-arrow-dropdown"></i></a>
+
+					<ul class="collapse show sidebar__menu" id="collapseMenu">
+						<li class="<?php if ($this->uri->segment(1) == "transcations") {
+               echo "active";
+               }?>" ><a href="<?php echo base_url() ?>transcations">Pending Transction List</a></li>
+						<li class="<?php if ($this->uri->segment(1) == "tras_data") {
+               echo "active";
+               }?>" ><a href="<?php echo base_url()?>tras_data">Transcation List</a></li>
+					</ul>
+				</li>
          <li class="nav-item" class="<?php echo active_link('join_us'); ?>">
             <a class="<?php if ($this->uri->segment(1) == "join_us") {
                echo "active";
