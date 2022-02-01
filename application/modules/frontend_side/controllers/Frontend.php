@@ -221,7 +221,7 @@ class Frontend extends MX_Controller
 
                 $userDetails = $this->Allfiles_model->getCustomerDetails("tb_members", $whr)->row_array();
 
-                $this->session->set_userdata('user_logged', 1);
+                $this->session->set_userdata('user_logged',1);
                 $this->session->set_userdata('fullname', $userDetails['fullname']);
                 $this->session->set_userdata('member_id', $userDetails['member_id']);
 
@@ -251,12 +251,17 @@ class Frontend extends MX_Controller
 
     public function payment_page()
     {
-        if ($this->session->userdata('user_logged')) {
+        $log_status =  $this->session->userdata('user_logged');
+        if($log_status == 1) {
             $data['file'] = 'frontend_side/payment';
             $data['custom_js'] = 'frontend_side/all_common_js/payment_js';
             $this->load->view('user_template/main', $data);
         }
-        redirect('user_login');
+        else
+        {
+            redirect('user_login');
+        }
+       
     }
 
     public function saveTranscation()
