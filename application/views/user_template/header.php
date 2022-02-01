@@ -101,7 +101,7 @@ else
                                 <a class="nav-link" href="<?php echo base_url(); ?>joinus">Join Us</a>
                             </li>
 							<li class="nav-item download-btn">
-                                <a class="nav-link" href="<?php echo base_url(); ?>userLogin">Login / SignUp</a>
+                                <a class="nav-link" href="<?php echo base_url(); ?>user_login">Login / SignUp</a>
                             </li>
                         </ul>
                     </div>
