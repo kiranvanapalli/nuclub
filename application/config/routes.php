@@ -108,9 +108,12 @@ $route['register'] = 'frontend_side/Frontend/user_register';
 $route['user_forgotpassword'] = 'frontend_side/Frontend/forgotpassword';
 $route['savejoinus'] = 'frontend_side/Frontend/savejoinus';
 $route['forgotpasswordmail'] = 'frontend_side/Frontend/forgotpasswordmail';
-$route['userLogin'] = 'frontend_side/Frontend/userLogin';
+// $route['userLogin'] = 'frontend_side/Frontend/userLogin';
 $route['CheckUser'] = 'frontend_side/Frontend/CheckUser';
-
+$route['payment']= 'frontend_side/Frontend/payment_page';
+$route['saveTranscation']= 'frontend_side/Frontend/saveTranscation';
+$route['saveUser']= 'frontend_side/Frontend/saveUser';
+$route['user_logout'] = 'frontend_side/Frontend/logout';
 $route['member_dashboard'] = 'member_views/Member';
 
 

@@ -1,4 +1,12 @@
 <script>
+   function onlyNumberKey(evt) {
+
+// Only ASCII character in that range allowed
+var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+    return false;
+return true;
+}
 $(document).ready(function() { 
 intRegex = /[0-9 -()+]+$/;
 intRegex_spc = /^[A-Za-z0-9]+$/;

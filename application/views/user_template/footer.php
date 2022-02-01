@@ -48,6 +48,7 @@
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
 
 
 	<script>
@@ -60,6 +61,30 @@
 
 </body>
 </html>
+
+
+<div class="socialmedia">
+         <div class="">
+            <ul>
+               <li class="facebook"><a href="https://www.facebook.com/" target="_blank"><i class="fa-facebook-f fab font-weight-normal"></i></a></li>
+               <li class="instagram"><a href="https://www.instagram.com/" target="_blank"><i class="fa-instagram fab font-weight-normal"></i></a></li>
+               <li class="whatsapp"><a href="https://api.whatsapp.com/send?phone=+910000000000" target="_blank"><i class="fa-whatsapp fab font-weight-normal"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+<div id="back-to-top" class="show">
+      <a class="top" href="https://api.whatsapp.com/send?phone=+910000000000" target="_blank" id="top">
+		  <i class="fa-whatsapp fab font-weight-normal"></i>
+		</a>
+   </div>
+
+<div id="right-to-bottom" class="show">
+      <a class="top" href="contact-us.html" target="_blank">
+		  <i class="fa-address-book fa font-weight-normal"></i>
+		</a>
+   </div>
+
 
 
 <!-- Sidebar Right -->
@@ -122,6 +147,7 @@
         </div>
     </div>
 </div>
+
 <script>
 
 

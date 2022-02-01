@@ -259,7 +259,7 @@ p {
     top: 0;
     width: 100%;
     z-index: 99;
-    padding: 15px 0;
+    padding: 0px 0;
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
@@ -270,7 +270,7 @@ p {
     z-index: 9999;
     background: -webkit-gradient( linear, left top, right top, from(#20007e), to(#e61eb6));
     background: linear-gradient( 90deg, #20007e 0%, #e61eb6 100%);
-    padding: 10px 0;
+    padding: 0px 0;
     -webkit-box-shadow: 0 0 10px #111;
     box-shadow: 0 0 10px #111;
 }
@@ -315,15 +315,16 @@ p {
 }
 
 .navbar-nav .nav-item.download-btn .nav-link {
-    -webkit-box-shadow: 0px 10px 30px 0px rgba(21, 10, 82, 0.35);
-    box-shadow: 0px 10px 30px 0px rgba(21, 10, 82, 0.35);
+    -webkit-box-shadow: 0px 10px 30px 0px rgb(21 10 82 / 35%);
+    box-shadow: 0px 10px 30px 0px rgb(21 10 82 / 35%);
     background: -webkit-gradient(linear, right top, left top, from(#2e19a7), to(#ae0ee9));
     background: linear-gradient(to left, #ff7902, #ffb06b);
     border-radius: 25px;
-    padding: 10px 34px;
-    background-size: 100% auto
+    padding: 5px 25px;
+    background-size: 100% auto;
+    font-size: 12px;
+    margin-top: 3px;
 }
-
 .navbar-nav .nav-item.download-btn .nav-link:after {
     border: 0
 }
@@ -346,7 +347,6 @@ p {
     background-image: url(../images/home-bg-1.png);
     background-repeat: no-repeat;
     background-position: bottom;
-    margin-bottom: 60px
 }
 
 #home-area.bg-1 .home-bg-circle {
@@ -389,7 +389,7 @@ p {
 }
 
 .caption.two {
-    padding: 238px 0 170px;
+    padding: 60px 0 60px;
 }
 
 .caption h1 {
@@ -1715,7 +1715,7 @@ p {
     float: right;
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 42%
+    background-size: 42%;
     -webkit-animation: ani-rotate 50s linear infinite;
     animation: ani-rotate 50s linear infinite;
 }
@@ -1729,7 +1729,7 @@ p {
     float: right;
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 42%
+    background-size: 42%;
     -webkit-animation: ani-rotate 50s linear infinite;
     animation: ani-rotate 50s linear infinite;
 }
@@ -3411,7 +3411,7 @@ p {
 }
 
 .logo img {
-    width: 150px;
+    width: 120px;
     text-align: center;
 }
 
@@ -3524,7 +3524,7 @@ p {
     text-indent: 35px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    height: calc(2.45em + .75rem + 2px);
+    height: calc(2.6em + .75rem + 2px);
 }
 .login-signup-form .form-group .input-group.input-group-merge>.form-control:focus{
     z-index: inherit;
@@ -3543,7 +3543,7 @@ p {
 
 .input-icon span{
     padding: 18px 15px;
-    border-left: 2px solid #65258a;
+/*    border-left: 2px solid #65258a;*/
     position: absolute;
     font-size: 18px;
     height: calc(3.4rem + 2px);
@@ -3927,14 +3927,263 @@ a .single-promo-2 p {
     padding: 10px 34px;
     color: white;
 }
+.dropdown-toggle {
+    white-space: nowrap;
+}
+.menu li a.dropdown-toggle::after {
+    position: relative;
+    left: 2px;
+    vertical-align: middle;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+    position: relative !important;
+    border-bottom: 0px !important;
+    width: 10px !important;
+	margin: 0px;
+}
 
 
+#back-to-top .top {
+    z-index: 999;
+    position: fixed;
+    margin: 0px;
+    bottom: 30px;
+    left: 25px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 90px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: #3eb557;
+    color: #ffffff;
+    box-shadow: 2px 3px 9px 0px #0000004a;
+}
+#right-to-bottom .top {
+    z-index: 999;
+    position: fixed;
+    margin: 0px;
+    bottom: 30px;
+    right: 25px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 90px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: #042c95;
+    color: #ffffff;
+    box-shadow: 2px 3px 9px 0px #0000004a;
+}
+#back-to-top.show {
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+#back-to-top {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.show {
+    display: block!important;
+}
+#back-to-top .top:hover {
+    color: rgb(62 181 87);
+    background: rgb(255 255 255 / 90%);
+}
+.socialmedia {
+    position: fixed;
+    /* background-color: white; */
+    z-index: 10000;
+    float: right;
+    right: 0;
+    color: white;
+    top: 15rem;
+    border-radius: 15px 0px 0px 14px;
+}
+.facebook {
+    background-color: #3b5998;
+    border-radius: 15px 0px 0px 0px;
+    padding: 10px;
+}
+.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+}
+.whatsapp {
+    background-color: #25D366;
+    border-radius: 0px 0px 0px 15px;
+    padding: 10px;
+}
+li {
+    list-style: none;
+    /* padding: 5px 0; */
+}
+.socialmedia a {
+    color: white;
+    font-size: 15px;
+    line-height: normal;
+}
 
 
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
 
 
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
 
+.main-menu {
+background:#212121;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
 
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+ font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+.form-control {
+    border: 0px solid #ced4da;
+    border-bottom: 1px solid #8b8b8b;
+}
+.form-group {
+    margin-bottom: 2rem;
+}
+.d-table-cell span {
+    background-color: #ff7600;
+    color: white;
+    padding: 0px 10px;
+}
+.login_user
+{
+    background: linear-gradient(90deg,#fff 15%, rgb(56, 144, 254) 100%) !important;
+}
 
 
 

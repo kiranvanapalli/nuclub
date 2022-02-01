@@ -341,8 +341,22 @@ class Allfiles_model extends CI_Model
 		// $this->db->group_end();
         $this->db->where($email);
 		$this->db->where($password);
-        
-		$this->db->where('status', 1);
+		$query = $this->db->get();
+		
+		if($query->num_rows() > 0) {
+			$result = $query->row_array();
+		}
+		return $result;
+	}
+    public function checkuser($table_name,$email,$mobile)
+	{
+		$result = array();
+		$this->db->select('*');
+		$this->db->from($table_name);
+		$this->db->group_start();
+		$this->db->where('email', $email)->or_where('mobilenumber', $mobile);
+		$this->db->group_end();
+		$this->db->where('status', 0);
 		$query = $this->db->get();
 		
 		if($query->num_rows() > 0) {
