@@ -364,6 +364,19 @@ class Allfiles_model extends CI_Model
 		}
 		return $result;
 	}
+    public function update_profile($table_name,$data,$user_id)
+   {
+      $this->db->where('member_id',$user_id);
+      $query =$this->db->update($table_name,$data); 
+      if($query)
+      {
+         return TRUE;
+      }
+      else
+      {
+         return FALSE;
+      }
+   }
 
 }
 ?>

@@ -126,6 +126,8 @@ $route['Referralse'] = 'member_views/Member/Referralsefview';
 
 $route['Profile'] = 'member_views/Member/Profile';
 $route['EditProfile'] = 'member_views/Member/editProfile';
+$route['updateProfile'] = 'member_views/Member/updateProfile';
+
 $route['update_password'] = 'member_views/Member/update_password';
 
 //Wallet

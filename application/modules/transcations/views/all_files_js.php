@@ -8,6 +8,11 @@
           return true;
       }
     $(document).ready(function() {
+        $("#date").datepicker({
+            format: 'mm/dd/yyyy',
+            endDate: '-3d',
+            autoclose: true //to close picker once year is selected
+        });
         var tran_table = $('.transcationtable').DataTable({});
         $(document).on('submit', '#update_transction', function(event) {
             event.preventDefault();

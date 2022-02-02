@@ -4,7 +4,7 @@
             <div class="col-sm-6 p-md-0">
                 <div class="welcome-text">
                     <h4>Hi, welcome back! <strong><?php echo $this->session->userdata('fullname');  ?></strong></h4>
-    
+
                 </div>
             </div>
             <!-- <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
@@ -16,30 +16,30 @@
         <div class="">
             <div class="row">
                 <div class="col-lg-12">
-                    <form>
+                    <form name="update_profile" id="update_profile">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>FullName</label>
                                 <input type="text" placeholder="Full Name" class="form-control" name="fullname" id="fullname" value="<?php echo $get_member_details['fullname']; ?>" />
                             </div>
-                            <div class="form-group col-md-6">
+                            <!-- <div class="form-group col-md-6">
                                 <label>Mobile Number</label>
-                                <input type="text" placeholder="Mobile Number" class="form-control" name="mobilenumber" id="mobilenumber" value="<?php echo $get_member_details['mobilenumber']; ?>" />
+                                <input type="text" placeholder="Mobile Number" class="form-control" name="mobilenumber" id="mobilenumber" onkeypress="return onlyNumberKey(event)" maxlength="10" value="<?php echo $get_member_details['mobilenumber']; ?>" />
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Email</label>
-                                <input type="email" placeholder="Email" class="form-control" name="email" id="email"  value="<?php echo $get_member_details['email']; ?>"  />
-                            </div>
+                                <input type="email" placeholder="Email" class="form-control" name="email" id="email" value="<?php echo $get_member_details['email']; ?>" />
+                            </div> -->
                             <div class="form-group col-md-3">
                                 <label>Gender</label>
                                 <select class="form-control" name="gender" id="gender">
                                     <option value="">Please Select Gender</option>
                                     <option value="Male" <?php if ($get_member_details['gender'] == "Male") {
-                                                                        echo 'selected';
-                                                                    } ?>>Male</option>
-                                            <option value="Female" <?php if ($get_member_details['gender'] == "Female") {
-                                                                        echo 'selected';
-                                                                    } ?>>Female</option>
+                                                                echo 'selected';
+                                                            } ?>>Male</option>
+                                    <option value="Female" <?php if ($get_member_details['gender'] == "Female") {
+                                                                echo 'selected';
+                                                            } ?>>Female</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
@@ -51,11 +51,13 @@
                                 <select class="form-control" name="state" id="state">
                                     <option value="">Please Select State</option>
                                     <?php
-                                                    foreach ($state_list as $states_list) { 
-                                                      ?>
-                                                       <option value="<?php echo $states_list['state_id']; ?>"<?php if($get_member_details['state'] == $states_list['state_id']) { echo 'selected'; } ?>><?php echo $states_list['state_name']; ?></option>
-                                                    <?php }
-                                                    ?>
+                                    foreach ($state_list as $states_list) {
+                                    ?>
+                                        <option value="<?php echo $states_list['state_id']; ?>" <?php if ($get_member_details['state'] == $states_list['state_id']) {
+                                                                                                    echo 'selected';
+                                                                                                } ?>><?php echo $states_list['state_name']; ?></option>
+                                    <?php }
+                                    ?>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
