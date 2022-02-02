@@ -37,6 +37,9 @@
                                         <?php
                                         // $i = 1;
                                         foreach ($all_trascations as $all_trascations) {  
+
+                                            if($all_trascations['status'] == 1 || ($all_trascations['status'] == 0 ))
+                                            {
                                             ?>
 
                                            
@@ -69,7 +72,7 @@
                                               
                                             </tr>
 
-                                        <?php  }
+                                        <?php  } }
 
                                         ?>
 
