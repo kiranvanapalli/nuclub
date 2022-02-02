@@ -13,223 +13,92 @@ class Member extends MX_Controller
 
     public function index()
     {
-        // $data['file'] = 'members/member_list';
-        // $this->load->view('member_template/main', $data);
-        $this->load->view('dashboard');
+        $data['file'] = 'member_views/dashboard/dashboard';
+        $member_id = $this->session->userdata('member_id');
+        $data['member_name'] = $this->session->userdata('fullname');
+        $get_member_details = $this->Allfiles_model->get_data('tb_members', '*', 'member_id', $member_id);
+        $data['get_member_details'] = $get_member_details['resultSet'];
+        $this->load->view('member_template/main', $data);
+      
     }
 
-    public function add_member()
+
+
+    public function Profile()
     {
-        $data['file'] = 'members/add_member';
-        $where = ["status" => 1];
+        $member_id = $this->session->userdata('member_id');
+        $get_member_details = $this->Allfiles_model->get_data('tb_members', '*', 'member_id', $member_id);
+        $data['get_member_details'] = $get_member_details['resultSet'];
+        $where = ['status' => 1];
         $type = "array";
-        $data['states_list'] = $this->Allfiles_model->GetDataAllmodels("tb_states", $where, $type, 'state_name', $limit = '');
-        $data['custom_js'] = 'members/all_files_js';
-        $this->load->view('admin_template/main', $data);
-
+        $data['state_list'] = $this->Allfiles_model->GetDataAllmodels("tb_states", $where, $type, 'state_id', $limit = '');
+        $data['file'] = 'member_views/profile/profile';
+        $this->load->view('member_template/main', $data);
     }
-
-    // public function save_member()
-    // {
-    //     $response = [];
-    //     $fivedigitcode = mt_rand(11111, 99999);
-    //     $member_code = "NU" . $fivedigitcode;
-    //     $mobile_number = $this->input->post("mobile_number");
-    //     $where = ["mobilenumber" => $mobile_number];
-    //     $type = "array";
-    //     $all_members = $this->Allfiles_model->GetDataAll("tb_members", $where, $type, 'member_id', $limit = '');
-    //     if (!empty($all_members)) {
-    //         // $response = array('status'=>'error','message' => 'Mobile Number Already Existed'); //etc
-    //         // echo json_encode($response);
-
-    //         $response = ['status' => 'fail'];
-    //     }
-    //     else {
-    //         $data = array(
-    //             'fullname' => $this->input->post("full_name"),
-    //             'email' => $this->input->post("email_id"),
-    //             'mobilenumber' => $this->input->post("mobile_number"),
-    //             'gender' => $this->input->post("gender"),
-    //             'date_of_birth' => $this->input->post("date"),
-    //             'state' => $this->input->post("state"),
-    //             'city' => $this->input->post("city"),
-    //             'payment_via' => $this->input->post("pay_via"),
-    //             'password' => $this->input->post("password"),
-    //             'points' => $this->input->post("nu_points"),
-    //             'member_code' => $member_code,
-    //             'created_at' => date('Y-m-d H:i:s'),
-    //             'status' => 1,
-    //         );
-    //         $result = $this->Allfiles_model->data_save("tb_members", $data);
-    //         $response = ['status' => 'success'];
-
-    //         print_r($response);
-
-    //         if ($result) {
-    //             // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
-    //             // echo json_encode($response);
-    //             $insert_id = $this->db->insert_id();
-    //             if ($insert_id) {
-    //                 $fieldname = '';
-    //                 $primaryfield = 'member_id';
-    //                 $get_member_details = $this->Allfiles_model->get_data("tb_members", $fieldname, $primaryfield, $insert_id);
-    //                 $data['get_member_details'] = $get_member_details['resultSet'];
-    //                 $this->load->config('email');
-    //                 $this->load->library('email');
-    //                 $from = $this->config->item('smtp_user');
-    //                 $to = $this->input->post('email_id');
-    //                 $data = array(
-    //                     'from_address' => $from,
-    //                     'to_address' => $to,
-    //                     'full_name' => $this->input->post("full_name"),
-    //                     'email' => $this->input->post("email_id"),
-    //                     'mobilenumber' => $this->input->post("mobile_number"),
-    //                     'password' => $this->input->post('password'),
-    //                     'member_code' => $member_code,
-    //                     'points' => $this->input->post('nu_points'),
-
-    //                 );
-
-    //                 $subject = 'Member Login Details';
-    //                 $body = $this->load->view('send_mail_temp', $data, true);
-    //                 $this->email->set_newline("\r\n");
-    //                 $this->email->from($from, 'Nu Club');
-    //                 $this->email->to($to);
-    //                 $this->email->subject($subject);
-    //                 $this->email->message($body);
-    //                 if ($this->email->send()) {
-    //                     echo 'Email has been sent successfully';
-    //                     redirect("");
-    //                 } else {
-    //                     show_error($this->email->print_debugger());
-    //                 }
-
-    //             }
-    //             // $response = array('status'=>'success','message' => 'Member Details Added Successfully');
-    //             // echo json_encode($response);
-
-    //         }
-
-    //     }
-
-    //     echo json_encode($response);
-
-    // }
-    public function save_member()
+    public function editProfile()
     {
-        $response = [];
-        $fivedigitcode = mt_rand(11111, 99999);
-        $member_code = "NU" . $fivedigitcode;
-        $password = base64_encode(base64_encode($this->input->post('password')));
-        $data = array(
-            'fullname' => $this->input->post("full_name"),
-            'email' => $this->input->post("email_id"),
-            'mobilenumber' => $this->input->post("mobile_number"),
-            'gender' => $this->input->post("gender"),
-            'date_of_birth' => $this->input->post("date"),
-            'state' => $this->input->post("state"),
-            'city' => $this->input->post("city"),
-            'payment_via' => $this->input->post("pay_via"),
-            'password' => $password,
-            'points' => $this->input->post("nu_points"),
-            'member_code' => $member_code,
-            'created_at' => date('Y-m-d H:i:s'),
-            'status' => 1,
-        );
-        $result = $this->Allfiles_model->data_save("tb_members", $data);
-        echo json_encode($result);
-        if ($result) {
-            $insert_id = $this->db->insert_id();
-            if ($insert_id) {
-                $fieldname = '';
-                $primaryfield = 'member_id';
-                $get_member_details = $this->Allfiles_model->get_data("tb_members", $fieldname, $primaryfield, $insert_id);
-                $data['get_member_details'] = $get_member_details['resultSet'];
-                $this->load->config('email');
-                $this->load->library('email');
-                $from = $this->config->item('smtp_user');
-                $to = $this->input->post('email_id');
-                
-                $data = array(
-                    'from_address' => $from,
-                    'to_address' => $to,
-                    'full_name' => $this->input->post("full_name"),
-                    'email' => $this->input->post("email_id"),
-                    'mobilenumber' => $this->input->post("mobile_number"),
-                    'password' => $this->input->post('password'),
-                    'member_code' => $member_code,
-                    'points' => $this->input->post('nu_points'),
-
-                );
-
-                $subject = 'Member Login Details';
-                $body = $this->load->view('new_mail_temp', $data, true);
-                $this->email->set_newline("\r\n");
-                $this->email->from($from, 'Nu Club');
-                $this->email->to($to);
-                $this->email->subject($subject);
-                $this->email->message($body);
-                if ($this->email->send()) {
-                    echo 'Email has been sent successfully';
-                    redirect("");
-                } else {
-                    show_error($this->email->print_debugger());
-                }
-            }
-        }
-
-       
-
+        $member_id = $this->session->userdata('member_id');
+        $get_member_details = $this->Allfiles_model->get_data('tb_members', '*', 'member_id', $member_id);
+        $data['get_member_details'] = $get_member_details['resultSet'];
+        $where = ['status' => 1];
+        $type = "array";
+        $data['state_list'] = $this->Allfiles_model->GetDataAllmodels("tb_states", $where, $type, 'state_id', $limit = '');
+        $data['file'] = 'member_views/profile/edit_profile';
+        $this->load->view('member_template/main', $data);
     }
-    public function edit_member()
+    public function Wallet()
     {
-        if (isset($_GET['id']) && !empty($_GET['id'])) {
-            $id = $_GET['id'];
-            //  $where = ['member_id' => $id];
-            $where1 = ['status' => 1];
-            $type = "array";
-            $get_member_details = $this->Allfiles_model->get_data('tb_members', '*', 'member_id', $id);
-            $data['get_member_details'] = $get_member_details['resultSet'];
-            $data['states'] = $this->Allfiles_model->GetDataAllmodels("tb_states", $where1, $type, 'state_id', $limit = '');
-            $data['file'] = 'members/edit_member';
-            $data['custom_js'] = 'members/all_files_js';
-            $this->load->view('admin_template/main', $data);
-        }
+        $data['file'] = 'member_views/dashboard/wallet';
+        $this->load->view('member_template/main', $data);
     }
 
-    public function update_member()
+    public function update_password()
     {
-        if (!empty($_POST['edit_id'])) {
+        $data['file'] = 'member_views/update_password/change_password';
+        $this->load->view('member_template/main', $data);
+    }
+    
 
-            $response = [];
-            $where = ['member_id' => $_POST['edit_id']];
-            $data = array(
-                'fullname' => $this->input->post("full_name"),
-                'email' => $this->input->post("email_id"),
-                'mobilenumber' => $this->input->post("mobile_number"),
-                'gender' => $this->input->post("gender"),
-                'date_of_birth' => $this->input->post("date"),
-                'state' => $this->input->post("state"),
-                'city' => $this->input->post("city"),
-                'payment_via' => $this->input->post("pay_via"),
-                'password' => $this->input->post("password"),
-                'points' => $this->input->post("nu_points"),
-                'member_code' => $this->input->post('member_code'),
-                'updated_at' => date('Y-m-d H:i:s'),
-                'status' => $this->input->post('status'),
-            );
+    public function Referralsefview()
+    {
+       $data['file'] = 'member_views/referrals/list';
+       $data['custom_js'] = 'member_views/referrals/all_files_js';
+       $member_id = $this->session->userdata('member_id');
+       $get_member_details = $this->Allfiles_model->get_data('tb_members', '*', 'member_id', $member_id);
+       $member_details = $get_member_details['resultSet'];
+       $nucode = $member_details['member_code'];
+       $member_name = $this->session->userdata('fullname');
+       $where = ["member_code" => $nucode ,'refer_name' => $member_name];
+      
+       $type = "array";
+       $data['refer_list'] = $this->Allfiles_model->GetDataAllmodels("tb_members", $where, $type, 'member_code', $limit = '');
+       $this->load->view('member_template/main', $data);
+    }
 
-            $update_member_details = $this->Allfiles_model->updateData("tb_members", $data, $where);
-            if ($update_member_details) {
-                $response = ['status' => 'success'];
-            } else {
-                $response = ['status' => 'fail'];
-            }
-            echo json_encode($response);
-        }
+    public function getReferrals()
+    {
+        $member_id = $this->session->userdata('member_id');
+        $get_member_details = $this->Allfiles_model->get_data('tb_members', '*', 'member_id', $member_id);
+        $member_details = $get_member_details['resultSet'];
+        $nucode = $member_details['member_code'];
+        $where = ["member_code" => $nucode];
+        $type = "array";
+        $data['refer_list'] = $this->Allfiles_model->GetDataAllmodels("tb_members", $where, $type, 'member_code', $limit = '');
 
     }
 
+    public function nucoins()
+    {
+        $data['file'] = 'member_views/nucoins/list';
+        $this->load->view('member_template/main', $data);
+        
+    }
+    public function afiliated()
+    {
+        $data['file'] = 'member_views/afiliated/list';
+        $this->load->view('member_template/main', $data);
+        
+    }
     public function delete_member()
     {
       

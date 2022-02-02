@@ -114,14 +114,34 @@ $route['payment']= 'frontend_side/Frontend/payment_page';
 $route['saveTranscation']= 'frontend_side/Frontend/saveTranscation';
 $route['saveUser']= 'frontend_side/Frontend/saveUser';
 $route['user_logout'] = 'frontend_side/Frontend/logout';
-$route['member_dashboard'] = 'member_views/Member';
+
 $route['news_letter_save'] = 'frontend_side/Frontend/saveNewsLetter';
 
+// Member Views
+
+$route['member_dashboard'] = 'member_views/Member';
+$route['Referralse'] = 'member_views/Member/Referralsefview';
+
+//Profile
+
+$route['Profile'] = 'member_views/Member/Profile';
+$route['EditProfile'] = 'member_views/Member/editProfile';
+$route['update_password'] = 'member_views/Member/update_password';
+
+//Wallet
+
+$route['Wallet'] = 'member_views/Member/Wallet';
 
 
 
+//NU Coins
 
 
+$route['nucoins'] = 'member_views/Member/nucoins';
+
+//Afiliated Market Products
+
+$route['afiliated'] = 'member_views/Member/afiliated';
 
 
 /** admin side **/
