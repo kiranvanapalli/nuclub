@@ -115,6 +115,7 @@ $route['saveTranscation']= 'frontend_side/Frontend/saveTranscation';
 $route['saveUser']= 'frontend_side/Frontend/saveUser';
 $route['user_logout'] = 'frontend_side/Frontend/logout';
 $route['member_dashboard'] = 'member_views/Member';
+$route['news_letter_save'] = 'frontend_side/Frontend/saveNewsLetter';
 
 
 
@@ -164,6 +165,11 @@ $route['tras_data'] = 'transcations/Transcations/tras_data';
 
 $route['join_us'] = 'joinus/JoinUs';
 $route['delete_join_us'] = 'joinus/JoinUs/delete_join_us';
+
+//News Letter Subscription
+
+$route['news_letter_subscription'] = 'news_letters/News_letters';
+$route['delete_news_letter_sub'] = 'news_letters/News_letters/delete';
 
 
 /* END HERE */

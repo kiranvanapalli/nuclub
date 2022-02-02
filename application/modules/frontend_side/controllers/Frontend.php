@@ -15,6 +15,7 @@ class Frontend extends MX_Controller
     public function nuclub_view()
     {
         $data['file'] = 'frontend_side/nuclub';
+        $data['custom_js'] = 'frontend_side/custom_js';
         $this->load->view('user_template/main', $data);
     }
 
@@ -286,6 +287,30 @@ class Frontend extends MX_Controller
         );
         $result = $this->Allfiles_model->data_save('tb_transaction', $data);
         echo json_encode($result);
+    }
+
+    public function saveNewsLetter()
+    {
+        
+        
+        $data = array(
+            'email' => $this->input->post('email_data'),
+            'created_at' => date('Y-m-d H:i:s')
+        );
+
+        $result = $this->Allfiles_model->data_save('tb_news_letter',$data);
+
+        if($result)
+        {
+            $this->session->set_flashdata('success','Thank You For News Letter Subscription');
+            redirect('nuclub');
+        }
+        else
+        {
+            $this->session->set_flashdata('error','Some Thing Went Wrong');
+            redirect('nuclub');
+        }
+
     }
 
     public function logout()

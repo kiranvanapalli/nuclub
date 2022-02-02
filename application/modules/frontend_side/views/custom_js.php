@@ -50,19 +50,13 @@
 
         });
 
-        $('#login_btn').click(function(e) {
+      
+
+        $('#news_letter_submit').click(function(e) {
             if ($('#email').val() == '')
 
             {
                 toastr["error"]("Email Address is required!");
-
-                e.preventDefault();
-
-            }
-            if ($('#password').val() == '')
-
-            {
-                toastr["error"]("Password is required!");
 
                 e.preventDefault();
 

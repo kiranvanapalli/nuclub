@@ -62,19 +62,14 @@
             </a>
          </li>
         
-         <!-- <li class="nav-item">
-            <a class="<?php if ($this->uri->segment(1) == "movies") {
+         <li class="nav-item">
+            <a class="<?php if ($this->uri->segment(1) == "news_letter_subscription") {
                echo "active";
-               } else if ($this->uri->segment(1) == "add_movie") {
-               echo "active";
-               }
-               else if ($this->uri->segment(1) == "edit_movie") {
-               echo "active";
-               } ?>" href="<?= base_url() ?>movies">
-            <i class="las la-film"></i>
-            <span class="menu-title" data-i18n="Transactions">Movies</span>
+               } ?>" href="<?= base_url() ?>news_letter_subscription">
+            <i class="las la-newspaper"></i>
+            <span class="menu-title" data-i18n="Transactions">News Letter Subscription</span>
             </a>
-         </li> -->
+         </li>
          <!-- <li class="nav-item">
             <a class="<?php if ($this->uri->segment(1) == "enquiry") {
                echo "active";

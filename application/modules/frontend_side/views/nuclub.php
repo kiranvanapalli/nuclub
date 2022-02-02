@@ -269,13 +269,13 @@
                 <!--start newsletter form-->
                 <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="newsletter-form two">
-                        <form id="mc-newsletter" action="http://pixner.net/NU Club/demo/newsletter/config.php" method="post">
+                        <form id="news_letter" method="POST" action="<?php echo base_url() ?>news_letter_save">
                             <div class="newsletter-input-bx">
-                                <input type="email" class="form-control" id="mc-email" name="mc-email" placeholder="Enter Your Email" required>
-                                <button type="submit">SUBSCRIBE</button>
+                                <input type="email" class="form-control" id="email" name="email_data" placeholder="Enter Your Email">
+                                <button type="submit" id="news_letter_submit">SUBSCRIBE</button>
                             </div>
                         </form>
-                        <div id="response"></div>
+                      
                     </div>
                 </div>
                 <!--end newsletter form-->

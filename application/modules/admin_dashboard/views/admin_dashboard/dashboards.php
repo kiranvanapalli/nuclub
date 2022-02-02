@@ -35,22 +35,22 @@
                             <span>Join US</span>
                             <p><?php echo $join_us; ?></p>
                             <i class="las la-user-friends"></i>
-                        </div>
+                    </div>
                     </a>
                 </div>
 
 
-                <!-- <div class="col-12 col-sm-6 col-lg-4">
-                    <a href="<?php echo base_url() ?>enquiry">
+                 <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="<?php echo base_url() ?>news_letter_subscription">
                         <div class="card p-2 stats colo-4">
-                            <span>Enquiry</span>
-                            <p><?php echo $contactus; ?></p>
-                            <i class="las la-headset"></i>
+                            <span>News Letter Subscription</span>
+                        <p><?php echo $news_subscription; ?></p>
+                            <i class="las la-newspaper"></i>
                         </div>
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+               <!-- <div class="col-12 col-sm-6 col-lg-4">
                     <a href="<?php echo base_url() ?>videos">
                         <div class="card p-2 stats colo-5">
                             <span>Videos</span>

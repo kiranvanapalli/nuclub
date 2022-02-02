@@ -18,7 +18,7 @@ class Admin_dashboards extends MX_Controller
         // $data['custom_js'] = 'admin_dashboard/admin_dashboard/custom_js/admin_dashboard_js';
          $data['no_of_members'] = $this->Allfiles_model->count('tb_members',$where);
          $data['join_us'] = $this->Allfiles_model->countwittoutwhere('tb_join_us');
-        // $data['awards'] = $this->Allfiles_model->count('tb_awards',$where);
+         $data['news_subscription'] = $this->Allfiles_model->countwittoutwhere('tb_news_letter');
         // // $data['movies'] = $this->Allfiles_model->count('tb_movies',$where);
         // $data['videos'] = $this->Allfiles_model->count('tb_videos',$where);
         // $data['recent_news'] = $this->Allfiles_model->count('tb_resent_news',$where);
