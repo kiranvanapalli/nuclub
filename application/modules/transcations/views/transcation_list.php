@@ -5,7 +5,7 @@
                 <!-- main title -->
                 <div class="col-6">
                     <div class="main__title">
-                        <h2>Transcation List</h2>
+                        <h2>Pending Transcation List</h2>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                                     <tbody>
                                         <?php
                                         // $i = 1;
-                                        foreach ($all_trascations as $all_trascations) { if($all_trascations['status'] == 0) {
+                                        foreach ($all_trascations as $all_trascations) { if($all_trascations['status'] == 2) {
                                             ?>
 
                                            
