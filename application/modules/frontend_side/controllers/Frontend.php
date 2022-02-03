@@ -304,7 +304,7 @@ class Frontend extends MX_Controller
         echo $transaction_type;
         $utr_number = '';
         $transaction_id = '';
-        $ref_id = $this->session->userdata('ref_id');
+        $ref_data = $this->session->userdata('ref_id');
 
         if ($transaction_type == 'utr_number') {
             $utr_number = $this->input->post('UTR_Transaction_value');
@@ -312,8 +312,19 @@ class Frontend extends MX_Controller
             $transaction_id = $this->input->post('UTR_Transaction_value');
 
         }
+        $mem_id = '';
+
+        $member_id =  $this->input->post('member_id');
+        if($ref_data == '')
+        {
+            $ref_id = '';
+        }
+        else
+        {
+            $ref_id = $this->session->userdata('ref_id');
+        }
         $data = array(
-            'member_id' => $this->input->post('member_id'),
+            'member_id' => $member_id,
             'ref_id' =>  $ref_id,
             'transaction_type' => $transaction_type,
             'transaction_id' => $transaction_id,
