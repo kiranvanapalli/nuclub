@@ -87,13 +87,15 @@ class Transcations extends MX_Controller
                 $tr_id = $_POST['edit_id'];
                 $trs_data = $this->Allfiles_model->get_data('tb_transaction', '*', 'tr_id', $tr_id);
                 $trs_details = $trs_data['resultSet'];
-                $ref_id = ['ref_id' => $trs_details['ref_id']];
+                if(!empty($trs_details['ref_id']))
+                {
+                    $ref_id = ['ref_id' => $trs_details['ref_id']];
                 $data_ref = array(
                     'status' => 1,
                     'points' => 100,
                     'updated_at' => date('Y-m-d H:i:s')
                 );
-                if (!$trs_data['ref_id']) {
+                
                     $ref_id = ['ref_id' => $trs_details['ref_id']];
                     $this->Allfiles_model->update('tb_referrals', $data_ref, $ref_id);
                     $ref_id = $trs_details['ref_id'];
@@ -121,6 +123,8 @@ class Transcations extends MX_Controller
                         }
                         $response = ['status' => 'success'];
                     }
+
+                    $response = ['status' => 'success'];
                 }
             }
         } else {
