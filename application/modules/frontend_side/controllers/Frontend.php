@@ -173,6 +173,34 @@ class Frontend extends MX_Controller
         echo json_encode($response);
     }
 
+
+    public function ref_page()
+    {
+      
+        if (isset($_GET['id']) && !empty($_GET['id']))
+        {
+            $id = $_GET['id'];
+            $where = ['status' => 1];
+            $type = "array";
+            $decode = base64_decode(base64_decode($id));
+            $this->session->set_userdata('ref_id',$decode);
+            $data['states_list'] = $this->Allfiles_model->GetDataAllmodels("tb_states", $where, $type, 'state_name', $limit = '');
+            $get_member_details = $this->Allfiles_model->get_data('tb_referrals', '*', 'ref_id', $decode);
+            $data['get_member_details'] = $get_member_details['resultSet'];
+            // $data['nucode'] = $decode;
+            $data['file'] = 'frontend_side/ref_page';
+            $data['validation_js'] = 'frontend_side/all_common_js/frontend_validation_admin';
+            $data['custom_js'] = 'frontend_side/all_common_js/ref_js';
+            $this->load->view('user_template/main', $data);
+
+        }
+        else
+        {
+            redirect('');
+        }
+       
+    }
+
    
 
     public function is_logged_in()
@@ -215,10 +243,16 @@ class Frontend extends MX_Controller
 
             $save_user = $this->Allfiles_model->data_save('tb_members', $data);
 
-            $insert_id = $this->db->insert_id();
+            $save_ref = array(
+                'status' => 0,
 
+            );
+           
+            $insert_id = $this->db->insert_id();
             $whr = ['member_id' => $insert_id];
             if ($insert_id) {
+                $ref_id = $this->session->userdata('ref_id');
+                $this->Allfiles_model->update_profile('tb_referrals',$save_ref,$ref_id);
 
                 $userDetails = $this->Allfiles_model->getCustomerDetails("tb_members", $whr)->row_array();
 

@@ -108,7 +108,7 @@ $route['register'] = 'frontend_side/Frontend/user_register';
 $route['user_forgotpassword'] = 'frontend_side/Frontend/forgotpassword';
 $route['savejoinus'] = 'frontend_side/Frontend/savejoinus';
 $route['forgotpasswordmail'] = 'frontend_side/Frontend/forgotpasswordmail';
-// $route['userLogin'] = 'frontend_side/Frontend/userLogin';
+$route['Referral'] = 'frontend_side/Frontend/ref_page';
 $route['CheckUser'] = 'frontend_side/Frontend/CheckUser';
 $route['payment']= 'frontend_side/Frontend/payment_page';
 $route['saveTranscation']= 'frontend_side/Frontend/saveTranscation';
@@ -129,6 +129,8 @@ $route['EditProfile'] = 'member_views/Member/editProfile';
 $route['updateProfile'] = 'member_views/Member/updateProfile';
 
 $route['update_password'] = 'member_views/Member/update_password';
+$route['saveRefferData'] = 'member_views/Member/saveRefferData';
+
 
 //Wallet
 

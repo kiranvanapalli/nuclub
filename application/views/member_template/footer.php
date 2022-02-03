@@ -30,13 +30,13 @@
     <script src="member_assets/js/quixnav-init.js"></script>
     <script src="member_assets/js/custom.min.js"></script>
 
-    <script src="member_assets/vendor/chartist/js/chartist.min.js"></script>
+    <!-- <script src="member_assets/vendor/chartist/js/chartist.min.js"></script> -->
 
     <script src="member_assets/vendor/moment/moment.min.js"></script>
     <script src="member_assets/vendor/pg-calendar/js/pignose.calendar.min.js"></script>
 
 
-    <script src="member_assets/js/dashboard/dashboard-2.js"></script>
+    <!-- <script src="member_assets/js/dashboard/dashboard-2.js"></script> -->
     <script src="member_assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="member_assets/js/plugins-init/datatables.init.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

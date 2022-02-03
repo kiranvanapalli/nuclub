@@ -10,14 +10,14 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <a class="btn-google float-right mr-3 mt-3 p-2 pl-3 pr-3" href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicModal">
+                            <a class="btn-google float-right mr-3 mt-3 p-2 pl-3 pr-3" href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#ref_model">
                                 Referral your Friend</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table id="example" class="display" style="min-width: 845px">
+                            <table id="ref_table" class="display text-center ref_table" style="min-width: 845px">
                                 <thead>
                                     <tr>
                                         <th>Ref Name</th>
@@ -27,15 +27,29 @@
                                         <th>Earned Points</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <?php foreach($refer_list as $refer_list){ ?>
-                                    <tr>
-                                        <td><?php echo $refer_list['fullname']; ?></td>
-                                        <td><?php echo $refer_list['mobilenumber']; ?></td>
-                                        <td><?php echo $refer_list['email']; ?></td>
-                                        <td><span class="badge badge-success"><?php echo $refer_list['status']; ?></span></td>
-                                        <td>-00-</td>
-                                    </tr>
+                                <tbody class="text-center">
+                                    <?php foreach ($refer_list as $refer_list) { ?>
+                                        <tr>
+                                            <td><?php echo $refer_list['fullname']; ?></td>
+                                            <td><?php echo $refer_list['mobilenumber']; ?></td>
+                                            <td><?php echo $refer_list['email']; ?></td>
+                                            <?php $status = $refer_list['status'];
+                                            $class = '';
+                                            $status_remark= '';
+                                            if($status == 2)
+                                            {
+                                                $status_remark = "Pending";
+                                                $class = "badge badge-secondary";
+                                            }
+                                            else if($status == 1)
+                                            {
+                                                $status_remark = "Sucess";
+                                                $class ="badge badge-sucess";
+                                            }
+                                            ?>
+                                            <td><span class="<?php echo $class; ?>"><?php echo $status_remark; ?></span></td>
+                                            <td><?php echo $refer_list['points']; ?></td>
+                                        </tr>
                                     <?php } ?>
                                 </tbody>
                             </table>
@@ -47,7 +61,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="basicModal">
+<div class="modal fade" id="ref_model">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -55,10 +69,11 @@
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <form id="ref_form" name="ref_form" method="POST">
+            <form id="ref_form" name="ref_form" method="POST">
+                <div class="modal-body">
+
                     <div class="form-row">
-                    <div class="form-group col-md-12">
+                        <div class="form-group col-md-12">
                             <label>Full Name</label>
                             <input type="text" placeholder="Full Name" class="form-control" name="fullname" id="fullname" />
                         </div>
@@ -68,15 +83,16 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label>Mobile Number</label>
-                            <input type="text" placeholder="Mobile Number" class="form-control" name="mobilenumber" id="mobilenumber" />
+                            <input type="text" placeholder="Mobile Number" class="form-control" name="mobilenumber" id="mobilenumber" onkeypress="return onlyNumberKey(event)" maxlength="10" />
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="ref_btn" id="ref_btn">Refer</button>
-            </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" name="ref_btn" id="ref_btn">Refer</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
