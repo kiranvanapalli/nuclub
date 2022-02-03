@@ -255,7 +255,6 @@ class Frontend extends MX_Controller
                 $this->Allfiles_model->update_profile('tb_referrals',$save_ref,$ref_id);
 
                 $userDetails = $this->Allfiles_model->getCustomerDetails("tb_members", $whr)->row_array();
-
                 $this->session->set_userdata('user_logged',1);
                 $this->session->set_userdata('fullname', $userDetails['fullname']);
                 $this->session->set_userdata('member_id', $userDetails['member_id']);
@@ -305,6 +304,7 @@ class Frontend extends MX_Controller
         echo $transaction_type;
         $utr_number = '';
         $transaction_id = '';
+        $ref_id = $this->session->userdata('ref_id');
 
         if ($transaction_type == 'utr_number') {
             $utr_number = $this->input->post('UTR_Transaction_value');
@@ -314,6 +314,7 @@ class Frontend extends MX_Controller
         }
         $data = array(
             'member_id' => $this->input->post('member_id'),
+            'ref_id' =>  $ref_id,
             'transaction_type' => $transaction_type,
             'transaction_id' => $transaction_id,
             'utr_number' => $utr_number,

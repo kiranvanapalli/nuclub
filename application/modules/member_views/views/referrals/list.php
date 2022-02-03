@@ -44,7 +44,7 @@
                                             else if($status == 1)
                                             {
                                                 $status_remark = "Sucess";
-                                                $class ="badge badge-sucess";
+                                                $class ="badge badge-success";
                                             }
                                             ?>
                                             <td><span class="<?php echo $class; ?>"><?php echo $status_remark; ?></span></td>

@@ -378,5 +378,19 @@ class Allfiles_model extends CI_Model
       }
    }
 
+   public function update($table_name,$data,$user_id)
+   {
+      $this->db->where($user_id);
+      $query =$this->db->update($table_name,$data); 
+      if($query)
+      {
+         return TRUE;
+      }
+      else
+      {
+         return FALSE;
+      }
+   }
+
 }
 ?>
