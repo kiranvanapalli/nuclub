@@ -126,6 +126,7 @@ class Transcations extends MX_Controller
 
                     $response = ['status' => 'success'];
                 }
+                $response = ['status' => 'success'];
             }
         } else {
             $response = ['status' => 'fail'];
