@@ -83,10 +83,7 @@ class Transcations extends MX_Controller
                     'updated_at' => date('Y-m-d H:i:s')
                 );
                 $response =   $this->Allfiles_model->update('tb_members', $data_member, $where_member);
-
-
                 //Reffer Change to Active
-
                 $tr_id = $_POST['edit_id'];
                 $trs_data = $this->Allfiles_model->get_data('tb_transaction', '*', 'tr_id', $tr_id);
                 $trs_details = $trs_data['resultSet'];
@@ -96,35 +93,35 @@ class Transcations extends MX_Controller
                     'points' => 100,
                     'updated_at' => date('Y-m-d H:i:s')
                 );
-                $this->Allfiles_model->update('tb_referrals', $data_ref, $ref_id);
-                $ref_id = $trs_details['ref_id'];
-                $get_ref_data = $this->Allfiles_model->get_data('tb_referrals', '*', 'ref_id', $ref_id);
-                $ref_data = $get_ref_data['resultSet'];
-                $get_member_id_ref_data = $ref_data['member_id'];
-                $where_refdetails = ['ref_id' => $ref_id, 'member_id' => $get_member_id_ref_data, 'status' => 1];
-                $gt_mem_details = $this->Allfiles_model->getCustomerDetails('tb_referrals', $where_refdetails)->row_array();
-                // print_r($gt_mem_details);die();
-                if (!empty($gt_mem_details)) {
-                    $get_member_id = ['member_id' => $gt_mem_details['member_id']];
-                    $gt_mem_data_member_table = $this->Allfiles_model->getCustomerDetails('tb_members', $get_member_id)->row_array();
-                    $points = $gt_mem_data_member_table['points'];
-                    $add_wallet = $points + $gt_mem_details['points'];
-                    $data_update_wallet = array(
-                        'points' => $add_wallet,
-                        'updated_at' => date('Y-m-d H:i:s')
-                    );
-                    $response = $this->Allfiles_model->update('tb_members', $data_update_wallet, $get_member_id);
+                if (!$trs_data['ref_id']) {
+                    $ref_id = ['ref_id' => $trs_details['ref_id']];
+                    $this->Allfiles_model->update('tb_referrals', $data_ref, $ref_id);
+                    $ref_id = $trs_details['ref_id'];
+                    $get_ref_data = $this->Allfiles_model->get_data('tb_referrals', '*', 'ref_id', $ref_id);
+                    $ref_data = $get_ref_data['resultSet'];
+                    $get_member_id_ref_data = $ref_data['member_id'];
+                    $where_refdetails = ['ref_id' => $ref_id, 'member_id' => $get_member_id_ref_data, 'status' => 1];
+                    $gt_mem_details = $this->Allfiles_model->getCustomerDetails('tb_referrals', $where_refdetails)->row_array();
+                    // print_r($gt_mem_details);die();
+                    if (!empty($gt_mem_details)) {
+                        $get_member_id = ['member_id' => $gt_mem_details['member_id']];
+                        $gt_mem_data_member_table = $this->Allfiles_model->getCustomerDetails('tb_members', $get_member_id)->row_array();
+                        $points = $gt_mem_data_member_table['points'];
+                        $add_wallet = $points + $gt_mem_details['points'];
+                        $data_update_wallet = array(
+                            'points' => $add_wallet,
+                            'updated_at' => date('Y-m-d H:i:s')
+                        );
+                        $response = $this->Allfiles_model->update('tb_members', $data_update_wallet, $get_member_id);
+                        if ($response) {
+
+                            $response = ['status' => 'success'];
+                        } else {
+                            $response = ['status' => 'fail'];
+                        }
+                        $response = ['status' => 'success'];
+                    }
                 }
-
-
-                if ($response) {
-
-                    $response = ['status' => 'success'];
-                } else {
-                    $response = ['status' => 'fail'];
-                }
-            } else {
-                $response = ['status' => 'success'];
             }
         } else {
             $response = ['status' => 'fail'];
