@@ -88,7 +88,7 @@
                                 </div>
 								<div class="col-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="mobile_no" id="mobile_no" placeholder="Enter Mobile Number" required="required">
+                                        <input type="text" class="form-control" name="mobile_no" id="mobile_no" placeholder="Enter Mobile Number" required="required">
                                     </div>
                                 </div>
                                 <div class="col-12">

@@ -194,6 +194,12 @@ $route['tras_data'] = 'transcations/Transcations/tras_data';
 $route['join_us'] = 'joinus/JoinUs';
 $route['delete_join_us'] = 'joinus/JoinUs/delete_join_us';
 
+//contact
+
+$route['contact'] = 'contact/Contact';
+$route['delete_contact_us'] = 'contact/Contact/delete_contact_us';
+
+
 //News Letter Subscription
 
 $route['news_letter_subscription'] = 'news_letters/News_letters';

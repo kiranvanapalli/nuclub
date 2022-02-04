@@ -5,7 +5,7 @@
                 <!-- main title -->
                 <div class="col-6">
                     <div class="main__title">
-                        <h2>Intersted User's List</h2>
+                        <h2>Intersted Contact List</h2>
                     </div>
                 </div>
 
@@ -22,7 +22,7 @@
 
                         <div class="card-content collapse show">
                             <div class="table-responsive">
-                                <table class="table table-sm mb-0 text-center join_us_table">
+                                <table class="table table-sm mb-0 text-center contact_us_table">
                                     <thead>
                                         <tr>
                                             <th>Sl.no</th>    
@@ -35,20 +35,20 @@
                                     <tbody>
                                         <?php
                                         $i = 1;
-                                        foreach ($join_us_list as $join_us_list) { ?>
+                                        foreach ($contact_list as $contact_list) { ?>
 
                                             <tr>
                                                 <td>
                                                     <div class="main__table-text"><?php echo $i++; ?></div>
                                                 </td>
                                                 <td>
-                                                    <div class="main__table-text"><?php echo $join_us_list['full_name']; ?></div>
+                                                    <div class="main__table-text"><?php echo $contact_list['name']; ?></div>
                                                 </td>
                                                 <td>
-                                                    <div class="main__table-text"><?php echo $join_us_list['mobile_number']; ?></div>
+                                                    <div class="main__table-text"><?php echo $contact_list['mobile_no']; ?></div>
                                                 </td>
                                                 <td>
-                                                    <div class="main__table-text"><?php echo $join_us_list['email']; ?></div>
+                                                    <div class="main__table-text"><?php echo $contact_list['email']; ?></div>
                                                 </td>
 
                                                 
@@ -58,7 +58,7 @@
                                                         <!-- <a href="detailviewpage.html" target="_blank" class="main__table-btn main__table-btn--view">
                                                             <i class="lar la-eye"></i>
                                                         </a> -->
-                                                        <a id="<?php echo $join_us_list['id']; ?>"data-toggle="modal" data-target="#modaldelete" class="main__table-btn main__table-btn--delete open-modal delete">
+                                                        <a id="<?php echo $contact_list['contact_id']; ?>"data-toggle="modal" data-target="#modaldelete" class="main__table-btn main__table-btn--delete open-modal delete">
                                                             <i class="las la-trash-alt"></i>
                                                         </a>
                                                     </div>

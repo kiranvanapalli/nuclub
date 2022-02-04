@@ -15,23 +15,23 @@ class Contact extends MX_Controller
     public function index()
     {
         $where = '';
-        $data['file'] = 'joinus/join_list';
-        $data['custom_js'] = 'joinus/all_files_js';
+        $data['file'] = 'contact/contact_list';
+        $data['custom_js'] = 'contact/all_files_js';
         // $data['validation_js'] = 'admin/all_common_js/frontend_validation_admin';
         $type = "array";
-        $join_us_list = $this->Allfiles_model->GetDataAll("tb_join_us", $where, $type, 'id', $limit = '');
-        $data['join_us_list'] = $join_us_list;
+        $contact_list = $this->Allfiles_model->GetDataAll("tb_contact", $where, $type, 'contact_id', $limit = '');
+        $data['contact_list'] = $contact_list;
         $this->load->view('admin_template/main', $data);
     }
 
    
 
-    public function delete_join_us()
+    public function delete_contact_us()
     {
       
 
-            $where = ['id' => $_POST['id']];
-            $result = $this->Allfiles_model->deleteData("tb_join_us", $where);
+            $where = ['contact_id' => $_POST['id']];
+            $result = $this->Allfiles_model->deleteData("tb_contact", $where);
             // echo $this->db->last_query();
             echo $result;
          }
