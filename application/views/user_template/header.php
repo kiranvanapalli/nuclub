@@ -89,7 +89,7 @@ else
                                 <a class="nav-link" href="<?php echo base_url() ?>about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Services</a>
+                                <a class="nav-link" href="<?php echo base_url() ?>services">Services</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo base_url() ?>events">News & Events</a>

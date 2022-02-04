@@ -35,6 +35,22 @@ class Frontend extends MX_Controller
         $data['custom_js'] = 'frontend_side/custom_js';
         $this->load->view('user_template/main', $data);
     }
+
+    public function services()
+    {
+
+        $data['file'] = 'frontend_side/services';
+        $data['custom_js'] = 'frontend_side/custom_js';
+        $this->load->view('user_template/main', $data);
+    }
+
+    public function service_details()
+    {
+
+        $data['file'] = 'frontend_side/servicedetails';
+        $data['custom_js'] = 'frontend_side/custom_js';
+        $this->load->view('user_template/main', $data);
+    }
     public function joinus()
     {
         $data['file'] = 'frontend_side/joinus';

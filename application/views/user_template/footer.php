@@ -80,13 +80,10 @@
    </div>
 
 <div id="right-to-bottom" class="show">
-<<<<<<< HEAD
       <a class="top" href="<?php echo base_url() ?>contactus" target="_blank">
 		  <i class="fa-address-book fa font-weight-normal"></i>
-=======
       <a class="top" href="contact-us.html" target="_blank">
 		  <i class="fa-address-book fas font-weight-normal"></i>
->>>>>>> 05e51e4c2aa4ba033be6ddeb9d987b3ed52c9131
 		</a>
    </div>
 
