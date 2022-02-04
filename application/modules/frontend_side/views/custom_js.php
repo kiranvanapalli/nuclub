@@ -62,7 +62,51 @@
 
             }
         });
+
+           
+        $(document).on('submit', '#contactForm', function(event) {
+            event.preventDefault();
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var mobile_no = $('#mobile_no').val();
+
+
+            if (name == '') {
+                toastr["error"]("Name is required!");
+                return false;
+            }
+            if (email == '') {
+                toastr["error"]("Email Id is required!");
+                return false;
+            }
+            if (mobile_no == '') {
+                toastr["error"]("Please Enter Mobile Number!");
+                return false;
+            }
+            $.ajax({
+                url: "<?php echo base_url() ?>savecontact",
+                method: 'POST',
+                data: new FormData(this),
+                contentType: false,
+                processData: false,
+                success: function(data) {
+                    console.log(data);
+                    if (data) {
+
+                        toastr["success"]("Thank you Join Admin Contact You Later");
+                        window.location.href = "<?php echo base_url(); ?>";
+
+                    } else {
+                        toastr["error"]("Some Thing Went Wrong");
+                        return false;
+                    }
+                }
+            });
+
+        });
+
     });
+
 
     toastr.options = {
         "closeButton": true,

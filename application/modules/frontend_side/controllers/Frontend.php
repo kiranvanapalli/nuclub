@@ -72,6 +72,21 @@ class Frontend extends MX_Controller
         echo json_encode($result);
     }
 
+    public function savecontact()
+    {
+        $data = array(
+            'name' => $this->input->post('name'),
+            'email' => $this->input->post('email'),
+            'mobile_no' => $this->input->post('mobile_no'),
+            'message' => $this->input->post('message'),
+
+        );
+
+        $result = $this->Allfiles_model->data_save('tb_contact', $data);
+
+        echo json_encode($result);
+    }
+
     public function forgotpasswordmail()
     {
         $email = $this->input->post('email');

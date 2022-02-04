@@ -74,21 +74,21 @@
                 <div class="col-md-6">
                     <div class="contact-us-form p-2">
                         <h4>Ready to get started?</h4>
-                        <form action="#" method="POST" id="contactForm" class="contact-us-form">
+                        <form name="contactForm" id="contactForm" class="contact-us-form">
                             <div class="form-row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="Enter name" required="required">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required="required">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" placeholder="Enter email" required="required">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required="required">
                                     </div>
                                 </div>
 								<div class="col-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" placeholder="Enter Mobile Number" required="required">
+                                        <input type="email" class="form-control" name="mobile_no" id="mobile_no" placeholder="Enter Mobile Number" required="required">
                                     </div>
                                 </div>
                                 <div class="col-12">
