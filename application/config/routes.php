@@ -100,8 +100,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 // frontend views
 $route['default_controller'] = 'frontend_side/frontend/index';
 $route['index'] = 'frontend_side/Frontend/index';
+$route['about'] = 'frontend_side/Frontend/about';
 $route['nuclub'] = 'frontend_side/Frontend/nuclub_view';
 $route['contactus'] = 'frontend_side/Frontend/contactus';
+$route['events'] = 'frontend_side/Frontend/events';
 $route['joinus'] = 'frontend_side/Frontend/joinus';
 $route['user_login'] = 'frontend_side/Frontend/userLogin';
 $route['register'] = 'frontend_side/Frontend/user_register';
@@ -114,7 +116,6 @@ $route['payment']= 'frontend_side/Frontend/payment_page';
 $route['saveTranscation']= 'frontend_side/Frontend/saveTranscation';
 $route['saveUser']= 'frontend_side/Frontend/saveUser';
 $route['user_logout'] = 'frontend_side/Frontend/logout';
-
 $route['news_letter_save'] = 'frontend_side/Frontend/saveNewsLetter';
 
 // Member Views

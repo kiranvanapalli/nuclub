@@ -10,7 +10,7 @@
                         <h2 class="text-white mb-0">Contact Us</h2>
                         <div class="custom-breadcrumb">
                             <ol class="breadcrumb d-inline-block bg-transparent list-inline py-0">
-                                <li class="list-inline-item breadcrumb-item"><a class="text-white" href="<?php echo base_url() ?>">Home</a></li>
+                                <li class="list-inline-item breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                                 <li class="list-inline-item breadcrumb-item active text-white">Contact Us</li>
                             </ol>
                         </div>
@@ -25,7 +25,7 @@
     <section class="contact-us-promo pt-100">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="card single-promo-card single-promo-hover text-center shadow-sm">
                         <div class="py-5">
                             <div class="pb-2">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="card single-promo-card single-promo-hover text-center shadow-sm">
                         <div class="py-5">
                             <div class="pb-2">
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="card single-promo-card single-promo-hover text-center shadow-sm">
                         <div class="py-5">
                             <div class="pb-2">
@@ -56,17 +56,6 @@
                             </div>
                             <div><h5 class="mb-0">Mail Us</h5>
                                 <p class="text-muted mb-0">help@yourdomain.com</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="card single-promo-card single-promo-hover text-center shadow-sm">
-                        <div class="py-5">
-                            <div class="pb-2">
-                                <span class="fa-tty fas color-secondary"></span>
-                            </div>
-                            <div><h5 class="mb-0">Live Chat</h5>
-                                <p class="text-muted mb-0">Chat with Us 24/7</p></div>
                         </div>
                     </div>
                 </div>
@@ -83,7 +72,7 @@
             </div>
             <div class="row justify-content-around">
                 <div class="col-md-6">
-                    <div class="contact-us-form gray-light-bg rounded p-5">
+                    <div class="contact-us-form p-2">
                         <h4>Ready to get started?</h4>
                         <form action="#" method="POST" id="contactForm" class="contact-us-form">
                             <div class="form-row">
@@ -95,6 +84,11 @@
                                 <div class="col-12">
                                     <div class="form-group">
                                         <input type="email" class="form-control" name="email" placeholder="Enter email" required="required">
+                                    </div>
+                                </div>
+								<div class="col-12">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="Enter Mobile Number" required="required">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -113,11 +107,9 @@
                 </div>
                 <div class="col-md-5">
                     <div class="contact-us-content">
-                        <h4>Looking for a excellent Business idea?</h4>
-                        <p class="">Seamlessly deliver pandemic e-services and next-generation initiatives.</p>
-
-                        <a href="#" class="btn outline-btn align-items-center">Get Directions <span class="icon-arrow-pointing-to-right pl-2"></span></a>
-
+                        <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15202.886577658523!2d83.3006988!3d17.7106049!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7992878188839743!2sHotel%20Daspalla%20Visakhapatnam!5e0!3m2!1sen!2sin!4v1643634820690!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
                         <hr class="my-5">
 
                         <h5>Our Headquarters</h5>
@@ -126,8 +118,10 @@
                             Factory, United State, 13420
                         </address>
                         <br>
+<!--
                         <span>Phone: +1234567890123</span> <br>
                         <span>Email: <a href="mailto:email@yourdomain.com" class="link-color">email@yourdomain.com</a></span>
+-->
 
                     </div>
                 </div>
@@ -137,9 +131,7 @@
     <!--contact us section end-->
 
     <!--google map block start-->
-    <div class="google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.953735315922!3d-37.817323442021234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sbd!4v1571030260624!5m2!1sen!2sbd" height="450" style="border:0;" allowfullscreen=""></iframe>
-    </div>
+    
     <!--google map block end-->
 
 

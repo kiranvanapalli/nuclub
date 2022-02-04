@@ -27,6 +27,14 @@ class Frontend extends MX_Controller
         $this->load->view('user_template/main', $data);
     }
 
+
+    public function events()
+    {
+
+        $data['file'] = 'frontend_side/events';
+        $data['custom_js'] = 'frontend_side/custom_js';
+        $this->load->view('user_template/main', $data);
+    }
     public function joinus()
     {
         $data['file'] = 'frontend_side/joinus';
@@ -280,6 +288,7 @@ class Frontend extends MX_Controller
     public function about()
     {
         $data['file'] = 'frontend_side/about';
+        $data['custom_js'] = 'frontend_side/custom_js';
         $this->load->view('user_template/main', $data);
     }
 

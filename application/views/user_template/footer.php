@@ -80,7 +80,7 @@
    </div>
 
 <div id="right-to-bottom" class="show">
-      <a class="top" href="contact-us.html" target="_blank">
+      <a class="top" href="<?php echo base_url() ?>contactus" target="_blank">
 		  <i class="fa-address-book fa font-weight-normal"></i>
 		</a>
    </div>

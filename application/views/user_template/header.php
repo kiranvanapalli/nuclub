@@ -86,13 +86,13 @@ else
                                 <a class="nav-link active" href="<?php echo base_url(); ?>">Home</a>
                             </li>
 							<li class="nav-item">
-                                <a class="nav-link" href="#" data-scroll-nav="2">About Us</a>
+                                <a class="nav-link" href="<?php echo base_url() ?>about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-scroll-nav="2">Services</a>
+                                <a class="nav-link" href="#">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-scroll-nav="4">News & Events</a>
+                                <a class="nav-link" href="<?php echo base_url() ?>events">News & Events</a>
                             </li>
 							<li class="nav-item">
                                 <a class="nav-link" href="" type="button" data-toggle="modal" data-target="#sidebar-right">Refer & Earn</a>

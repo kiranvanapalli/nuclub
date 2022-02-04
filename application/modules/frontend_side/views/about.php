@@ -5,82 +5,215 @@
 }
 </style>
 
-		
-<!--		---------------------------------  Menu  ----------------------------------->
-		
-    <div class="breadcumb-wrapper breadcumb-layout1 pt-60 pb-50" data-bg-src="user_assets/img/breadcumb/breadcumb-1.jpg" data-overlay>
-         <div class="container z-index-common">
-            <div class="breadcumb-content text-center">
-               <h1 class="breadcumb-title h1 text-white my-0">About</h1>
-               <h2 class="breadcumb-bg-title">About</h2>
-               <ul class="breadcumb-menu-style1 text-white mx-auto fs-xs">
-                  <li><a href="<?= base_url(); ?>"><i class="fal fa-home"></i>Home</a></li>
-                  <li class="active">About Us</li>
-               </ul>
-            </div>
-         </div>
-      </div>
-      <section class="vs-about-wrapper">
-         <div class="container">
-            <div class="row flex-lg-row-reverse">
-               <div class="col-md-4 col-lg-4 mb-40 mb-xl-0">
-                  <div class="hover-shape position-relative img-box2 text-start text-xl-end">
-                     <div class="shape1 position-absolute start-0 top-0 ml-15"><img src="user_assets/img/about/about-2-2.png" alt="Shape"></div>
-                     <img src="user_assets/img/about/about-2-1.png" alt="About Image"> 
-					  
-                  </div>
-               </div>
-               <div class="col-md-8 col-lg-8">
-<!--                  <span class="sub-title2 mb-30">M.M.M</span>-->
-                  <h2 class="mb-15">Mythri Movie Makers</h2>
-                  <p class="fs-18 text-justify">Mythri Movie Makers was formed when like-minded persons Mr. Naveen Yerneni and Mr. Ravi Shankar Yalamanchili came together with a passion to make feel good movies. Mythri Movie Makers has amassed an impressive recognition in the entertainment industry with its unwavering dedication to excellence. Its consistency and success so far is built on a foundation of stable management provided by the promoters and in forging a long-term creative relationships with many of the Tollywood’s leading talent.</p>
-				   <br>
-				   <p class="fs-18 text-justify">Mythri is focused on producing profitable movies through an annual slate that includes a mix of a few key major-budget movies along with smaller, more modest-budget films.</p>
-                  
-               </div>
-            </div>
-         </div>
-      </section>
-		
-	<section class="vs-popular-news pt-60 pb-80">
-            <div class="container">
-                <h2 class="h4  font-theme3 mt-md-n2 mb-4 z-index-common">Our Team</h2>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="vs-blog d-md-flex gap-4 mb-20">
-                            <div class="media-img mb-10 mb-md-0">
-                                <img class="w-100" src="user_assets/img/popular/popular-img-1-1.jpg" alt="Popular Image" />
-                            </div>
-                            <div class="media-body align-self-center">
-                                
-                                <h3 class="blog-title  font-theme fs-20-ls mb-2">Mr. Naveen Yerneni (Founder)</h3>
-<!--
-                                <p class="mb-0 text-on-dark1">
-                                    An Indian producer, Naveen Yerneni is associated with the Telugu film industry. Naveen established his production company, Mythri Movie Makers along with C.V. Mohan and Y.R. Shankar.
-									<p>Since establishing his production house, he has been a part of films like Srimanthudu (2015), and Janatha Garage (2016), among others. His 2018 projects include Savyasachi and Amar Akbar Anthony. His 2019 release includes Dear Comrade, directed by Bharat Kamma</p>
-                                </p>
--->
-                            </div>
-                        </div>
-                    </div>
-					<div class="col-lg-6">
-						<div class="vs-blog d-md-flex gap-4 mb-20">
-                            <div class="media-img mb-10 mb-md-0">
-                                <img class="w-100" src="user_assets/img/popular/popular-img-1-2.jpg" alt="Popular Image" />
-                            </div>
-                            <div class="media-body align-self-center">
-                                
-                                <h3 class="blog-title font-theme fs-20-ls mb-2">Mr. Y. Ravi Shankar (Founder)</h3>
-<!--
-                                <p class="mb-0 text-on-dark1">
-                                   Ravi Shankar Yalamanchili is an Indian producer known for working in the Telugu film industry. He produced the films The Wealthy Man (2015), People`s Garage (2016), and The Stage (2018). As of 2018, he is associated with Savyasachi. 
-                                </p>
--->
-                            </div>
-                        </div>
-					</div>
+
+<body>
+    <!--Start Preloader-->
+    <div class="preloader">
+        <div class="d-table">
+            <div class="d-table-cell align-middle">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
                 </div>
             </div>
-        </section>
-      
-    
+        </div>
+    </div>
+    <!--End Preloader-->
+<section class="hero-section ptb-100 gradient-overlay" style="background: url('img/header-bg-5.jpg')no-repeat center center / cover">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-7">
+                    <div class="page-header-content text-white text-center pt-sm-5 pt-md-5">
+                        <h1 class="text-white mb-0">About Us</h1>
+                        <div class="custom-breadcrumb">
+                            <ol class="breadcrumb d-inline-block bg-transparent list-inline py-0">
+                                <li class="list-inline-item breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                                <li class="list-inline-item breadcrumb-item">About Us</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="promo-section pt-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="promo-single-wrap p-5 text-center border rounded">
+                        <div class="promo-icon mb-4">
+                            <img src="./new-assets/images/search-engine.svg" alt="promo" width="65">
+                            <span class="number-bg">01</span>
+                        </div>
+                        <div class="promo-info">
+                            <strong class="color-secondary">Discuss with Users</strong>
+                            <h4>Site Optimisation</h4>
+                            <p>What is business contents insurance? Business contents insurance is a type of
+                                business.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="promo-single-wrap p-5 text-center border rounded">
+                        <div class="promo-icon mb-4">
+                            <img src="./new-assets/images/increase.svg" alt="promo" width="65">
+                            <span class="number-bg">02</span>
+                        </div>
+                        <div class="promo-info">
+                            <strong class="color-secondary">Discuss with Users</strong>
+                            <h4>Increased Traffic</h4>
+                            <p>What is business contents insurance? Business contents insurance is a type of
+                                business.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="promo-single-wrap p-5 text-center border rounded">
+                        <div class="promo-icon mb-4">
+                            <img src="./new-assets/images/bullhorn.svg" alt="promo" width="65">
+                            <span class="number-bg">03</span>
+                        </div>
+                        <div class="promo-info">
+                            <strong class="color-secondary">Discuss with Users</strong>
+                            <h4>Digital Marketing</h4>
+                            <p>What is business contents insurance? Business contents insurance is a type of
+                                business.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="about-us-section ptb-100">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-12 col-lg-5">
+                    <div class="about-us-content-wrap">
+                        <strong class="color-secondary">About Us</strong>
+                        <h3>Grow Your Business With Experienced SEO Experts</h3>
+                        <span class="animate-border mb-4"></span>
+                        <p>Globally transition proactive niches without progressive processes. Objectively syndicate
+                            enterprise-wide services through timely metrics. </p>
+                        <ul class="list-unstyled tech-feature-list">
+                            <li class="py-1"><span class="fa-angle-double-right fas mr-2 color-secondary"></span><strong>Creative</strong>
+                                Websites Design
+                            </li>
+                            <li class="py-1"><span class="fa-angle-double-right fas mr-2 color-secondary"></span><strong>Accounting</strong>
+                                Procedures Guidebook
+                            </li>
+                            <li class="py-1"><span class="fa-angle-double-right fas mr-2 color-secondary"></span><strong>Cost</strong>
+                                Accounting Fundamentals
+                            </li>
+                            <li class="py-1"><span class="fa-angle-double-right fas mr-2 color-secondary"></span><strong>Corporate</strong>
+                                Cash Management
+                            </li>
+                        </ul>
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <div class="counter-single">
+                                    <h2 class="mb-0 color-secondary">45</h2>
+                                    <strong>Total Product</strong>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="counter-single">
+                                    <h2 class="mb-0 color-secondary">502</h2>
+                                    <strong>Total Referrals</strong>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="counter-single">
+                                    <h2 class="mb-0 color-secondary">66</h2>
+                                    <strong>Total Earls</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-btns mt-4">
+                            <a href="registernow.html" class="btn secondary-solid-btn mr-3">Start Now</a>
+<!--                            <a href="#" class="btn secondary-outline-btn">Learn More</a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="card border-0 text-white">
+                        <img src="./new-assets/images/why-choose-us.png" alt="video" class="img-fluid">
+                        <div class="card-img-overlay text-center">
+                            <a href="https://www.youtube.com/watch?v=9No-FiEInLA" class="popup-youtube video-play-icon color-bip shadow"><span class="fa-play fas"></span> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<div class="client-section ptb-100" style="background: url('./new-assets/images/client-bg.jpg')no-repeat center center / cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6">
+                    <div class="client-heading-wrap">
+                        <h3>Who are Happy With Services and Work</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="client-para">
+                        <p>Seamlessly administrate synergistic growth strategies and collaborative markets. Globally
+                            empower inexpensive infomediaries after sustainable mindshare. Phosfluorescently brand
+                            professional collaboration and idea-sharing without principle-centered interfaces. </p>
+                    </div>
+                </div>
+            </div>
+            <!--clients logo start-->
+            <div class="row align-items-center justify-content-center mb-4">
+                <div class="col-md-10 col-lg-9">
+                    <div class="owl-carousel owl-theme clients-carousel dot-indicator client-logo-wrap owl-loaded owl-drag">
+                        
+                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-945px, 0px, 0px); transition: all 4.5s linear 0s; width: 2700px;"><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-03.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-04.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-05.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-06.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-07.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-08.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-01.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item active" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-02.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item active" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-03.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item active" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-04.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item active" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-05.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item active" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-06.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item active" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-07.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-08.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-01.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-02.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-03.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-04.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-05.png" alt="client logo" class="client-img">
+                        </div></div><div class="owl-item cloned" style="width: 120px; margin-right: 15px;"><div class="item single-client">
+                            <img src="./new-assets/images/clients-logo-06.png" alt="client logo" class="client-img">
+                        </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                </div>
+            </div>
+            <!--clients logo end-->
+        </div>
+    </div>
+
+   
