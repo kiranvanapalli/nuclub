@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <!--start caption-->
-                <div class="col-lg-7 col-md-8">
+                <div class="col-lg-7 col-md-8 pt-165">
                     <div class="caption two d-table">
                         <div class="d-table-cell align-middle">
                             <h1 class="mb-3">The Perfect App Landing page For Your App </h1>
@@ -16,109 +16,7 @@
     </section>
     <!--start home area-->
     <!--start core feature area-->
-    <section id="core-feature-area" class="bg-3">
-        <div class="core-feature-circle">
-            <img class="circle1" src="user_assets/new-assets/images/asset-6.png" alt="">
-            <img class="circle2" src="user_assets/new-assets/images/asset-6.png" alt="">
-            <img class="circle3" src="user_assets/new-assets/images/asset-6.png" alt="">
-        </div>
-        <div class="container">
-            <div class="row">
-                <!--start section heading-->
-                <div class="col-md-10 offset-md-1">
-                    <div class="section-heading text-center">
-                        <h5>About our App</h5>
-                        <h2>Wonderful features to satisfy you to use our mobile app</h2>
-                        <p>Here you are welcome to present number of the most characteristic features of your app you are proud of.It was designed to promote your mobile App, services or business projects </p>
-                    </div>
-                </div>
-                <!--end section heading-->
-            </div>
-            <div class="row">
-                <!--start core feature single-->
-                <div class="col-lg-3 col-md-6">
-                    <div class="core-feature-single">
-                        <div class="core-feature-single-item text-center">
-                            <div class="icon">
-                                <i class="icon-gear"></i>
-                            </div>
-                            <h3>Quick Setup</h3>
-                            <p>The app is really easy to install, the complete setup process will take less than 1 minute of your time.</p>
-                        </div>
-                        <img class="hover-shape-1 hover-shape" src="user_assets/new-assets/images/shape-one.svg" alt="Shape One">
-                        <img class="hover-shape-2 hover-shape" src="user_assets/new-assets/images/shape-two.svg" alt="Shape Two">
-                        <img class="hover-shape-3 hover-shape" src="user_assets/new-assets/images/shape-three.svg" alt="Shape Three">
-                        <img class="hover-shape-4 hover-shape" src="user_assets/new-assets/images/shape-four.svg" alt="Shape Four">
-                        <img class="hover-shape-5 hover-shape" src="user_assets/new-assets/images/shape-five.svg" alt="Shape Five">
-                    </div>
-                </div>
-                <!--end core feature single-->
-                <!--start core feature single-->
-                <div class="col-lg-3 col-md-6">
-                    <div class="core-feature-single">
-                        <div class="core-feature-single-item two text-center">
-                            <div class="icon">
-                                <i class="icon-web-design"></i>
-                            </div>
-                            <h3>Lovely Design</h3>
-                            <p>With carefully thought-out design, NU Club looks great on any device and Easy to Use, Easy way to customize.</p>
-                        </div>
-                        <img class="hover-shape-1 hover-shape" src="user_assets/new-assets/images/shape-one.svg" alt="Shape One">
-                        <img class="hover-shape-2 hover-shape" src="user_assets/new-assets/images/shape-two.svg" alt="Shape Two">
-                        <img class="hover-shape-3 hover-shape" src="user_assets/new-assets/images/shape-three.svg" alt="Shape Three">
-                        <img class="hover-shape-4 hover-shape" src="user_assets/new-assets/images/shape-four.svg" alt="Shape Four">
-                        <img class="hover-shape-5 hover-shape" src="user_assets/new-assets/images/shape-five.svg" alt="Shape Five">
-                    </div>
-                </div>
-                <!--end core feature single-->
-                <!--start core feature single-->
-                <div class="col-lg-3 col-md-6">
-                    <div class="core-feature-single">
-                        <div class="core-feature-single-item three text-center">
-                            <div class="icon three">
-                                <i class="icon-report"></i>
-                            </div>
-                            <h3>Optimized Data</h3>
-                            <p>Speed is very important when you work with loading data, especially if you have a large number of users.</p>
-                        </div>
-                        <img class="hover-shape-1 hover-shape" src="user_assets/new-assets/images/shape-one.svg" alt="Shape One">
-                        <img class="hover-shape-2 hover-shape" src="user_assets/new-assets/images/shape-two.svg" alt="Shape Two">
-                        <img class="hover-shape-3 hover-shape" src="user_assets/new-assets/images/shape-three.svg" alt="Shape Three">
-                        <img class="hover-shape-4 hover-shape" src="user_assets/new-assets/images/shape-four.svg" alt="Shape Four">
-                        <img class="hover-shape-5 hover-shape" src="user_assets/new-assets/images/shape-five.svg" alt="Shape Five">
-                    </div>
-                </div>
-                <!--end core feature single-->
-                <!--start core feature single-->
-                <div class="col-lg-3 col-md-6">
-                    <div class="core-feature-single">
-                        <div class="core-feature-single-item four text-center">
-                            <div class="icon four">
-                                <i class="icon-list"></i>
-                            </div>
-                            <h3>Secure Data</h3>
-                            <p>Transfer all information with the help of SSL - a solution allowing you to save any data from the public eye.</p>
-                        </div>
-                        <img class="hover-shape-1 hover-shape" src="user_assets/new-assets/images/shape-one.svg" alt="Shape One">
-                        <img class="hover-shape-2 hover-shape" src="user_assets/new-assets/images/shape-two.svg" alt="Shape Two">
-                        <img class="hover-shape-3 hover-shape" src="user_assets/new-assets/images/shape-three.svg" alt="Shape Three">
-                        <img class="hover-shape-4 hover-shape" src="user_assets/new-assets/images/shape-four.svg" alt="Shape Four">
-                        <img class="hover-shape-5 hover-shape" src="user_assets/new-assets/images/shape-five.svg" alt="Shape Five">
-                    </div>
-                </div>
-                <!--end core feature single-->
-            </div>
-            <div class="row">
-                <!--start read more button-->
-                <div class="col-lg-12">
-                    <div class="load-more-btn text-center">
-                        <a href="#">Learn More</a>
-                    </div>
-                </div>
-                <!--end read more button-->
-            </div>
-        </div>
-    </section>
+    
     <!--end core feature area-->
     <!--start about area-->
     <section id="about-area" class="bg-3" data-scroll-index="1">
@@ -285,31 +183,7 @@
     <!--end newsletter area-->
    <br>
     <!--start custom plan area-->
-    <section id="custom-plan-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="custom-plan-wrap bg-2 row">
-                        <div class="custom-plan-wrap-circle">
-                            <img class="circle1" src="user_assets/new-assets/images/asset-7.png" alt="">
-                            <img class="circle2" src="user_assets/new-assets/images/asset-8.png" alt="">
-                        </div>
-                        <div class="col-md-8 offset-md-2">
-                            <div class="section-heading text-center">
-                                <h2 class="text-white">Need a <br>Investment Plan?</h2>
-                                <p class="text-white">We’ve created this handy plan cost calculator just for you. Find out how much your custom plan will cost in under a minute! </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="plan-btn two text-center">
-                                <a href="./new-assets/images/Investment Plan.pdf" target="_blank">Check Our Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <!--end custom plan area-->
     
     <!--start testimonial area-->
