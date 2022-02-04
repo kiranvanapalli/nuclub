@@ -81,7 +81,7 @@
 
 <div id="right-to-bottom" class="show">
       <a class="top" href="contact-us.html" target="_blank">
-		  <i class="fa-address-book fa font-weight-normal"></i>
+		  <i class="fa-address-book fas font-weight-normal"></i>
 		</a>
    </div>
 

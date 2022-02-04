@@ -94,9 +94,9 @@ else
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-scroll-nav="4">News & Events</a>
                             </li>
-							<li class="nav-item">
+							<!-- <li class="nav-item">
                                 <a class="nav-link" href="" type="button" data-toggle="modal" data-target="#sidebar-right">Refer & Earn</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item download-btn">
                                 <a class="nav-link" href="<?php echo base_url(); ?>joinus">Join Us</a>
                             </li>
